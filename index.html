@@ -1,28 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>England Atlas</title>
-<link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header><div class="identity"><span class="mark" aria-hidden="true">E</span><div><h1>England Atlas</h1><p>People, places and environment</p></div></div><div class="header-actions"><button id="viewsToggle" aria-controls="sidebar" aria-expanded="true">Views & layers</button><button id="coverageButton">Data & coverage</button></div></header>
-<main>
-<div id="map" aria-label="Interactive map of England"></div>
-<aside id="sidebar" aria-label="Map views and layers">
-<div class="panel-heading"><h2>Explore England</h2><button class="close" id="closeViews" aria-label="Close views">×</button></div>
-<p class="intro">Choose a view, then select the evidence you want to see.</p>
-<nav id="views" aria-label="Map views"></nav>
-<section class="layer-section"><h3 id="layerHeading">Clean map</h3><p id="viewDescription"></p><div id="layers"></div></section>
-<section class="search-section"><label for="search">Find a town or local authority</label><input id="search" type="search" placeholder="Search England…" autocomplete="off"><div id="searchResults" role="listbox"></div></section>
-<div class="base-section"><label for="basemap">Basemap</label><select id="basemap"><option value="imagery">Satellite imagery</option><option value="light">Light map</option></select><button id="fit">Fit England</button></div>
-<p class="credit">Mapping by Hugh Lamarque</p>
-</aside>
-<section id="legend" hidden aria-label="Map legend"><div class="panel-heading"><h2 id="legendTitle"></h2><button id="collapseLegend" class="close" aria-label="Minimise legend">−</button></div><div id="legendBody"></div></section>
-<button id="expandLegend" hidden>Show key</button>
-<div id="status" role="status">Opening England…</div>
-<div id="toast" role="alert" hidden></div>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>England · Country atlas</title><link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css?v=2"></head><body>
+<header class="topnav"><a class="brand" href="#clean">England <span>/ Country atlas</span></a><nav aria-label="Main navigation"><button id="mapTab" class="active">Map</button><button id="analysisTab">Country analysis</button><button id="sourcesTab">Sources</button></nav></header>
+<main id="mapPage"><div id="map" aria-label="Interactive map of England"></div>
+<div class="searchbox"><label for="search" class="sr-only">Find a town or local authority</label><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a town or local authority" autocomplete="off"><div id="searchResults" role="listbox"></div></div>
+<button id="panelToggle" class="floating" aria-controls="panel" aria-expanded="true">Views & key</button>
+<aside id="panel" class="panel" aria-label="Map views and key"><div class="panel-heading"><h1>England</h1><button id="closePanel" class="close" aria-label="Hide views and return to map">×</button></div><nav id="views" class="preset-grid" aria-label="Map views"></nav>
+<section class="view-options"><h2 id="activeViewTitle">Clean</h2><p id="viewHint"></p><div id="themeControls"></div><div id="metricControls"></div><div id="selectionInfo" hidden></div><details id="contextMenu"><summary>Add context layers</summary><div id="contextOptions" class="context-options"></div></details></section>
+<section class="map-key"><div class="section-heading"><h2>Key</h2><button id="opacityButton" class="text-button" hidden>Opacity</button></div><div id="opacityControls" hidden><input id="opacity" type="range" min="15" max="100" value="86" aria-label="Overlay opacity"></div><div id="legend"></div><p class="credit">Mapping by Hugh Lamarque</p></section>
+<footer class="panel-footer"><button id="fit">Fit England</button><button id="sourcesButton">Data sources & limitations</button></footer></aside>
+<div class="map-tools"><label for="basemap" class="sr-only">Basemap</label><select id="basemap"><option value="imagery">Satellite</option><option value="light">Light map</option></select><button id="clearSelection" hidden>Clear area ×</button></div>
+<aside id="areaCard" hidden aria-label="Selected local authority"></aside><div id="status" role="status"></div><div id="toast" role="alert" hidden></div>
 </main>
-<dialog id="coverage"><div class="dialog-heading"><div><span class="eyebrow">ABOUT THE EVIDENCE</span><h2>Data & coverage</h2></div><button id="closeCoverage" class="close" aria-label="Close data and coverage">×</button></div><p>Each layer retains its source date. Raster overlays are generalised for web display; source resolution and qualifications appear in the map key. An empty area may indicate missing coverage.</p><div class="downloads"><a href="data/district_statistics.csv" download>Download district statistics · CSV</a><a href="manifest.json" download>Download source register · JSON</a><a href="SOURCES.md" download>Data credits & references</a></div><div id="coverageSummary"></div><div class="table-wrap"><table><thead><tr><th>Layer</th><th>Date</th><th>Coverage</th><th>Source</th></tr></thead><tbody id="coverageRows"></tbody></table></div><h3>Remaining gaps</h3><ul id="issues"></ul><p id="buildDate" class="muted"></p></dialog>
-<script src="vendor/leaflet.js"></script><script src="app.js"></script>
-</body></html>
+<main id="analysisPage" hidden class="analysis-page"><header class="page-head"><div><p class="eyebrow">ENGLAND / COUNTRY ANALYSIS</p><h1>People, places and environment</h1><p>Compare local authorities and take the results back to the map.</p></div><button id="analysisExport">Export table · CSV</button></header><div id="nationalStats" class="kpis"></div><section class="analysis-card"><div class="analysis-filters"><label>Search local authorities<input id="areaSearch" type="search" placeholder="All local authorities"></label><label>Compare<select id="analysisMetric"><option value="population_2025">Population · 2025</option><option value="density_km2">Population density</option><option value="area_km2">Land area</option></select></label><label>Order<select id="analysisSort"><option value="desc">Highest first</option><option value="asc">Lowest first</option><option value="name">Name</option></select></label></div><div id="analysisSummary" class="scope-note"></div><div id="rankings"></div><p class="method-note">WorldPop 2025 modelled population. Totals use source-cell centres within December 2025 local authority boundaries. Density uses the same geographical area. Source coverage is shown in area details.</p></section><footer>Mapping by Hugh Lamarque · Dates and methods remain attached to each measure.</footer></main>
+<dialog id="sources"><div class="dialog-heading"><div><p class="eyebrow">ENGLAND / SOURCE REGISTER</p><h2>Data sources & limitations</h2></div><button id="closeSources" class="close" aria-label="Close sources">×</button></div><p>Each layer retains its source date. Modelled population, historical travel times and settlement projections describe different periods.</p><div class="downloads"><a href="data/district_statistics.csv" download>District statistics · CSV</a><a href="manifest.json" download>Source register · JSON</a><a href="SOURCES.md" download>References</a></div><div id="coverageSummary"></div><div class="table-wrap"><table><thead><tr><th>Layer</th><th>Date</th><th>Coverage</th><th>Source</th></tr></thead><tbody id="coverageRows"></tbody></table></div><h3>Availability</h3><ul id="issues"></ul><p id="buildDate" class="method-note"></p></dialog>
+<script src="vendor/leaflet.js"></script><script src="app.js?v=2"></script></body></html>
