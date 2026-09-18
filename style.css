@@ -103,3 +103,39 @@
 @media print{.comparison-charts{grid-template-columns:1fr 1fr}.chart-card{break-inside:avoid}.overview-controls,.chart-inspector,.chart-data{display:none}.chart-note{font-size:10px}}
 
 @media(max-width:620px){#analysisPage{padding-top:18px}#analysisPage .page-head{margin-bottom:14px}#analysisPage .page-head .eyebrow{font-size:9px;margin-bottom:6px}#analysisPage .page-head h1{font-size:25px}#analysisPage .page-head p:not(.eyebrow){font-size:12px}#analysisPage .page-head button{margin-top:10px}#analysisPage .kpis{gap:7px;margin-bottom:12px}#analysisPage .kpi{padding:9px 12px}#analysisPage .kpi span{font-size:10px}#analysisPage .kpi strong{font-size:20px;margin:2px 0}}
+
+/* Release 8: individual land cover and practical planning comparisons. */
+.land-cover-choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.land-cover-choices button{display:flex;align-items:center;gap:7px;min-height:38px;font-size:11px;line-height:1.4;text-align:left;padding:8px}
+.land-cover-choices button:first-child{grid-column:1/-1}
+.cover-swatch{flex:none;width:11px;height:11px;border:1px solid #0003;border-radius:3px}
+.land-cover-choices button[aria-pressed=true] .cover-swatch{border-color:#fffa}
+.planning-presets{display:flex;gap:7px;align-items:center;flex-wrap:wrap;border-top:1px solid #e3ebe5;margin-top:13px;padding-top:12px}
+.planning-presets>span{font-size:11px;color:#607369;margin-right:3px}
+.planning-presets button{font-size:11px;border-radius:18px;padding:6px 11px}
+.planning-charts{align-items:stretch}
+.planning-charts .chart-heading{min-height:57px;margin-bottom:5px}
+.planning-charts .chart-heading h2{font-size:20px;line-height:1.3;max-width:430px}
+.planning-charts .chart-subtitle{margin-bottom:10px;min-height:33px}
+.practical-bars{display:flex;flex-direction:column;gap:4px}
+.practical-bar{display:grid;grid-template-columns:19px minmax(0,1fr) auto;gap:4px 8px;align-items:center;text-align:left;position:relative;border:1px solid transparent;border-radius:6px;padding:6px 6px 7px;background:white;color:var(--text);min-height:43px}
+.practical-bar:hover{background:#f4f7f4;border-color:#ceddd2}
+.practical-rank{font-size:10px;color:#657c6d;grid-row:1/3}
+.practical-name{font-size:12px;line-height:1.35;overflow-wrap:anywhere}
+.practical-bar strong{font-size:12px;font-weight:600;white-space:nowrap}
+.practical-track{grid-column:2/4;display:block;height:6px;background:#edf2ee;border-radius:4px;overflow:hidden}
+.practical-track>span{display:block;height:100%;background:#658e78;border-radius:4px;min-width:1px}
+#exposureCard .practical-track>span{background:#6699b4}
+.practical-bar[aria-pressed=true]{background:#fbf6ec;color:#5c4828;border-color:#e0c99f}
+.practical-bar[aria-pressed=true] .practical-track>span,#exposureCard .practical-bar[aria-pressed=true] .practical-track>span{background:#ad7628}
+.exposure-options{display:flex;flex-wrap:wrap;gap:6px 12px;margin-bottom:8px}
+.exposure-options .chart-hazards{margin:0;min-height:0}
+.exposure-options .chart-hazards button{font-size:10px;padding:5px 9px}
+.supporting-heading{margin:24px 0 13px;align-items:baseline}
+.supporting-heading h2{font-size:18px!important}
+.supporting-heading>span{font-size:11px;color:#63796b}
+@media(max-width:620px){.planning-charts .chart-heading{min-height:0;margin-bottom:9px}.planning-charts .chart-heading h2{font-size:18px}.practical-name{font-size:12px}.practical-bar{min-height:47px}.supporting-heading{display:block}.supporting-heading>span{display:block;margin-top:6px}.planning-presets>span{width:100%}.planning-presets{gap:6px}.planning-presets button{padding:7px 10px}.land-cover-choices button{font-size:12px;min-height:40px}}
+
+#toast{position:fixed;top:78px;max-width:min(500px,calc(100% - 30px))}
+
+#analysisPage .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}#analysisPage .kpi{min-width:0}@media(max-width:620px){#analysisPage .kpi{padding:9px}#analysisPage .kpi span{line-height:1.35;display:block}#analysisPage .kpi strong{font-size:23px}}

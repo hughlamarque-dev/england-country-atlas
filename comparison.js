@@ -1,5 +1,12 @@
 'use strict';
-let comparisonHazard='rofsw',inspectedAuthority='';
+let comparisonHazard='rofsw',inspectedAuthority='',exposureBasis='people';
+const PLANNING_PRESETS=[
+ ['no_car_pct','Transport','Households without a car or van'],
+ ['disability_limited_lot_pct','Accessible support','Disability · activities limited a lot'],
+ ['child_income_deprivation_pct','Children','Income deprivation affecting children'],
+ ['older_income_deprivation_pct','Older people','Income deprivation affecting older people'],
+ ['income_deprivation_pct','Financial pressure','Income deprivation · all ages']
+];
 
 // Five equal-width intervals, with readable limits and no discarded extremes.
 function chartExtent(values){
@@ -27,7 +34,7 @@ function chartGrid(x,y,w,h,maxY,steps){
 }
 function renderComparisonCharts(){
  if(!$('distributionCard'))return;
- renderDistributionChart();renderRelationshipChart();
+ renderPlanningPresets();renderPriorityChart();renderExposureChart();renderDistributionChart();renderRelationshipChart();
 }
 function renderDistributionChart(){
  const metric=$('analysisMetric').value,meta=METRICS[metric],rows=analysisRows.filter(p=>Number.isFinite(p[metric]));
@@ -68,11 +75,42 @@ function renderRelationshipChart(){
  }else html+='<p class="chart-empty">No authorities in this search have both measures.</p>';
  html+='<p class="chart-note">'+rows.length+' of '+analysisRows.length+' authorities in this search · '+(analysisRows.length-rows.length)+' without both measures. <a href="'+esc(source.url)+'" target="_blank" rel="noopener">EA '+esc(source.period)+'</a> · high + medium likelihood (≥1% annual chance). <a href="'+NEEDS_SOURCE+'" target="_blank" rel="noopener">IoD2025</a> uses inputs from different years. Area-level association does not identify which low-income households are exposed.</p>';
  box.innerHTML=html;
- box.querySelectorAll('[data-hazard]').forEach(b=>b.onclick=()=>{comparisonHazard=b.dataset.hazard;renderRelationshipChart();box.querySelector('[data-hazard="'+comparisonHazard+'"]').focus();});
+ box.querySelectorAll('[data-hazard]').forEach(b=>b.onclick=()=>{comparisonHazard=b.dataset.hazard;renderExposureChart();renderRelationshipChart();box.querySelector('[data-hazard="'+comparisonHazard+'"]').focus();});
  const inspect=$('inspectAuthority');
  if(inspect){
   inspect.onchange=()=>{inspectedAuthority=inspect.value;renderRelationshipChart();$('inspectAuthority').focus();};
   box.querySelectorAll('[data-authority]').forEach(dot=>dot.onclick=()=>{inspectedAuthority=dot.dataset.authority;renderRelationshipChart();});
   $('chartShortlist').onclick=()=>{toggleShortlist(inspectedAuthority);$('chartShortlist')?.focus();};
  }
+}
+
+function renderPlanningPresets(){
+ const box=$('planningPresets');box.innerHTML='<span>Start with a planning question</span>';
+ for(const[key,label,title]of PLANNING_PRESETS){const b=document.createElement('button');b.textContent=label;b.title=title;b.dataset.planning=key;b.setAttribute('aria-pressed',String($('analysisMetric').value===key));b.onclick=()=>{$('analysisMetric').value=key;renderAnalysis();box.querySelector('[data-planning="'+key+'"]').focus();};box.append(b);}
+}
+function topComparisonRows(key){
+ return analysisRows.filter(p=>Number.isFinite(p[key])).sort((a,b)=>b[key]-a[key]||a.name.localeCompare(b.name)).slice(0,8);
+}
+function practicalBars(rows,key,meta,allValues){
+ const max=Math.max(1,...allValues.filter(Number.isFinite));
+ if(!rows.length)return '<p class="chart-empty">No authorities in this search have this measure.</p>';
+ return '<div class="practical-bars" role="group" aria-label="Select an authority to add or remove it from the shortlist">'+rows.map((p,i)=>'<button class="practical-bar" data-shortlist="'+p.code+'" aria-pressed="'+shortlist.has(p.code)+'" aria-label="'+esc((shortlist.has(p.code)?'Remove ':'Shortlist ')+p.name)+'"><span class="practical-rank">'+(i+1)+'</span><span class="practical-name">'+esc(p.name)+'</span><strong>'+esc(metricValue(p[key],key,meta.decimals))+'</strong><span class="practical-track" aria-hidden="true"><span style="width:'+Math.max(0,100*p[key]/max)+'%"></span></span></button>').join('')+'</div>';
+}
+function wirePracticalBars(box){
+ box.querySelectorAll('[data-shortlist]').forEach(b=>b.onclick=()=>{const code=b.dataset.shortlist;toggleShortlist(code);box.querySelector('[data-shortlist="'+code+'"]')?.focus();});
+}
+function renderPriorityChart(){
+ const box=$('priorityCard'),key=$('analysisMetric').value,meta=METRICS[key],rows=topComparisonRows(key),valid=analysisRows.filter(p=>Number.isFinite(p[key])).length;
+ const questions={no_car_pct:'Where might transport support matter?',disability_limited_lot_pct:'Where might accessible support matter?',disability_pct:'Where is disability more prevalent?',child_income_deprivation_pct:'Where is child income deprivation higher?',older_income_deprivation_pct:'Where is older-age income deprivation higher?',income_deprivation_pct:'Where is income deprivation higher?',imd_top10_pct:'Where is deprivation concentrated?'};
+ const period=meta.period||(NEEDS_METRICS[key]?'IoD2025':key==='population_2025'||key==='density_km2'?'WorldPop 2025':'');
+ const interpretation=key==='no_car_pct'?'Households, not people. Read alongside local public transport: no car does not establish transport isolation.':key.startsWith('disability')?'Crude Census rates, not age-standardised. Confirm individual support and access requirements locally.':NEEDS_METRICS[key]?'Area-level context for planning outreach. It does not establish an individual household’s need.':'Higher values describe this measure; they do not constitute an emergency-priority score.';
+ box.innerHTML='<div class="chart-heading"><div><p class="eyebrow">SUPPORT PLANNING · SELECTED INDICATOR</p><h2>'+esc(questions[key]||'Which areas have the highest values?')+'</h2></div></div><p class="chart-subtitle">'+esc(meta.title)+' · '+esc(meta.unit)+(period?' · '+esc(period):'')+'</p>'+practicalBars(rows,key,meta,areas.map(f=>f.properties[key]))+'<p class="chart-note">Highest '+rows.length+' of '+valid+' authorities with data in this search · '+(analysisRows.length-valid)+' unavailable. Select an area to add or remove it from your shortlist; selected bars are gold.</p><p class="chart-note">'+esc(interpretation)+(meta.source_url?' <a href="'+esc(meta.source_url)+'" target="_blank" rel="noopener">Source ↗</a>':NEEDS_METRICS[key]?' <a href="'+NEEDS_SOURCE+'" target="_blank" rel="noopener">IoD2025 ↗</a>':'')+'</p>';
+ wirePracticalBars(box);
+}
+function renderExposureChart(){
+ const box=$('exposureCard'),key=comparisonHazard+'_people_high_medium'+(exposureBasis==='share'?'_pct':''),meta=FLOOD_METRICS[key],source=floodData.sources[comparisonHazard],rows=topComparisonRows(key),valid=analysisRows.filter(p=>Number.isFinite(p[key])).length;
+ box.innerHTML='<div class="chart-heading"><div><p class="eyebrow">LONG-TERM FLOOD EXPOSURE</p><h2>Where is exposure greatest?</h2></div></div><div class="exposure-options"><div class="chart-hazards" role="group" aria-label="Flood source for exposure ranking"><button data-source="rofsw" aria-pressed="'+(comparisonHazard==='rofsw')+'">Surface water</button><button data-source="rofrs" aria-pressed="'+(comparisonHazard==='rofrs')+'">Rivers & sea</button></div><div class="chart-hazards" role="group" aria-label="Exposure ranking basis"><button data-basis="people" aria-pressed="'+(exposureBasis==='people')+'">Estimated people</button><button data-basis="share" aria-pressed="'+(exposureBasis==='share')+'">% exposed</button></div></div><p class="chart-subtitle">'+(exposureBasis==='share'?'Share of EA estimated population':'EA estimated people')+' · high + medium likelihood (≥1% annual chance) · '+esc(source.period)+'</p>'+practicalBars(rows,key,meta,areas.map(f=>f.properties[key]))+'<p class="chart-note">Highest '+rows.length+' of '+valid+' authorities with data in this search · '+(analysisRows.length-valid)+' unavailable. Select an area to shortlist it.</p><p class="chart-note">'+(exposureBasis==='share'?'Published high + medium percentages, using the EA denominator.':'Estimates use residential properties × '+source.factor+'.')+' These are whole-authority exposure estimates, not people affected by a current event. Flood sources overlap; do not add them. <a href="'+esc(source.url)+'" target="_blank" rel="noopener">EA source ↗</a></p>';
+ wirePracticalBars(box);
+ box.querySelectorAll('[data-source]').forEach(b=>b.onclick=()=>{comparisonHazard=b.dataset.source;renderExposureChart();renderRelationshipChart();box.querySelector('[data-source="'+comparisonHazard+'"]').focus();});
+ box.querySelectorAll('[data-basis]').forEach(b=>b.onclick=()=>{exposureBasis=b.dataset.basis;renderExposureChart();box.querySelector('[data-basis="'+exposureBasis+'"]').focus();});
 }

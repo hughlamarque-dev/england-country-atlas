@@ -26,11 +26,12 @@ function renderShortlist(){
 }
 function currentAtlasLink(){
  const u=new URL(location.href);u.search='';
+ if(primaryId==='landcover'){u.searchParams.set('environment','land');u.searchParams.set('landcover',landCoverClass);}
  if(selectedArea)u.searchParams.set('area',selectedArea.properties.code);
  const key=!$('analysisPage').hidden?$('analysisMetric').value:primaryId?.replace('district_need_','').replace('district_flood_','');
  if(key&&(NEEDS_METRICS[key]||METRICS[key]))u.searchParams.set('indicator',key);
  if(shortlist.size)u.searchParams.set('compare',[...shortlist].join(','));
- if(!$('analysisPage').hidden){u.searchParams.set('floodChart',comparisonHazard);if(inspectedAuthority)u.searchParams.set('inspect',inspectedAuthority);if($('areaSearch').value)u.searchParams.set('search',$('areaSearch').value);u.searchParams.set('sort',$('analysisSort').value);}
+ if(!$('analysisPage').hidden){u.searchParams.set('floodChart',comparisonHazard);u.searchParams.set('exposureBasis',exposureBasis);if(inspectedAuthority)u.searchParams.set('inspect',inspectedAuthority);if($('areaSearch').value)u.searchParams.set('search',$('areaSearch').value);u.searchParams.set('sort',$('analysisSort').value);}
  if(!$('partnersPage').hidden){if($('partnerSearch').value)u.searchParams.set('partner',$('partnerSearch').value);if($('partnerRegion').value)u.searchParams.set('region',$('partnerRegion').value);if($('partnerType').value)u.searchParams.set('partnerType',$('partnerType').value);if($('partnerSaved').checked)u.searchParams.set('saved',filteredPartners().map(p=>p.id).join(','));}
  return u.href;
 }
@@ -41,9 +42,11 @@ function shareAtlasView(){
 async function restoreAtlasState(){
  await loadAreas();shortlist=new Set([...shortlist].filter(code=>areas.some(a=>a.properties.code===code)));
  if(initialAtlasState.has('compare'))shortlist=new Set(initialAtlasState.get('compare').split(',').filter(code=>areas.some(a=>a.properties.code===code)).slice(0,6));
- comparisonHazard=initialAtlasState.get('floodChart')==='rofrs'?'rofrs':'rofsw';inspectedAuthority=initialAtlasState.get('inspect')||'';
+ comparisonHazard=initialAtlasState.get('floodChart')==='rofrs'?'rofrs':'rofsw';exposureBasis=initialAtlasState.get('exposureBasis')==='share'?'share':'people';inspectedAuthority=initialAtlasState.get('inspect')||'';
  $('areaSearch').value=initialAtlasState.get('search')||'';if(['asc','desc','name'].includes(initialAtlasState.get('sort')))$('analysisSort').value=initialAtlasState.get('sort');
  saveShortlist();const metric=initialAtlasState.get('indicator');
+ if(manifest.comparison_exclusions?.[metric])toast('That indicator has been removed from comparisons. Showing households without a car or van.');
+ const cover=initialAtlasState.get('landcover');if(view==='environment'&&cover&&(cover==='all'||landCoverClasses().some(c=>String(c.value)===cover))){environment='land';landCoverClass=cover;choose('landcover');}
  if(metric&&METRICS[metric]){if(!$('analysisPage').hidden){$('analysisMetric').value=metric;renderAnalysis();}else if(view==='flood'&&FLOOD_METRICS[metric])choose('district_flood_'+metric);else if(view==='needs'&&NEEDS_METRICS[metric])choose('district_need_'+metric);else if(view==='population'&&['population_2025','density_km2'].includes(metric))choose(metric==='population_2025'?'district_population':'district_density');}
  const area=areas.find(a=>a.properties.code===initialAtlasState.get('area'));if(area)selectArea(area,{zoom:true});
  if(initialAtlasState.has('partner'))$('partnerSearch').value=initialAtlasState.get('partner');

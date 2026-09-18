@@ -1,6 +1,6 @@
 'use strict';
 function catalogueRows(){
- const rows=manifest.layers.map(l=>({id:l.id,title:l.title,group:l.group||'Map data',format:l.kind,period:l.date,source:l.source,source_url:l.source_url||'',coverage:l.kind==='raster'?fmt(l.coverage_pct,1)+'% of display mask':fmt(l.count)+' records',interpretation:l.note||'See the original source documentation.'}));
+ const rows=[...manifest.layers,...(manifest.archived_layers||[]).map(l=>({...l,group:'Archived source · not displayed',note:l.archive_reason+' '+l.note}))].map(l=>({id:l.id,title:l.title,group:l.group||'Map data',format:l.kind,period:l.date,source:l.source,source_url:l.source_url||'',coverage:l.kind==='raster'?fmt(l.coverage_pct,1)+'% of display mask':fmt(l.count)+' records',interpretation:l.note||'See the original source documentation.'}));
  rows.push({id:'resilience_forums',title:'English Local Resilience Forums',group:'Local partners',format:'directory',period:'Directory updated '+resilienceData.directory_updated,source:'Cabinet Office',source_url:resilienceData.source_url,coverage:resilienceData.records.length+' directory entries',interpretation:resilienceData.note+' Directory checked '+resilienceData.checked+'. Individual linked websites and current contact roles were not independently verified.'});
  return rows;
 }
@@ -25,5 +25,5 @@ function openCatalogue(){
 function initialiseCatalogue(){
  $('sourceSearch').oninput=renderCatalogue;$('sourceGroup').onchange=renderCatalogue;
  $('downloadAllProfiles').onclick=async()=>{await loadAreas();exportRows(areas.map(f=>f.properties),'England-community-profiles.csv');};
- $('sourceJSON').onclick=()=>downloadBlob(JSON.stringify({exported_at:new Date().toISOString(),layers:catalogueRows(),census_provenance:censusData.sources,flood_provenance:{sources:floodData.sources,tables:floodData.tables,geography:floodData.geography_note,source_issue:floodData.source_issue,percentage_note:floodData.percentage_note},deprivation_provenance:{source:preparednessData.source,workbook:preparednessData.workbook,sha256:preparednessData.source_sha256},partner_sources:[preparednessData.partner_source,resilienceData.source_url]},null,2),'England-source-catalogue.json','application/json');
+ $('sourceJSON').onclick=()=>downloadBlob(JSON.stringify({exported_at:new Date().toISOString(),layers:catalogueRows(),comparison_exclusions:manifest.comparison_exclusions||{},census_provenance:censusData.sources,flood_provenance:{sources:floodData.sources,tables:floodData.tables,geography:floodData.geography_note,source_issue:floodData.source_issue,percentage_note:floodData.percentage_note},deprivation_provenance:{source:preparednessData.source,workbook:preparednessData.workbook,sha256:preparednessData.source_sha256},partner_sources:[preparednessData.partner_source,resilienceData.source_url]},null,2),'England-source-catalogue.json','application/json');
 }
