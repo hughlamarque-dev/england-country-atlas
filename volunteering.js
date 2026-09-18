@@ -223,7 +223,7 @@
     if (!mapReady) {notice('The map is unavailable. See the location note in the listing.');return;}
     const r=data.records.find(record=>record.id===id);if (!r?.location) return;
     $('recordDialog').close();$('volunteerMap').scrollIntoView({behavior:'smooth',block:'center'});map.invalidateSize();
-    map.setView([r.location.lat,r.location.lon],r.location.basis==='venue'?13:r.location.basis==='office'?11:8);renderMap(false);
+    map.setView([r.location.lat,r.location.lon],r.location.basis==='venue'?13:r.location.basis==='office'?11:8,{animate:false});renderMap(false);
     let found=false;markers.eachLayer(marker=>{if (marker._routeIDs.includes(id)) {marker.openPopup();found=true;}});
     if (!found) notice('This listing is outside the current filters. Reset the filters to show it on the map.');
   }
