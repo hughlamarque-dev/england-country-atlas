@@ -147,3 +147,16 @@ Historical severe drought frequency has been removed from the map choices and co
 The motorised healthcare comparison for more than two hours has also been removed: all 296 authority values are 0.00%. Historical travel-time source maps remain available and dated; these data cannot establish present-day access or service capacity. Future builds preserve the land-cover controls and omit this motorised comparison when its values are identical.
 
 Existing source values are unchanged. Additional file downloads were not required.
+
+
+## OSM interaction and loading — release 2026.09.18.9
+
+- Feature types now share a consistent colour across the category controls, map markers, cluster rings and expanded spider markers. Cities, towns and villages also have different marker sizes; these are OSM place classifications.
+- Cluster popups provide a list of names that opens individual feature details, including airports, ports and stations. Source categories that were not retained precisely remain labelled as other transport records; no missing port type has been inferred.
+- Point paths use SVG with individual hit targets so a higher point layer does not intercept clicks across an entire canvas. Map points and clusters support keyboard activation.
+- All enabled layers with zoom restrictions now show guidance beside the controls, including an action to zoom to detail. Railways have an explicitly generalised overview at wider scales.
+- Detailed OSM records are copied without changing their coordinates or properties into smaller geographic downloads, compressed for modern browsers. The original files remain available as a fallback. Downloads run in bounded parallel batches; old work stops scheduling further requests after the view changes. Only shapes intersecting the map are drawn.
+- A reproducible central-London bounding-box check (west −0.15, south 51.48, east −0.10, north 51.52) reduced selected power data from 38 files / 8,475,833 file bytes to 2 files / 140,800 file bytes; railways from 17 / 4,710,800 to 2 / 267,456; major roads from 43 / 11,254,435 to 2 / 588,640. These compare stored payload sizes, not measured end-to-end loading times; CDN compression and network conditions affect actual transfer times.
+- A complete audit checks the record count and an order-independent SHA-256 fingerprint of all original versus repackaged detailed features. The railway overview alone simplifies geometry for display; individual-track downloads retain the source geometries.
+
+No additional user download is needed for these changes. A fresh OSM extraction would recover the harbour/aeroway tags missing from some existing transport records; the builder now uses the qualifying category tag for future extractions. A fresh extraction is separate from reusing its existing extraction cache.
