@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>England Atlas</title>
+<link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="identity"><span class="mark" aria-hidden="true">E</span><div><h1>England Atlas</h1><p>People, places and environment</p></div></div><div class="header-actions"><button id="viewsToggle" aria-controls="sidebar" aria-expanded="true">Views & layers</button><button id="coverageButton">Data & coverage</button></div></header>
+<main>
+<div id="map" aria-label="Interactive map of England"></div>
+<aside id="sidebar" aria-label="Map views and layers">
+<div class="panel-heading"><h2>Explore England</h2><button class="close" id="closeViews" aria-label="Close views">×</button></div>
+<p class="intro">Choose a view, then select the evidence you want to see.</p>
+<nav id="views" aria-label="Map views"></nav>
+<section class="layer-section"><h3 id="layerHeading">Clean map</h3><p id="viewDescription"></p><div id="layers"></div></section>
+<section class="search-section"><label for="search">Find a town or local authority</label><input id="search" type="search" placeholder="Search England…" autocomplete="off"><div id="searchResults" role="listbox"></div></section>
+<div class="base-section"><label for="basemap">Basemap</label><select id="basemap"><option value="imagery">Satellite imagery</option><option value="light">Light map</option></select><button id="fit">Fit England</button></div>
+<p class="credit">Mapping by Hugh Lamarque</p>
+</aside>
+<section id="legend" hidden aria-label="Map legend"><div class="panel-heading"><h2 id="legendTitle"></h2><button id="collapseLegend" class="close" aria-label="Minimise legend">−</button></div><div id="legendBody"></div></section>
+<button id="expandLegend" hidden>Show key</button>
+<div id="status" role="status">Opening England…</div>
+<div id="toast" role="alert" hidden></div>
+</main>
+<dialog id="coverage"><div class="dialog-heading"><div><span class="eyebrow">ABOUT THE EVIDENCE</span><h2>Data & coverage</h2></div><button id="closeCoverage" class="close" aria-label="Close data and coverage">×</button></div><p>Each layer retains its source date. Raster overlays are generalised for web display; source resolution and qualifications appear in the map key. An empty area may indicate missing coverage.</p><div class="downloads"><a href="data/district_statistics.csv" download>Download district statistics · CSV</a><a href="manifest.json" download>Download source register · JSON</a><a href="SOURCES.md" download>Data credits & references</a></div><div id="coverageSummary"></div><div class="table-wrap"><table><thead><tr><th>Layer</th><th>Date</th><th>Coverage</th><th>Source</th></tr></thead><tbody id="coverageRows"></tbody></table></div><h3>Remaining gaps</h3><ul id="issues"></ul><p id="buildDate" class="muted"></p></dialog>
+<script src="vendor/leaflet.js"></script><script src="app.js"></script>
+</body></html>
