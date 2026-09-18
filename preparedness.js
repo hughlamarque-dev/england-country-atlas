@@ -24,7 +24,7 @@ async function initialisePreparedness(){
 function mergePreparedness(f,l){if(!l?.id.startsWith('district'))return f;return {...f,properties:{...f.properties,...(preparednessData?.records[f.properties.code]||{}),name:f.properties.name,code:f.properties.code}};}
 function renderPreparednessControls(box,metrics){
  if(view==='needs'){
-  const label=document.createElement('label');label.className='control-label';label.textContent='Compare community needs';label.htmlFor='needsIndicator';box.append(label);
+  const label=document.createElement('label');label.className='control-label';label.textContent='Compare community needs';label.htmlFor='needsIndicator';
   const select=document.createElement('select');select.id='needsIndicator';select.className='control-select';select.setAttribute('aria-label','Community needs indicator');
   for(const[key,meta]of Object.entries(NEEDS_METRICS)){const option=new Option(meta.title,'district_need_'+key);option.selected=primaryId==='district_need_'+key;select.add(option);}select.onchange=e=>choose(e.target.value);box.append(select);
   const p=document.createElement('p');p.className='measure-explanation';p.textContent=primaryId==='district_need_imd_top10_pct'?'Share of neighbourhoods in England’s most deprived 10%. Select an area to open its briefing.':'Published income-deprivation measure. Select an area to open its briefing.';metrics.append(p);
