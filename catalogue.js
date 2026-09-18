@@ -16,7 +16,7 @@ function openCatalogue(){
  for(const group of [...new Set(catalogueRows().map(r=>r.group))].sort())$('sourceGroup').add(new Option(group,group));$('sourceGroup').value=selected;
  renderCatalogue();
  const missing=areas.filter(a=>a.properties.imd_top10_pct==null).map(a=>a.properties.name);
- $('issues').innerHTML=manifest.issues.map(x=>'<li><strong>'+esc(x.layer)+':</strong> '+esc(x.message)+'</li>').join('');
+ $('issues').innerHTML=manifest.issues.map(x=>'<li><strong>'+esc(x.layer)+':</strong> '+esc(x.layer==='Flood risk'?'Validated flood exposure is not included. Historical surface-water observations are a separate measure.':x.layer==='Rainfall'?'The rainfall layer is unavailable in this release.':x.message)+'</li>').join('');
  if(missing.length)$('issues').innerHTML+='<li><strong>Geography:</strong> '+esc(missing.join(', '))+' have no matched deprivation values. Source and atlas codes differ.</li>';
  $('buildDate').textContent='Map data built '+new Date(manifest.built_at).toLocaleDateString('en-GB')+' · Community data and web interface reviewed 18 September 2026 · '+(manifest.web_version||'');
  $('sources').showModal();
