@@ -7,7 +7,7 @@ async function initialiseFlood(){
  const districts=layer('districts');
  for(const[key,meta]of Object.entries(FLOOD_METRICS)){
   manifest.analysis_metrics[key]=meta;
-  manifest.layers.push({...districts,id:'district_flood_'+key,title:meta.title+' · ≥1% annual chance',group:'Flood exposure',date:meta.period,source:meta.source,source_url:meta.source_url,unit:meta.unit+' · '+meta.period,note:meta.note+' '+floodData.geography_note,count:Object.keys(floodData.records).length,style:{metric:key,breaks:meta.breaks,colors:FLOOD_COLORS}});
+  manifest.layers.push({...districts,id:'district_flood_'+key,title:meta.title+' · ≥1% annual chance',group:'Flood exposure',date:meta.period,source:meta.source,source_url:meta.source_url,unit:meta.unit+' · '+meta.period,note:meta.note+' '+floodData.geography_note+' '+floodData.source_issue+' '+floodData.percentage_note,count:Object.keys(floodData.records).length,style:{metric:key,breaks:meta.breaks,colors:FLOOD_COLORS}});
  }
 }
 function renderFloodControls(box,metrics){
@@ -18,11 +18,10 @@ function renderFloodControls(box,metrics){
  });
  const label=document.createElement('label');label.htmlFor='floodIndicator';label.className='control-label';label.textContent='Exposure at ≥1% annual chance';box.append(label);
  const select=document.createElement('select');select.id='floodIndicator';select.className='control-select';select.setAttribute('aria-label','Flood exposure indicator');
- for(const[k,m]of Object.entries(FLOOD_METRICS)){if(m.hazard!==hazard)continue;const option=new Option(m.title.split(' · ')[1],'district_flood_'+k);option.selected=k===key;select.append(option);}select.onchange=e=>choose(e.target.value);box.append(select);
- const p=document.createElement('p');p.className='measure-explanation';p.textContent='High + medium likelihood bands · '+meta.period+'. Shading compares whole authorities; it does not show where flooding occurs within them.';metrics.append(p);
+ for(const[k,m]of Object.entries(FLOOD_METRICS)){if(m.hazard!==hazard)continue;const option=new Option(m.title.split(' · ')[1].replace(/^./,c=>c.toUpperCase()),'district_flood_'+k);option.selected=k===key;select.append(option);}select.onchange=e=>choose(e.target.value);box.append(select);
+ const p=document.createElement('p');p.className='measure-explanation';p.textContent='High + medium · '+meta.period+'. Shading shows authority summaries, not flood zones.';metrics.append(p);
  const b=document.createElement('button');b.className='wide-action';b.textContent='Compare all areas';b.onclick=()=>{$('analysisMetric').value=key;showAnalysis();};metrics.append(b);
  const details=document.createElement('details');details.className='coverage-detail';details.innerHTML='<summary>293 of 296 areas matched</summary><p>'+esc(floodData.geography_note)+'</p>';metrics.append(details);
- const definitions=document.createElement('details');definitions.className='coverage-detail';definitions.innerHTML='<summary>Definitions & source checks</summary><p>'+esc(meta.note)+'</p><p>'+esc(floodData.source_issue)+'</p><p>'+esc(floodData.percentage_note)+'</p><a href="'+esc(meta.source_url)+'" target="_blank" rel="noopener">Environment Agency source ↗</a>';metrics.append(definitions);
 }
 function floodSourceHTML(){
  return '<p>Environment Agency: <a href="'+floodData.sources.rofrs.url+'" target="_blank" rel="noopener">rivers and sea · June 2026</a>; <a href="'+floodData.sources.rofsw.url+'" target="_blank" rel="noopener">surface water · September 2025</a>. NRD 2023 property base. Estimated people equal residential properties × 2.36 for rivers and sea, or × 2.35 for surface water. These are long-term exposure estimates. The two sources overlap and must not be added.</p><p>'+esc(floodData.geography_note)+'</p><details><summary>Source inconsistencies retained</summary><p>'+esc(floodData.source_issue)+'</p><p>'+esc(floodData.percentage_note)+'</p></details>';
@@ -32,7 +31,7 @@ function floodBriefingHTML(p){
  if(!floodData.records[p.code])return html+'<p class="data-context">'+esc(floodData.withheld[p.name]||'No matching flood data.')+'</p>';
  for(const[hazard,s]of Object.entries(floodData.sources)){
   html+='<h4>'+esc(s.title)+' · '+esc(s.period)+'</h4><div class="table-wrap"><table class="flood-table"><thead><tr><th>Likelihood</th><th>Estimated people</th><th>People (%)</th><th>Properties</th>'+(hazard==='rofsw'?'<th>Ground-floor properties</th>':'')+'</tr></thead><tbody>';
-  for(const band of [...s.bands,'all']){const label=band==='all'?'All published bands':band.replace('_',' ').replace(/^./,c=>c.toUpperCase());html+='<tr><th scope="row">'+esc(label)+'</th><td>'+fmt(p[hazard+'_people_'+band])+'</td><td>'+fmt(p[hazard+'_people_'+band+'_pct'],1)+'%</td><td>'+fmt(p[hazard+'_properties_'+band])+'</td>'+(hazard==='rofsw'?'<td>'+fmt(p[hazard+'_groundfloor_'+band])+'</td>':'')+'</tr>';}
+  for(const band of [...s.bands,'all']){const label=band==='all'?'All published bands':band.replace('_',' ').replace(/^./,c=>c.toUpperCase());html+='<tr><th scope="row">'+esc(label)+'</th><td>'+fmt(p[hazard+'_people_'+band])+'</td><td>'+esc(metricValue(p[hazard+'_people_'+band+'_pct'],hazard+'_people_'+band+'_pct',1))+'</td><td>'+fmt(p[hazard+'_properties_'+band])+'</td>'+(hazard==='rofsw'?'<td>'+fmt(p[hazard+'_groundfloor_'+band])+'</td>':'')+'</tr>';}
   html+='</tbody></table></div>';
  }
  return html+'<p class="method-note">High: ≥3.3% annual chance; medium: 1–&lt;3.3%. Rivers/sea low: 0.1–&lt;1%; very low: &lt;0.1%. Surface-water low: &lt;1%. “All published bands” covers different likelihood ranges in the two products. People are shown rounded to whole estimates; exports retain source precision.</p>'+floodSourceHTML();
@@ -46,3 +45,5 @@ function floodExportMetadata(p){return {
  flood_source_issue:floodData.source_issue,flood_percentage_note:floodData.percentage_note,
  flood_interpretation:'Whole-authority long-term exposure. Do not add river/sea and surface-water figures. Does not estimate people affected by a current incident.'
 };}
+
+function metricValue(value,key,decimals=1){if(value==null)return 'Unavailable';if(key.endsWith('_pct'))return value>0&&value<0.05?'<0.1%':fmt(value,decimals)+'%';return fmt(value,decimals);}

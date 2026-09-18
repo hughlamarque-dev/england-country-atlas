@@ -16,7 +16,7 @@ function comparisonHTML(){
  if(!rows.length)return '<p>Add areas from the list below or from an area’s map card.</p>';
  let html='<table class="comparison-table"><caption>Area profiles · source periods differ. Flood measures: high + medium likelihood (≥1% annual chance).</caption><thead><tr><th scope="col">Measure</th>'+rows.map(p=>'<th scope="col">'+esc(p.name)+'</th>').join('')+'</tr></thead><tbody>';
  const metrics={population_2025:{title:'Modelled population',unit:'residents',period:'WorldPop 2025',decimals:0},...NEEDS_METRICS,...FLOOD_METRICS};
- for(const[key,m]of Object.entries(metrics))html+='<tr><th scope="row">'+esc(m.title)+'<small>'+esc(m.unit+' · '+(m.period||'IoD2025'))+'</small></th>'+rows.map(p=>'<td>'+esc(p[key]==null?'Unavailable':fmt(p[key],m.decimals)+(key.endsWith('_pct')?'%':''))+'</td>').join('')+'</tr>';
+ for(const[key,m]of Object.entries(metrics))html+='<tr><th scope="row">'+esc(m.title)+'<small>'+esc(m.unit+' · '+(m.period||'IoD2025'))+'</small></th>'+rows.map(p=>'<td>'+esc(p[key]==null?'Unavailable':metricValue(p[key],key,m.decimals))+'</td>').join('')+'</tr>';
  return html+'</tbody></table>';
 }
 function renderShortlist(){
