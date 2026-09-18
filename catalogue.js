@@ -16,7 +16,8 @@ function openCatalogue(){
  for(const group of [...new Set(catalogueRows().map(r=>r.group))].sort())$('sourceGroup').add(new Option(group,group));$('sourceGroup').value=selected;
  renderCatalogue();
  const missing=areas.filter(a=>a.properties.imd_top10_pct==null).map(a=>a.properties.name);
- $('issues').innerHTML=manifest.issues.map(x=>'<li><strong>'+esc(x.layer)+':</strong> '+esc(x.layer==='Flood risk'?'Validated flood exposure is not included. Historical surface-water observations are a separate measure.':x.layer==='Rainfall'?'The rainfall layer is unavailable in this release.':x.message)+'</li>').join('');
+ $('issues').innerHTML=manifest.issues.map(x=>'<li><strong>'+esc(x.layer)+':</strong> '+esc(x.layer==='Flood risk'?'Authority flood exposure summaries are included. Detailed flood-extent geometries are not included; historical surface-water observations remain separate.':x.layer==='Rainfall'?'The rainfall layer is unavailable in this release.':x.message)+'</li>').join('');
+ $('issues').innerHTML+='<li><strong>Flood geography:</strong> '+esc(floodData.geography_note)+'</li>';
  if(missing.length)$('issues').innerHTML+='<li><strong>Geography:</strong> '+esc(missing.join(', '))+' have no matched deprivation values. Source and atlas codes differ.</li>';
  $('buildDate').textContent='Map data built '+new Date(manifest.built_at).toLocaleDateString('en-GB')+' · Community data and web interface reviewed 18 September 2026 · '+(manifest.web_version||'');
  $('sources').showModal();
@@ -24,5 +25,5 @@ function openCatalogue(){
 function initialiseCatalogue(){
  $('sourceSearch').oninput=renderCatalogue;$('sourceGroup').onchange=renderCatalogue;
  $('downloadAllProfiles').onclick=async()=>{await loadAreas();exportRows(areas.map(f=>f.properties),'England-community-profiles.csv');};
- $('sourceJSON').onclick=()=>downloadBlob(JSON.stringify({exported_at:new Date().toISOString(),layers:catalogueRows(),census_provenance:censusData.sources,deprivation_provenance:{source:preparednessData.source,workbook:preparednessData.workbook,sha256:preparednessData.source_sha256},partner_sources:[preparednessData.partner_source,resilienceData.source_url]},null,2),'England-source-catalogue.json','application/json');
+ $('sourceJSON').onclick=()=>downloadBlob(JSON.stringify({exported_at:new Date().toISOString(),layers:catalogueRows(),census_provenance:censusData.sources,flood_provenance:{sources:floodData.sources,tables:floodData.tables,geography:floodData.geography_note,source_issue:floodData.source_issue,percentage_note:floodData.percentage_note},deprivation_provenance:{source:preparednessData.source,workbook:preparednessData.workbook,sha256:preparednessData.source_sha256},partner_sources:[preparednessData.partner_source,resilienceData.source_url]},null,2),'England-source-catalogue.json','application/json');
 }

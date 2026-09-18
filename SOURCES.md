@@ -32,3 +32,8 @@ Technical references:
 - UK Community Foundations directory, 45 offices grouped under English regions, checked 18 September 2026: https://www.ukcommunityfoundations.org/find-a-foundation
 - The office directory is not a map of service areas or a list of confirmed NET appeal partners.
 - See NET-Atlas-Review.md for rationale and prioritised additions.
+
+
+## Environment Agency flood-exposure summaries
+
+User-supplied RoFRS_KeySummaryInfo.zip and RoFSW_KeySummaryInfo.zip, inspected 18 September 2026. River/sea workbooks June 2026; surface-water workbooks September 2025; NRD 2023 property base. Source catalogues: https://environment.data.gov.uk/dataset/dcbad548-ba75-4f32-bf22-306f9059343e and https://environment.data.gov.uk/dataset/0ff39df9-b8da-4885-831d-2d3bca8eb6cd . Open Government Licence. Workbook hashes, sheet names, coverage and source checks accompany data/flood_risk.json. See NET-Atlas-Review.md for known inconsistencies and excluded geographic matches.
