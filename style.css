@@ -163,3 +163,6 @@
 .topnav .nav-link{display:inline-flex;align-items:center;text-decoration:none;color:inherit;padding:10px 14px;font-size:13px;border-radius:5px;white-space:nowrap}.topnav .nav-link:hover{background:#edf3ee}.topnav .nav-link:focus-visible{outline:2px solid #356a59;outline-offset:2px}.partner-coverage{color:#526a60;font-size:13px;line-height:1.5}.directory-notice a{color:#255e4e;font-weight:600;white-space:normal}
 @media(max-width:900px){.brand span{display:none}.topnav .nav-link{padding:9px 8px}}
 @media(max-width:560px){.topnav{height:88px;flex-wrap:wrap;align-content:center;gap:3px;padding:6px 12px}.topnav .brand{width:100%;font-size:16px}.topnav nav{width:100%;justify-content:space-between}.topnav button,.topnav .nav-link{padding:8px 6px;font-size:12px}.topnav button:last-child{display:block}#mapPage{height:calc(100dvh - 88px)}}
+
+/* Distinguish measured car availability from unmeasured assistance needs. */
+.practical-context{display:block;font-size:10px;font-weight:400;line-height:1.4;color:#5f7268;margin-top:3px}.chart-interpretation{padding:12px 14px;margin:0 0 13px;border:1px solid #d4e0d7;border-left:3px solid #688977;border-radius:6px;background:#f2f6f2;font-size:11px;line-height:1.6;color:#445e4e}.chart-interpretation strong{display:block;color:#294e3c;font-size:12px}.chart-interpretation p{margin:6px 0 0}

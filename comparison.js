@@ -1,11 +1,11 @@
 'use strict';
 let comparisonHazard='rofsw',inspectedAuthority='',exposureBasis='people';
 const PLANNING_PRESETS=[
- ['no_car_pct','Transport','Households without a car or van'],
+ ['income_deprivation_pct','Financial pressure','Income deprivation · all ages'],
+ ['no_car_pct','Car availability','Households without a car or van'],
  ['disability_limited_lot_pct','Accessible support','Disability · activities limited a lot'],
  ['child_income_deprivation_pct','Children','Income deprivation affecting children'],
- ['older_income_deprivation_pct','Older people','Income deprivation affecting older people'],
- ['income_deprivation_pct','Financial pressure','Income deprivation · all ages']
+ ['older_income_deprivation_pct','Older people','Income deprivation affecting older people']
 ];
 
 // Five equal-width intervals, with readable limits and no discarded extremes.
@@ -85,26 +85,30 @@ function renderRelationshipChart(){
 }
 
 function renderPlanningPresets(){
- const box=$('planningPresets');box.innerHTML='<span>Start with a planning question</span>';
+ const box=$('planningPresets');box.innerHTML='<span>Explore a measure</span>';
  for(const[key,label,title]of PLANNING_PRESETS){const b=document.createElement('button');b.textContent=label;b.title=title;b.dataset.planning=key;b.setAttribute('aria-pressed',String($('analysisMetric').value===key));b.onclick=()=>{$('analysisMetric').value=key;renderAnalysis();box.querySelector('[data-planning="'+key+'"]').focus();};box.append(b);}
 }
 function topComparisonRows(key){
  return analysisRows.filter(p=>Number.isFinite(p[key])).sort((a,b)=>b[key]-a[key]||a.name.localeCompare(b.name)).slice(0,8);
 }
+function carIncomeContext(p){
+ return 'Income deprivation: '+(Number.isFinite(p.income_deprivation_pct)?fmt(p.income_deprivation_pct,1)+'%':'unavailable')+' · IoD2025';
+}
 function practicalBars(rows,key,meta,allValues){
  const max=Math.max(1,...allValues.filter(Number.isFinite));
  if(!rows.length)return '<p class="chart-empty">No authorities in this search have this measure.</p>';
- return '<div class="practical-bars" role="group" aria-label="Select an authority to add or remove it from the shortlist">'+rows.map((p,i)=>'<button class="practical-bar" data-shortlist="'+p.code+'" aria-pressed="'+shortlist.has(p.code)+'" aria-label="'+esc((shortlist.has(p.code)?'Remove ':'Shortlist ')+p.name)+'"><span class="practical-rank">'+(i+1)+'</span><span class="practical-name">'+esc(p.name)+'</span><strong>'+esc(metricValue(p[key],key,meta.decimals))+'</strong><span class="practical-track" aria-hidden="true"><span style="width:'+Math.max(0,100*p[key]/max)+'%"></span></span></button>').join('')+'</div>';
+ return '<div class="practical-bars" role="group" aria-label="Select an authority to add or remove it from the shortlist">'+rows.map((p,i)=>'<button class="practical-bar" data-shortlist="'+p.code+'" aria-pressed="'+shortlist.has(p.code)+'" aria-label="'+esc((shortlist.has(p.code)?'Remove ':'Shortlist ')+p.name+(key==='no_car_pct'?' · '+metricValue(p[key],key,meta.decimals)+' of households without a car or van · '+carIncomeContext(p):''))+'"><span class="practical-rank">'+(i+1)+'</span><span class="practical-name">'+esc(p.name)+(key==='no_car_pct'?'<small class="practical-context">'+esc(carIncomeContext(p))+'</small>':'')+'</span><strong>'+esc(metricValue(p[key],key,meta.decimals))+'</strong><span class="practical-track" aria-hidden="true"><span style="width:'+Math.max(0,100*p[key]/max)+'%"></span></span></button>').join('')+'</div>';
 }
 function wirePracticalBars(box){
  box.querySelectorAll('[data-shortlist]').forEach(b=>b.onclick=()=>{const code=b.dataset.shortlist;toggleShortlist(code);box.querySelector('[data-shortlist="'+code+'"]')?.focus();});
 }
 function renderPriorityChart(){
  const box=$('priorityCard'),key=$('analysisMetric').value,meta=METRICS[key],rows=topComparisonRows(key),valid=analysisRows.filter(p=>Number.isFinite(p[key])).length;
- const questions={no_car_pct:'Where might transport support matter?',disability_limited_lot_pct:'Where might accessible support matter?',disability_pct:'Where is disability more prevalent?',child_income_deprivation_pct:'Where is child income deprivation higher?',older_income_deprivation_pct:'Where is older-age income deprivation higher?',income_deprivation_pct:'Where is income deprivation higher?',imd_top10_pct:'Where is deprivation concentrated?'};
+ const questions={no_car_pct:'Where is car availability lowest?',disability_limited_lot_pct:'Where might accessible support matter?',disability_pct:'Where is disability more prevalent?',child_income_deprivation_pct:'Where is child income deprivation higher?',older_income_deprivation_pct:'Where is older-age income deprivation higher?',income_deprivation_pct:'Where is income deprivation higher?',imd_top10_pct:'Where is deprivation concentrated?'};
  const period=meta.period||(NEEDS_METRICS[key]?'IoD2025':key==='population_2025'||key==='density_km2'?'WorldPop 2025':'');
- const interpretation=key==='no_car_pct'?'Households, not people. Read alongside local public transport: no car does not establish transport isolation.':key.startsWith('disability')?'Crude Census rates, not age-standardised. Confirm individual support and access requirements locally.':NEEDS_METRICS[key]?'Area-level context for planning outreach. It does not establish an individual household’s need.':'Higher values describe this measure; they do not constitute an emergency-priority score.';
- box.innerHTML='<div class="chart-heading"><div><p class="eyebrow">SUPPORT PLANNING · SELECTED INDICATOR</p><h2>'+esc(questions[key]||'Which areas have the highest values?')+'</h2></div></div><p class="chart-subtitle">'+esc(meta.title)+' · '+esc(meta.unit)+(period?' · '+esc(period):'')+'</p>'+practicalBars(rows,key,meta,areas.map(f=>f.properties[key]))+'<p class="chart-note">Highest '+rows.length+' of '+valid+' authorities with data in this search · '+(analysisRows.length-valid)+' unavailable. Select an area to add or remove it from your shortlist; selected bars are gold.</p><p class="chart-note">'+esc(interpretation)+(meta.source_url?' <a href="'+esc(meta.source_url)+'" target="_blank" rel="noopener">Source ↗</a>':NEEDS_METRICS[key]?' <a href="'+NEEDS_SOURCE+'" target="_blank" rel="noopener">IoD2025 ↗</a>':'')+'</p>';
+ const transportContext=key==='no_car_pct'?'<div class="chart-interpretation"><strong>Car availability is not a measure of transport need.</strong><p>This Census measure cannot distinguish choosing to live without a car from being unable to afford or use one. It does not measure public transport access, accessible travel or disruption during an emergency.</p><p>Whole-council averages can hide both affluence and deprivation within a borough. Confirm unmet need locally before prioritising vehicle support. <a href="'+NEEDS_SOURCE+'" target="_blank" rel="noopener">Income context: IoD2025 ↗</a></p></div>':'';
+ const interpretation=key==='no_car_pct'?'Ranked only by the share of households without a car or van. Income is shown separately for context, not combined into a score. The two measures use different populations and years and do not identify the same households.':key.startsWith('disability')?'Crude Census rates, not age-standardised. Confirm individual support and access requirements locally.':NEEDS_METRICS[key]?'Area-level context for planning outreach. It does not establish an individual household’s need.':'Higher values describe this measure; they do not constitute an emergency-priority score.';
+ box.innerHTML='<div class="chart-heading"><div><p class="eyebrow">AREA CONTEXT · SELECTED INDICATOR</p><h2>'+esc(questions[key]||'Which areas have the highest values?')+'</h2></div></div><p class="chart-subtitle">'+esc(meta.title)+' · '+esc(meta.unit)+(period?' · '+esc(period):'')+'</p>'+transportContext+practicalBars(rows,key,meta,areas.map(f=>f.properties[key]))+'<p class="chart-note">Highest '+rows.length+' of '+valid+' authorities with data in this search · '+(analysisRows.length-valid)+' unavailable. Select an area to add or remove it from your shortlist; selected bars are gold.</p><p class="chart-note">'+esc(interpretation)+(meta.source_url?' <a href="'+esc(meta.source_url)+'" target="_blank" rel="noopener">Source ↗</a>':NEEDS_METRICS[key]?' <a href="'+NEEDS_SOURCE+'" target="_blank" rel="noopener">IoD2025 ↗</a>':'')+'</p>';
  wirePracticalBars(box);
 }
 function renderExposureChart(){
