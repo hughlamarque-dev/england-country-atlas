@@ -9,7 +9,7 @@
     fit: {team_day:'Team volunteering',individual:'Individual volunteering',skills:'Professional skills',ongoing:'Ongoing commitment',unknown:'Format to confirm'},
     status: {advertised:'Published opportunity',enquiry:'Enquire with host',ongoing:'Ongoing commitment',closed:'Closed'},
     kind: {opportunity:'Opportunity',programme:'Programme',broker:'Local broker',platform:'Search platform'},
-    basis: {venue:'Activity venue',office:'Organisation office',area_anchor:'Approximate area — not a venue'}
+    basis: {venue:'Activity venue',office:'Organisation office',area_anchor:'Approximate area — not a venue',cluster:'Nearby map positions — select to zoom'}
   };
   const COLOURS = {preparedness:'#527d9a',recovery:'#a17837',community_support:'#437b62',environment:'#7b883c',skills:'#866298',response:'#b36052'};
   const STORAGE_KEY = 'england-atlas-volunteering-shortlist-v1';
@@ -159,6 +159,21 @@
     }
     return [...groups.values()];
   }
+  function displayLocations(records) {
+    const points=groupedLocations(records);
+    if (!map || map.getZoom()>=8) return points;
+    const cells=new Map();
+    for (const group of points) {
+      const point=map.project([group.location.lat,group.location.lon],map.getZoom());
+      const key=Math.floor(point.x/60)+':'+Math.floor(point.y/60);
+      if (!cells.has(key)) cells.set(key,[]);
+      cells.get(key).push(group);
+    }
+    return [...cells.values()].map(groups=>groups.length===1?groups[0]:{
+      location:{lat:groups.reduce((n,g)=>n+g.location.lat,0)/groups.length,lon:groups.reduce((n,g)=>n+g.location.lon,0)/groups.length,label:'Grouped map locations',basis:'cluster'},
+      records:groups.flatMap(g=>g.records),points:groups.map(g=>[g.location.lat,g.location.lon])
+    });
+  }
   async function initialiseMap() {
     if (!window.L) {$('mapMessage').hidden=false;$('mapMessage').textContent='Map unavailable. All route details remain available in the list.';return;}
     map=L.map('volunteerMap',{preferCanvas:true,scrollWheelZoom:false,minZoom:4,maxZoom:18}).setView([53,-2.5],6);
@@ -168,7 +183,7 @@
     const tiles=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxNativeZoom:16,maxZoom:18,attribution:'Esri, HERE, Garmin, © OpenStreetMap contributors'}).addTo(map);
     tiles.on('tileerror',()=>{if (!tileError && !tileSuccess) {$('mapMessage').hidden=false;$('mapMessage').textContent='Background map tiles could not load. Route markers and the results list remain available.';}tileError=true;});
     tiles.on('tileload',()=>{tileSuccess=true;if (tileError) $('mapMessage').hidden=true;});
-    markers=L.layerGroup().addTo(map);mapReady=true;renderMap(true);
+    markers=L.layerGroup().addTo(map);mapReady=true;map.on('zoomend',()=>renderMap(false));renderMap(true);
     try {
       const response=await fetch('data/volunteering-areas.geojson',{cache:'no-cache'});if (!response.ok) return;
       const boundaries=await response.json();
@@ -179,14 +194,15 @@
   function renderMap(shouldFit) {
     if (!mapReady) return;
     markers.clearLayers();
-    const groups=groupedLocations(filtered);
+    const groups=displayLocations(filtered);
     for (const group of groups) {
-      const {location:loc,records}=group,size=records.length>1?38:29,basis=['venue','office','area_anchor'].includes(loc.basis)?loc.basis:'area_anchor';
+      const {location:loc,records}=group,size=records.length>1?38:29,basis=['venue','office','area_anchor','cluster'].includes(loc.basis)?loc.basis:'area_anchor';
       const icon=L.divIcon({className:'area-marker marker-'+basis,html:`<span>${records.length}</span>`,iconSize:[size,size],iconAnchor:[size/2,size/2]});
       const title=`${loc.label||areaNames(records[0])}: ${records.length} ${records.length===1?'route':'routes'} · ${LABELS.basis[basis]}`;
       const marker=L.marker([loc.lat,loc.lon],{icon,title,alt:title,keyboard:true});
       marker.bindTooltip(esc(loc.label||areaNames(records[0]))+' · '+records.length,{direction:'top',offset:[0,-size/2],className:'area-tooltip'});
-      marker.bindPopup(`<h3>${esc(loc.label||areaNames(records[0]))}</h3><p>${esc(LABELS.basis[basis])}${basis==='office'?' — activity location may differ.':''}${loc.precision==='postcode'?' · Approximate postcode position; confirm the meeting point with the host.':''}</p><div class="map-popup-list">${records.map(r=>`<button type="button" data-details="${esc(r.id)}">${esc(r.title)}<small>${esc(r.organisation)} · ${esc(freshness(r).label)}</small></button>`).join('')}</div>`,{maxWidth:315});
+      if (basis==='cluster') marker.on('click',()=>map.fitBounds(L.latLngBounds(group.points),{padding:[45,45],maxZoom:12}));
+      else marker.bindPopup(`<h3>${esc(loc.label||areaNames(records[0]))}</h3><p>${esc(LABELS.basis[basis])}${basis==='office'?' — activity location may differ.':''}${loc.precision==='postcode'?' · Approximate postcode position; confirm the meeting point with the host.':''}</p><div class="map-popup-list">${records.map(r=>`<button type="button" data-details="${esc(r.id)}">${esc(r.title)}<small>${esc(r.organisation)} · ${esc(freshness(r).label)}</small></button>`).join('')}</div>`,{maxWidth:315});
       marker.addTo(markers);marker._routeIDs=records.map(r=>r.id);
     }
     const mapped=groups.reduce((sum,g)=>sum+g.records.length,0);
@@ -207,7 +223,8 @@
     if (!mapReady) {notice('The map is unavailable. See the location note in the listing.');return;}
     const r=data.records.find(record=>record.id===id);if (!r?.location) return;
     $('recordDialog').close();$('volunteerMap').scrollIntoView({behavior:'smooth',block:'center'});map.invalidateSize();
-    let found=false;markers.eachLayer(marker=>{if (marker._routeIDs.includes(id)) {map.setView(marker.getLatLng(),r.location.basis==='venue'?13:r.location.basis==='office'?11:8);marker.openPopup();found=true;}});
+    map.setView([r.location.lat,r.location.lon],r.location.basis==='venue'?13:r.location.basis==='office'?11:8);renderMap(false);
+    let found=false;markers.eachLayer(marker=>{if (marker._routeIDs.includes(id)) {marker.openPopup();found=true;}});
     if (!found) notice('This listing is outside the current filters. Reset the filters to show it on the map.');
   }
 

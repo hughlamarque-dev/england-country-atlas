@@ -6,7 +6,7 @@
   <meta name="description" content="Explore sourced routes into community resilience volunteering in England. A source-checked England atlas referral directory.">
   <title>Volunteering · England community &amp; emergency atlas</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="volunteering.css?v=20260918.11">
+  <link rel="stylesheet" href="volunteering.css?v=20260918.11b">
 </head>
 <body>
 <a class="skip-link" href="#filters">Skip to volunteering filters</a>
@@ -49,8 +49,8 @@
         <div class="map-heading"><div><h2>Where you could help</h2><p id="mapSummary">Select a marker to explore local routes.</p></div><button id="fitMap" type="button" aria-label="Fit map to filtered results">Fit map</button></div>
         <div id="volunteerMap" role="region" aria-label="Map of volunteering routes across England"></div>
         <p class="map-message" id="mapMessage" hidden></p>
-        <div class="map-key" aria-label="Map marker key"><span><i class="key-area" aria-hidden="true"></i>Area only</span><span><i class="key-office" aria-hidden="true"></i>Organisation office</span><span><i class="key-venue" aria-hidden="true"></i>Activity venue</span></div>
-        <p class="map-precision">Dashed markers show an approximate area, not an activity address. Some site markers use approximate postcode positions. Numbers count listed routes at that marker. Council search boundaries do not show host service coverage.</p>
+        <div class="map-key" aria-label="Map marker key"><span><i class="key-cluster" aria-hidden="true"></i>Grouped · select to zoom</span><span><i class="key-area" aria-hidden="true"></i>Area only</span><span><i class="key-office" aria-hidden="true"></i>Organisation office</span><span><i class="key-venue" aria-hidden="true"></i>Activity venue</span></div>
+        <p class="map-precision">Dashed markers show an approximate area, not an activity address. Some site markers use approximate postcode positions. Numbers count listed routes. Green groups combine nearby map positions when zoomed out; select one to zoom. Council search boundaries do not show host service coverage.</p>
       </div>
       <section class="coverage-card" aria-label="Regional directory coverage"><h2>Explore an area</h2><div id="areaCoverage"></div><p>Listing counts describe this directory’s coverage, not the amount of volunteering available locally.</p></section>
     </aside>
@@ -66,6 +66,6 @@
 <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
 <noscript><p class="noscript">Enable JavaScript to filter the directory, or <a href="data/volunteering.json">download the source register</a>.</p></noscript>
 <script src="vendor/leaflet.js"></script>
-<script src="volunteering.js?v=20260918.11"></script>
+<script src="volunteering.js?v=20260918.11b"></script>
 </body>
 </html>
