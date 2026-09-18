@@ -1,0 +1,28 @@
+'use strict';
+function catalogueRows(){
+ const rows=manifest.layers.map(l=>({id:l.id,title:l.title,group:l.group||'Map data',format:l.kind,period:l.date,source:l.source,source_url:l.source_url||'',coverage:l.kind==='raster'?fmt(l.coverage_pct,1)+'% of display mask':fmt(l.count)+' records',interpretation:l.note||'See the original source documentation.'}));
+ rows.push({id:'resilience_forums',title:'English Local Resilience Forums',group:'Local partners',format:'directory',period:'Directory updated '+resilienceData.directory_updated,source:'Cabinet Office',source_url:resilienceData.source_url,coverage:resilienceData.records.length+' directory entries',interpretation:resilienceData.note+' Directory checked '+resilienceData.checked+'. Individual linked websites and current contact roles were not independently verified.'});
+ return rows;
+}
+function renderCatalogue(){
+ const q=$('sourceSearch').value.trim().toLowerCase(),group=$('sourceGroup').value;
+ const rows=catalogueRows().filter(r=>(!group||r.group===group)&&(!q||[r.title,r.source,r.period,r.interpretation].join(' ').toLowerCase().includes(q)));
+ $('coverageSummary').textContent=rows.length+' layers and directories shown · '+manifest.district_count+' local authorities';
+ $('coverageRows').innerHTML=rows.map(r=>'<tr><th scope="row">'+esc(r.title)+'<small>'+esc(r.group)+'</small></th><td>'+esc(r.period)+'</td><td>'+esc(r.coverage)+'</td><td>'+(r.source_url?'<a href="'+esc(r.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(r.source)+' ↗</a>':esc(r.source))+'<details><summary>Interpretation</summary><p>'+esc(r.interpretation)+'</p></details></td></tr>').join('')||'<tr><td colspan="4">No sources match these filters.</td></tr>';
+ $('sourceExport').disabled=!rows.length;$('sourceExport').onclick=()=>downloadTable(rows,'England-source-catalogue.csv');
+}
+function openCatalogue(){
+ const selected=$('sourceGroup').value;$('sourceGroup').replaceChildren(new Option('All groups',''));
+ for(const group of [...new Set(catalogueRows().map(r=>r.group))].sort())$('sourceGroup').add(new Option(group,group));$('sourceGroup').value=selected;
+ renderCatalogue();
+ const missing=areas.filter(a=>a.properties.imd_top10_pct==null).map(a=>a.properties.name);
+ $('issues').innerHTML=manifest.issues.map(x=>'<li><strong>'+esc(x.layer)+':</strong> '+esc(x.message)+'</li>').join('');
+ if(missing.length)$('issues').innerHTML+='<li><strong>Geography:</strong> '+esc(missing.join(', '))+' have no matched deprivation values. Source and atlas codes differ.</li>';
+ $('buildDate').textContent='Map data built '+new Date(manifest.built_at).toLocaleDateString('en-GB')+' · Community data and web interface reviewed 18 September 2026 · '+(manifest.web_version||'');
+ $('sources').showModal();
+}
+function initialiseCatalogue(){
+ $('sourceSearch').oninput=renderCatalogue;$('sourceGroup').onchange=renderCatalogue;
+ $('downloadAllProfiles').onclick=async()=>{await loadAreas();exportRows(areas.map(f=>f.properties),'England-community-profiles.csv');};
+ $('sourceJSON').onclick=()=>downloadBlob(JSON.stringify({exported_at:new Date().toISOString(),layers:catalogueRows(),census_provenance:censusData.sources,deprivation_provenance:{source:preparednessData.source,workbook:preparednessData.workbook,sha256:preparednessData.source_sha256},partner_sources:[preparednessData.partner_source,resilienceData.source_url]},null,2),'England-source-catalogue.json','application/json');
+}
