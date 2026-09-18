@@ -22,3 +22,13 @@ Technical references:
 - [GDAL VRT](https://gdal.org/en/stable/drivers/raster/vrt.html): masking special byte codes before resampling.
 - [GitHub Pages REST API](https://docs.github.com/en/rest/pages/pages): main-branch publication and build verification.
 - [Leaflet](https://leafletjs.com/): bundled 1.9.4, licence in `web/vendor/LICENSE`. Basemaps are supplied online by Esri or CARTO/OSM with displayed attribution.
+
+
+## Community planning additions (18 September 2026)
+
+- MHCLG English Indices of Deprivation 2025, corrected File 10 (lower tier), updated 17 November 2025: https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025
+- Exact code joins for 294 of 296 local authorities. Barnsley and Sheffield withheld pending reconciliation of changed boundary codes.
+- Four indicators retain their official definitions: share of neighbourhoods in the most deprived decile, Income, IDACI and IDAOPI average scores multiplied by 100. No combined risk score or inferred individual eligibility.
+- UK Community Foundations directory, 45 offices grouped under English regions, checked 18 September 2026: https://www.ukcommunityfoundations.org/find-a-foundation
+- The office directory is not a map of service areas or a list of confirmed NET appeal partners.
+- See NET-Atlas-Review.md for rationale and prioritised additions.
