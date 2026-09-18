@@ -37,3 +37,13 @@ Technical references:
 ## Environment Agency flood-exposure summaries
 
 User-supplied RoFRS_KeySummaryInfo.zip and RoFSW_KeySummaryInfo.zip, inspected 18 September 2026. River/sea workbooks June 2026; surface-water workbooks September 2025; NRD 2023 property base. Source catalogues: https://environment.data.gov.uk/dataset/dcbad548-ba75-4f32-bf22-306f9059343e and https://environment.data.gov.uk/dataset/0ff39df9-b8da-4885-831d-2d3bca8eb6cd . Open Government Licence. Workbook hashes, sheet names, coverage and source checks accompany data/flood_risk.json. See NET-Atlas-Review.md for known inconsistencies and excluded geographic matches.
+
+## Community volunteering referral pilot · 18 September 2026
+
+`data/volunteering.json` contains 23 public-source records in Greater London, the Somerset Council area, and Cumbria (Cumberland plus Westmorland and Furness). Each record carries its source, evidence, source-check date, review deadline, status and location basis. Four records are advertised roles/events, sixteen are enquiry routes, and three require ongoing commitment. These are not 23 confirmed placements. Inclusion does not establish a National Emergencies Trust partnership or endorsement. Editorial resilience assessments are separated from source-derived descriptions.
+
+`data/volunteering-partners.json` adds eight local volunteering brokers and community resilience networks. This is selected pilot-area coverage, not an England-wide volunteer-centre census. `data/volunteering-areas.geojson` extracts the atlas's December 2025 local authority boundaries into pilot search areas, not host service areas.
+
+Where a host publishes a relevant postcode, the record retains it and its location basis (office or venue). [Postcodes.io](https://postcodes.io/docs/api/lookup-postcode/) supplied approximate postcode positions, checked on 18 September 2026. Host-supplied map pins retain their original source. Other points are explicitly labelled area anchors. [Postcode data attribution and licences](https://postcodes.io/docs/licences/): OS, Royal Mail, National Statistics and NRS data, copyright/database rights as stated by the provider (2025). No precise activity location is inferred from a host office or county marker.
+
+See [VOLUNTEERING-MAINTENANCE.md](VOLUNTEERING-MAINTENANCE.md) for editorial ownership, expiry rules, CSV updates and automated review reports. A working URL does not renew a source check or establish available places.

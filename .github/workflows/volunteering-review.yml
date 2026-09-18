@@ -1,0 +1,54 @@
+name: Volunteering source review
+
+on:
+  schedule:
+    - cron: '23 7 * * 1'
+  workflow_dispatch:
+    inputs:
+      check_links:
+        description: 'Also check public URLs (reachability only; does not reverify opportunities)'
+        required: false
+        default: false
+        type: boolean
+  pull_request:
+    paths:
+      - 'data/volunteering.json'
+      - 'scripts/volunteering_data.py'
+      - 'tests/test_volunteering_data.py'
+      - '.github/workflows/volunteering-review.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/volunteering.json'
+      - 'scripts/volunteering_data.py'
+      - 'tests/test_volunteering_data.py'
+      - '.github/workflows/volunteering-review.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test data safeguards
+        run: python3 -m unittest discover -s tests -p 'test_volunteering_data.py' -v
+      - name: Validate catalogue
+        run: python3 scripts/volunteering_data.py validate data/volunteering.json
+      - name: Create editorial review queue
+        run: python3 scripts/volunteering_data.py review data/volunteering.json --output volunteering-review.md
+      - name: Optional public link check
+        if: github.event_name == 'workflow_dispatch' && inputs.check_links
+        run: python3 scripts/volunteering_data.py check-links data/volunteering.json --output volunteering-link-report.json --timeout 10 --workers 4
+      - name: Save review reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: volunteering-source-review
+          path: |
+            volunteering-review.md
+            volunteering-link-report.json
+          if-no-files-found: warn
+          retention-days: 30

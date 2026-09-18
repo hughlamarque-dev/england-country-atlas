@@ -1,0 +1,1289 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-18",
+  "scope": "England pilot: London, Somerset Council and Cumbria",
+  "description": "Public-source volunteering opportunities and enquiry routes, selected for potential community preparedness, support and recovery relevance. No NET endorsement or host-confirmed places are implied.",
+  "areas": [
+    {
+      "id": "london",
+      "name": "London",
+      "lat": 51.489335,
+      "lon": -0.08811,
+      "description": "Greater London: the 32 boroughs and City of London.",
+      "bounds": [
+        [
+          51.28679,
+          -0.51024
+        ],
+        [
+          51.69188,
+          0.33402
+        ]
+      ],
+      "marker_note": "Display anchor at the centre of the pilot-area bounding box; not an activity venue."
+    },
+    {
+      "id": "somerset",
+      "name": "Somerset",
+      "lat": 51.074695,
+      "lon": -3.042125,
+      "description": "Somerset Council area; excludes Bath and North East Somerset and North Somerset.",
+      "bounds": [
+        [
+          50.82085,
+          -3.83982
+        ],
+        [
+          51.32854,
+          -2.24443
+        ]
+      ],
+      "marker_note": "Display anchor at the centre of the pilot-area bounding box; not an activity venue."
+    },
+    {
+      "id": "cumbria",
+      "name": "Cumbria",
+      "lat": 54.616625,
+      "lon": -2.89897,
+      "description": "Cumberland and Westmorland and Furness council areas.",
+      "bounds": [
+        [
+          54.04427,
+          -3.63894
+        ],
+        [
+          55.18898,
+          -2.159
+        ]
+      ],
+      "marker_note": "Display anchor at the centre of the pilot-area bounding box; not an activity venue."
+    }
+  ],
+  "location_note": "Pilot boundaries are search areas, not individual host service areas. Area markers are display anchors; postcode positions are approximate; host-map pins retain their source.",
+  "geocoding_attribution": "Postcodes.io, using ONS postcode data. Public host postcodes only; coordinates checked 18 September 2026.",
+  "records": [
+    {
+      "id": "london-thames21-corporate-river-days",
+      "title": "River and flood-mitigation team days",
+      "organisation": "Thames21",
+      "area_ids": [
+        "london"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "preparedness",
+        "environment"
+      ],
+      "description": "Arrange a corporate river volunteering day. Seasonal tasks can include wetland planting and reconnecting rivers with floodplains.",
+      "resilience_relevance": "Supports practical flood-risk reduction where the agreed activity has that purpose.",
+      "employee_fit": [
+        "team_day"
+      ],
+      "duration": "One day; agree the activity with the host.",
+      "team_size": "Tailored to the group; enquire with preferred size.",
+      "cost": "Host example: approximately £2,500 plus VAT for 20 people. Request a current quotation; cancellation terms apply.",
+      "accessibility": "Host offers activities for different abilities; confirm the chosen site's requirements.",
+      "requirements": "Enquire at least eight weeks ahead for fewer than 70 people, or twelve weeks for 70 or more.",
+      "location": {
+        "lat": 51.489335,
+        "lon": -0.08811,
+        "label": "London area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "London river sites; location agreed when arranging the day.",
+      "source_url": "https://www.thames21.org.uk/get-involved-2/corporateteamdays/",
+      "apply_url": "https://www.thames21.org.uk/get-involved-2/corporateteamdays/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Enquiry programme; dates, site, activity and capacity require agreement with Thames21.",
+      "evidence": [
+        {
+          "url": "https://www.thames21.org.uk/get-involved-2/corporateteamdays/",
+          "claim": "Host describes seasonal corporate activities, booking lead times and an indicative price."
+        }
+      ],
+      "location_postcode": null,
+      "location_address": null,
+      "location_basis": null
+    },
+    {
+      "id": "london-thames21-oxleas-20260929",
+      "title": "Oxleas Woods: Slowing the Flow — 29 September",
+      "organisation": "Thames21",
+      "area_ids": [
+        "london"
+      ],
+      "kind": "opportunity",
+      "status": "advertised",
+      "themes": [
+        "preparedness",
+        "environment"
+      ],
+      "description": "A community volunteering session improving wet woodland and slowing floodwater through work on tributaries and woodland habitat.",
+      "resilience_relevance": "The host explicitly connects this work to protecting downstream communities from flooding.",
+      "employee_fit": [
+        "individual"
+      ],
+      "duration": "29 September 2026, 11:00–15:00.",
+      "team_size": null,
+      "cost": "Free.",
+      "accessibility": "Ask the organiser about access needs before booking.",
+      "requirements": "Book before attending. Under-18s need a parent or guardian. Corporate groups must use the separate corporate programme.",
+      "location": {
+        "lat": 51.4676617,
+        "lon": 0.0680179,
+        "label": "Oxleas Wood Café, Crown Woods Lane, SE18 3JA; meeting point may change",
+        "basis": "venue",
+        "source_url": "https://www.thames21.org.uk/event/oxleas-woods-slowing-the-flow/",
+        "precision": "host_map_pin"
+      },
+      "coverage_note": "Oxleas Woods, London; normally meet at the café car park. The organiser may update the meeting point before the event.",
+      "source_url": "https://www.thames21.org.uk/event/oxleas-woods-slowing-the-flow/",
+      "apply_url": "https://book.plinth.org.uk/e/9TPs7t51MkYdlQFqEbKm",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": "2026-09-29",
+      "ends_on": "2026-09-29",
+      "application_deadline": null,
+      "source_published": "2026-08-04",
+      "availability_note": "Published event with a booking route; remaining places were not verified. Designed for the public, not corporate groups.",
+      "evidence": [
+        {
+          "url": "https://www.thames21.org.uk/event/oxleas-woods-slowing-the-flow/",
+          "claim": "Official event page supplies the date, venue coordinates in structured data, flood-management purpose and corporate-group restriction."
+        },
+        {
+          "url": "https://book.plinth.org.uk/e/9TPs7t51MkYdlQFqEbKm",
+          "claim": "Linked host booking page confirms registration is required."
+        }
+      ],
+      "location_postcode": "SE18 3JA",
+      "location_address": "Oxleas Wood Café, Crown Woods Lane, London",
+      "location_basis": "venue"
+    },
+    {
+      "id": "london-city-harvest-corporate",
+      "title": "Food redistribution team day",
+      "organisation": "City Harvest London",
+      "area_ids": [
+        "london"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "community_support"
+      ],
+      "description": "Teams help sort donated food and prepare deliveries for charities supporting people facing food poverty.",
+      "resilience_relevance": "Supports the local food-assistance network; this is everyday community support rather than a disaster deployment.",
+      "employee_fit": [
+        "team_day"
+      ],
+      "duration": "Full day.",
+      "team_size": "10–12 people.",
+      "cost": "A corporate group donation is requested; amount is not stated on the page.",
+      "accessibility": null,
+      "requirements": null,
+      "location": {
+        "lat": 51.489335,
+        "lon": -0.08811,
+        "label": "London area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "Corporate page lists Acton, Battersea and Leyton sites; the host must confirm the team's venue.",
+      "source_url": "https://cityharvest.org.uk/corporate-volunteering/",
+      "apply_url": "https://cityharvest.org.uk/corporate-volunteering/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Contact-form enquiry; the host discusses dates. No individual date or capacity is confirmed here.",
+      "evidence": [
+        {
+          "url": "https://cityharvest.org.uk/corporate-volunteering/",
+          "claim": "Host offers full-day warehouse support for groups of 10–12 and requests a donation."
+        }
+      ],
+      "location_postcode": null,
+      "location_address": null,
+      "location_basis": null
+    },
+    {
+      "id": "london-city-harvest-individual",
+      "title": "Flexible food redistribution shifts — Acton",
+      "organisation": "City Harvest London",
+      "area_ids": [
+        "london"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "community_support"
+      ],
+      "description": "Register to help with food redistribution at City Harvest’s Acton warehouse. The host offers regular or ad hoc shifts.",
+      "resilience_relevance": "Helps local charities maintain food provision for people experiencing hardship.",
+      "employee_fit": [
+        "individual"
+      ],
+      "duration": "Flexible shifts; check the registration system for times.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": "Warehouse work includes standing, walking and lifting; discuss alternatives with the host if needed.",
+      "requirements": "Warehouse volunteers receive manual-handling training and an induction. Age requirements apply.",
+      "location": {
+        "lat": 51.505229,
+        "lon": -0.257634,
+        "basis": "venue",
+        "label": "Unit 8, Acton Park Industrial Estate, London · approximate postcode position",
+        "source_url": "https://cityharvest.org.uk/community-volunteering/",
+        "precision": "postcode",
+        "geocode_source_url": "https://api.postcodes.io/postcodes/W3%207QE",
+        "geocode_checked_at": "2026-09-18"
+      },
+      "coverage_note": "Acton warehouse, Unit 8, Acton Park Industrial Estate, London W3 7QE; confirm the selected shift with the host.",
+      "source_url": "https://cityharvest.org.uk/community-volunteering/",
+      "apply_url": "https://cityharvest.org.uk/community-volunteering/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Registration route is published; specific available shifts were not inspected or reserved.",
+      "evidence": [
+        {
+          "url": "https://cityharvest.org.uk/community-volunteering/",
+          "claim": "Host describes flexible individual shifts and links to its booking system."
+        },
+        {
+          "url": "https://cityharvest.org.uk/volunteer/",
+          "claim": "FAQs describe physical warehouse tasks, induction and manual-handling preparation."
+        }
+      ],
+      "location_postcode": "W3 7QE",
+      "location_address": "Unit 8, Acton Park Industrial Estate, London",
+      "location_basis": "venue"
+    },
+    {
+      "id": "london-sar-support-skills",
+      "title": "Professional skills for search-and-rescue support",
+      "organisation": "London Search and Rescue",
+      "area_ids": [
+        "london"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "preparedness",
+        "skills"
+      ],
+      "description": "Support the charity through communications, fundraising, training administration, technology, finance or other professional skills.",
+      "resilience_relevance": "Strengthens the organisation behind London missing-person search operations.",
+      "employee_fit": [
+        "individual",
+        "skills",
+        "ongoing"
+      ],
+      "duration": "The host describes a few hours a week from home or a particular project; agree the commitment.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "Apply through the charity's volunteer recruitment route; role and commitment need agreement.",
+      "location": {
+        "lat": 51.521673,
+        "lon": -0.143705,
+        "basis": "office",
+        "label": "167–169 Great Portland Street, London · approximate postcode position",
+        "source_url": "https://www.londonsar.com/volunteer-support-services",
+        "precision": "postcode",
+        "geocode_source_url": "https://api.postcodes.io/postcodes/W1W%205PF",
+        "geocode_checked_at": "2026-09-18"
+      },
+      "coverage_note": "Supports London operations. Some support tasks can be done from home; an office pin would not identify the work location.",
+      "source_url": "https://www.londonsar.com/volunteer-support-services",
+      "apply_url": "https://www.londonsar.com/application-form",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Ongoing recruitment route; no one-day placement or specific vacancy is guaranteed.",
+      "evidence": [
+        {
+          "url": "https://www.londonsar.com/volunteer-support-services",
+          "claim": "Host lists support disciplines and describes home-based weekly or project contributions."
+        },
+        {
+          "url": "https://www.londonsar.com/volunteer",
+          "claim": "The charity states that it supports searches across London."
+        }
+      ],
+      "location_postcode": "W1W 5PF",
+      "location_address": "167–169 Great Portland Street, London",
+      "location_basis": "office"
+    },
+    {
+      "id": "london-sar-search-technician",
+      "title": "Search technician training and ongoing response",
+      "organisation": "London Search and Rescue",
+      "area_ids": [
+        "london"
+      ],
+      "kind": "programme",
+      "status": "ongoing",
+      "themes": [
+        "preparedness",
+        "response"
+      ],
+      "description": "Apply to train as a search technician supporting emergency services in searches for missing people.",
+      "resilience_relevance": "Builds trained local search-and-rescue capacity.",
+      "employee_fit": [
+        "individual",
+        "ongoing"
+      ],
+      "duration": "The host describes ten training days, followed by an ongoing operational commitment.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "Selection, training, assessment and probation are part of the pathway. This is not a single-day employee activity.",
+      "location": {
+        "lat": 51.521673,
+        "lon": -0.143705,
+        "basis": "office",
+        "label": "167–169 Great Portland Street, London · approximate postcode position",
+        "source_url": "https://www.londonsar.com/volunteer-opportunities",
+        "precision": "postcode",
+        "geocode_source_url": "https://api.postcodes.io/postcodes/W1W%205PF",
+        "geocode_checked_at": "2026-09-18"
+      },
+      "coverage_note": "Search operations across London; training and operational locations vary.",
+      "source_url": "https://www.londonsar.com/volunteer-opportunities",
+      "apply_url": "https://www.londonsar.com/application-form",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Recruitment pathway is published; the next intake and acceptance are not confirmed.",
+      "evidence": [
+        {
+          "url": "https://www.londonsar.com/volunteer-opportunities",
+          "claim": "Host describes its training, selection, assessment and ongoing response pathway."
+        }
+      ],
+      "location_postcode": "W1W 5PF",
+      "location_address": "167–169 Great Portland Street, London",
+      "location_basis": "office"
+    },
+    {
+      "id": "london-handson-wrapup-2026",
+      "title": "WrapUp London 2026: workplace coat-sorting sessions",
+      "organisation": "HandsOn London",
+      "area_ids": [
+        "london"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "community_support"
+      ],
+      "description": "Enquire about workplace-team sessions sorting winter coats for distribution through local charities.",
+      "resilience_relevance": "Helps community organisations support people facing cold-weather hardship.",
+      "employee_fit": [
+        "team_day"
+      ],
+      "duration": "Workplace sessions are advertised Tuesday–Friday between 17 November and 17 December 2026; confirm session hours.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "Arrange the session with the organiser before attending.",
+      "location": {
+        "lat": 51.489335,
+        "lon": -0.08811,
+        "label": "London area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "London campaign; the 2026 sorting-hub location is due to be published in October.",
+      "source_url": "https://www.handsonlondon.org.uk/wrap-uplondon",
+      "apply_url": "https://www.handsonlondon.org.uk/wrap-uplondon",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": "2026-11-17",
+      "ends_on": "2026-12-17",
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Host invites enquiries for 2026; dates and team capacity must be agreed. Older-looking drop-off entries on the same page were not used as volunteer venues.",
+      "evidence": [
+        {
+          "url": "https://www.handsonlondon.org.uk/wrap-uplondon",
+          "claim": "The 2026 page's volunteering FAQ gives a workplace sorting window and organiser contact, while saying the hub location will follow in October."
+        }
+      ],
+      "location_postcode": null,
+      "location_address": null,
+      "location_basis": null
+    },
+    {
+      "id": "london-felix-green-scheme",
+      "title": "Short food-rescue delivery shifts",
+      "organisation": "Felix",
+      "area_ids": [
+        "london"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "community_support",
+        "environment"
+      ],
+      "description": "Green Scheme volunteers collect surplus food from suppliers and deliver it to local community groups on foot, by bicycle or using small electric vans.",
+      "resilience_relevance": "Supports neighbourhood food assistance and local redistribution connections.",
+      "employee_fit": [
+        "individual"
+      ],
+      "duration": "Routes take approximately 1–3 hours, Monday–Friday.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "Attend an information session and complete portal training before booking a shift.",
+      "location": {
+        "lat": 51.489335,
+        "lon": -0.08811,
+        "label": "London area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "Central London routes include Old Street, Bishopsgate, Marylebone, Canary Wharf, Victoria and Barbican; choose a specific route with the host.",
+      "source_url": "https://felix.org/get-involved/volunteering/green-scheme",
+      "apply_url": "https://felix.org/get-involved/volunteering/green-scheme",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "The route and onboarding process are published; actual shift vacancies require registration and host confirmation.",
+      "evidence": [
+        {
+          "url": "https://felix.org/get-involved/volunteering/green-scheme",
+          "claim": "Host states the route locations, typical duration, weekdays and induction process."
+        }
+      ],
+      "location_postcode": null,
+      "location_address": null,
+      "location_basis": null
+    },
+    {
+      "id": "london-felix-team-shifts",
+      "title": "Food sorting and preparation team shifts — Poplar",
+      "organisation": "Felix",
+      "area_ids": [
+        "london"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "community_support"
+      ],
+      "description": "Arrange a group food-production or warehouse shift at Felix’s Poplar operation.",
+      "resilience_relevance": "Supports food supply to community organisations serving people in need.",
+      "employee_fit": [
+        "team_day"
+      ],
+      "duration": "Monday–Friday: 08:30–13:00, 12:30–17:00 or 17:00–20:00; attend the full shift.",
+      "team_size": "Up to 15 people.",
+      "cost": "Non-partners are asked for a voluntary £50 per person donation. Late cancellation and no-show terms apply; check before booking.",
+      "accessibility": null,
+      "requirements": "Group-lead approval, advance virtual training and the start-of-shift safety briefing are required.",
+      "location": {
+        "lat": 51.516006,
+        "lon": -0.024147,
+        "basis": "venue",
+        "label": "Felix Poplar operation, London · approximate postcode position",
+        "source_url": "https://felix.org/get-involved/volunteering/groups",
+        "precision": "postcode",
+        "geocode_source_url": "https://api.postcodes.io/postcodes/E14%207BN",
+        "geocode_checked_at": "2026-09-18"
+      },
+      "coverage_note": "Poplar operation, London E14 7BN; confirm arrival details with the host.",
+      "source_url": "https://felix.org/get-involved/volunteering/groups",
+      "apply_url": "https://felix.org/get-involved/volunteering/groups",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Enquiry and approval route. Corporate partners receive priority booking; no available dates have been confirmed.",
+      "evidence": [
+        {
+          "url": "https://felix.org/get-involved/volunteering/groups",
+          "claim": "Host lists London group operations, limits, registration requirements and donation terms."
+        }
+      ],
+      "location_postcode": "E14 7BN",
+      "location_address": "Felix Poplar operation, London",
+      "location_basis": "venue"
+    },
+    {
+      "id": "somerset-spark-skillshare",
+      "title": "Share professional skills with local charities",
+      "organisation": "Spark Somerset",
+      "area_ids": [
+        "somerset"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "skills",
+        "community_support"
+      ],
+      "description": "SkillShare matches business professionals with voluntary and community organisations seeking expertise, workshops or mentoring. It accepts one-off offers and longer collaborations.",
+      "resilience_relevance": "Professional support can strengthen the local organisations residents rely on; a specific preparedness or recovery task would need agreement with the host.",
+      "employee_fit": [
+        "skills",
+        "individual"
+      ],
+      "duration": "Flexible; one-off offers or longer collaborations.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": null,
+      "location": {
+        "lat": 51.074695,
+        "lon": -3.042125,
+        "label": "Somerset area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "Supports voluntary and community organisations in Somerset; matching determines where each activity takes place.",
+      "source_url": "https://www.sparksomerset.org.uk/skillshare/",
+      "apply_url": "https://www.sparksomerset.org.uk/skillshare/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "A matching programme, with no dated placement or team capacity published on this page.",
+      "evidence": [
+        {
+          "url": "https://www.sparksomerset.org.uk/skillshare/",
+          "claim": "Invites business and voluntary-sector professionals to offer expertise; matches one-off and longer support."
+        }
+      ]
+    },
+    {
+      "id": "somerset-spark-digital-champions",
+      "title": "Digital Champions: local digital inclusion",
+      "organisation": "Spark iT / Spark Somerset",
+      "area_ids": [
+        "somerset"
+      ],
+      "kind": "opportunity",
+      "status": "advertised",
+      "themes": [
+        "skills",
+        "community_support"
+      ],
+      "description": "Help residents learn everyday digital tasks at community cafés or occasional pop-up events. The host advertises flexible volunteer recruitment.",
+      "resilience_relevance": "Digital inclusion helps people access services and information; emergency-specific work would require a separate agreed brief.",
+      "employee_fit": [
+        "individual",
+        "skills"
+      ],
+      "duration": "A couple of hours weekly or monthly, or ad-hoc pop-up events.",
+      "team_size": null,
+      "cost": "The listing offers reimbursement of costs; confirm eligible expenses with the host.",
+      "accessibility": null,
+      "requirements": "Patience, people skills and good digital skills; advanced technical expertise is not required.",
+      "location": {
+        "lat": 51.074695,
+        "lon": -3.042125,
+        "label": "Somerset area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "Somerset; the listing particularly seeks volunteers in West Somerset, Taunton, Yeovil, Wellington, Chard, Highbridge and Somerton.",
+      "source_url": "https://www.sparkachange.org.uk/o/Spark-iT/opportunities/Recruiting-Volunteers-to-be-Digital-Champions/86638",
+      "apply_url": "https://www.sparkachange.org.uk/o/Spark-iT/opportunities/Recruiting-Volunteers-to-be-Digital-Champions/86638",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Recruitment listing is published, but individual session places and onboarding must be confirmed; no one-day team booking is advertised.",
+      "evidence": [
+        {
+          "url": "https://www.sparkachange.org.uk/o/Spark-iT/opportunities/Recruiting-Volunteers-to-be-Digital-Champions/86638",
+          "claim": "Recruiting Digital Champions, including an ad-hoc event pool; offers expense reimbursement."
+        },
+        {
+          "url": "https://www.sparksomerset.org.uk/spark-it/",
+          "claim": "Spark Somerset links directly to this recruitment listing and describes its local Digital Cafés."
+        }
+      ]
+    },
+    {
+      "id": "somerset-taunton-foodbank-business",
+      "title": "Foodbank team volunteering and skills support",
+      "organisation": "Taunton Foodbank",
+      "area_ids": [
+        "somerset"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "community_support",
+        "skills"
+      ],
+      "description": "Taunton Foodbank invites businesses to discuss team volunteering, workplace expertise and office food drives.",
+      "resilience_relevance": "Supports local food assistance and organisational capacity for people in crisis; no disaster-response deployment is advertised.",
+      "employee_fit": [
+        "team_day",
+        "skills"
+      ],
+      "duration": null,
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": null,
+      "location": {
+        "lat": 51.022941,
+        "lon": -3.107975,
+        "basis": "office",
+        "label": "Unit 4, Belvedere Trading Estate, Albemarle Road, Taunton, TA1 1BH · approximate postcode position",
+        "source_url": "https://taunton.foodbank.org.uk/contact-us/",
+        "precision": "postcode",
+        "geocode_source_url": "https://api.postcodes.io/postcodes/TA1%201BH",
+        "geocode_checked_at": "2026-09-18"
+      },
+      "coverage_note": "Taunton Foodbank; agree the activity venue with the host. Its service also lists distribution points in Wellington and Wiveliscombe.",
+      "source_url": "https://taunton.foodbank.org.uk/give-help/partner-with-us/",
+      "apply_url": "https://taunton.foodbank.org.uk/contact-us/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Business volunteering is invited by enquiry. A one-day format, date, team size and venue are not confirmed.",
+      "evidence": [
+        {
+          "url": "https://taunton.foodbank.org.uk/give-help/partner-with-us/",
+          "claim": "Invites team volunteering, workplace skills sharing and office food drives."
+        },
+        {
+          "url": "https://taunton.foodbank.org.uk/contact-us/",
+          "claim": "Publishes the Taunton contact address; this does not confirm a team activity venue."
+        },
+        {
+          "url": "https://taunton.foodbank.org.uk/locations/",
+          "claim": "Lists Taunton, Wellington and Wiveliscombe service locations."
+        }
+      ],
+      "location_postcode": "TA1 1BH",
+      "location_address": "Unit 4, Belvedere Trading Estate, Albemarle Road, Taunton, TA1 1BH",
+      "location_basis": "office",
+      "location_source_url": "https://taunton.foodbank.org.uk/contact-us/"
+    },
+    {
+      "id": "somerset-emergency-community-contact",
+      "title": "Become a nominated Emergency Community Contact",
+      "organisation": "Somerset Prepared",
+      "area_ids": [
+        "somerset"
+      ],
+      "kind": "programme",
+      "status": "ongoing",
+      "themes": [
+        "preparedness",
+        "response"
+      ],
+      "description": "Locally nominated contacts relay information between their community and public agencies during emergencies. Prospective contacts should first approach their parish council.",
+      "resilience_relevance": "Directly supports local preparedness and emergency communication; it requires continuing local responsibility rather than a single volunteering day.",
+      "employee_fit": [
+        "individual",
+        "ongoing"
+      ],
+      "duration": null,
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "Must be based within the parish, able to represent the community and nominated locally; access to phone, email and internet is required.",
+      "location": {
+        "lat": 51.074695,
+        "lon": -3.042125,
+        "label": "Somerset area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "Parishes and communities within Somerset; each contact represents their own locality.",
+      "source_url": "https://www.somersetprepared.org.uk/get-involved/emergency-community-contacts/",
+      "apply_url": "https://www.somersetprepared.org.uk/get-involved/emergency-community-contacts/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Published nomination route, not an open shift. Local need and nomination must be established through the parish council.",
+      "evidence": [
+        {
+          "url": "https://www.somersetprepared.org.uk/get-involved/emergency-community-contacts/",
+          "claim": "Defines the local liaison role, parish-location requirement and requirement to speak with the parish council first."
+        }
+      ]
+    },
+    {
+      "id": "somerset-act-to-adapt",
+      "title": "Community climate adaptation: Act to Adapt",
+      "organisation": "Somerset Wildlife Trust",
+      "area_ids": [
+        "somerset"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "preparedness",
+        "environment"
+      ],
+      "description": "Act to Adapt helps Somerset communities develop and implement local climate adaptation plans through collaborative events. Communities can enquire about involvement.",
+      "resilience_relevance": "Directly relevant to preparing for flooding and other climate hazards; employee contributions need a task agreed with the local project.",
+      "employee_fit": [
+        "unknown"
+      ],
+      "duration": null,
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": null,
+      "location": {
+        "lat": 51.074695,
+        "lon": -3.042125,
+        "label": "Somerset area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "Somerset communities; the page lists work in Frome, Minehead, Burnham-on-Sea and Highbridge, Spaxton, Wells and other Somerset locations.",
+      "source_url": "https://www.somersetwildlife.org/act-to-adapt",
+      "apply_url": "https://www.somersetwildlife.org/act-to-adapt",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Community participation route, not an advertised employee placement. No volunteering date, capacity or duration is published.",
+      "evidence": [
+        {
+          "url": "https://www.somersetwildlife.org/act-to-adapt",
+          "claim": "Describes local adaptation planning and invites communities to contact the programme about involvement."
+        }
+      ]
+    },
+    {
+      "id": "somerset-minehead-eye-maintenance",
+      "title": "Maintain a youth and community centre",
+      "organisation": "Minehead EYE",
+      "area_ids": [
+        "somerset"
+      ],
+      "kind": "opportunity",
+      "status": "advertised",
+      "themes": [
+        "community_support",
+        "skills"
+      ],
+      "description": "Help the centre team with minor repairs, painting and equipment upkeep. The host marks this flexible role as suitable for corporate volunteers.",
+      "resilience_relevance": "Maintains premises and equipment used by local community services; the source does not identify the centre as an emergency shelter.",
+      "employee_fit": [
+        "individual",
+        "skills"
+      ],
+      "duration": "Flexible hours.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "Disclosure and Barring Service check required.",
+      "location": {
+        "lat": 51.203611,
+        "lon": -3.468078,
+        "basis": "venue",
+        "label": "1 Mart Road, Minehead, TA24 5BJ · approximate postcode position",
+        "source_url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Maintenance-Volunteer/125055",
+        "precision": "postcode",
+        "geocode_source_url": "https://api.postcodes.io/postcodes/TA24%205BJ",
+        "geocode_checked_at": "2026-09-18"
+      },
+      "coverage_note": "Minehead EYE, 1 Mart Road, Minehead. The listing gives this venue for the role.",
+      "source_url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Maintenance-Volunteer/125055",
+      "apply_url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Maintenance-Volunteer/125055",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Published recruitment listing. Corporate suitability is stated, but a one-day group arrangement and places require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Maintenance-Volunteer/125055",
+          "claim": "Host advertises maintenance tasks, flexible hours, DBS requirement, venue and corporate suitability."
+        }
+      ],
+      "location_postcode": "TA24 5BJ",
+      "location_address": "1 Mart Road, Minehead, TA24 5BJ",
+      "location_basis": "venue",
+      "location_source_url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Maintenance-Volunteer/125055"
+    },
+    {
+      "id": "somerset-minehead-eye-centre-assistant",
+      "title": "Support community-centre activities",
+      "organisation": "Minehead EYE",
+      "area_ids": [
+        "somerset"
+      ],
+      "kind": "opportunity",
+      "status": "advertised",
+      "themes": [
+        "community_support"
+      ],
+      "description": "Support room preparation, visitor reception, bookings and deliveries at a youth and community centre. The host marks the role as suitable for corporate volunteers.",
+      "resilience_relevance": "Helps local services and community activities operate; emergency response use is not established by the listing.",
+      "employee_fit": [
+        "individual"
+      ],
+      "duration": "Flexible hours.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "Disclosure and Barring Service check required.",
+      "location": {
+        "lat": 51.203611,
+        "lon": -3.468078,
+        "basis": "venue",
+        "label": "Minehead EYE, Minehead, TA24 5BJ · approximate postcode position",
+        "source_url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Centre-Assistant-Volunteer/124603",
+        "precision": "postcode",
+        "geocode_source_url": "https://api.postcodes.io/postcodes/TA24%205BJ",
+        "geocode_checked_at": "2026-09-18"
+      },
+      "coverage_note": "Minehead EYE in Minehead; the listing publishes postcode TA24 5BJ.",
+      "source_url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Centre-Assistant-Volunteer/124603",
+      "apply_url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Centre-Assistant-Volunteer/124603",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Published recruitment listing, with no guaranteed places or one-day team format. Confirm commitment and onboarding with the host.",
+      "evidence": [
+        {
+          "url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Centre-Assistant-Volunteer/124603",
+          "claim": "Host advertises centre support tasks, flexible hours, DBS requirement, postcode and corporate suitability."
+        }
+      ],
+      "location_postcode": "TA24 5BJ",
+      "location_address": "Minehead EYE, Minehead, TA24 5BJ",
+      "location_basis": "venue",
+      "location_source_url": "https://www.sparkachange.org.uk/o/Minehead-EYE/opportunities/Centre-Assistant-Volunteer/124603"
+    },
+    {
+      "id": "somerset-sevag-volunteering-route",
+      "title": "Find a trained emergency volunteering agency",
+      "organisation": "Somerset Prepared / Somerset Emergency Voluntary Agencies Group",
+      "area_ids": [
+        "somerset"
+      ],
+      "kind": "broker",
+      "status": "enquiry",
+      "themes": [
+        "preparedness",
+        "response",
+        "recovery"
+      ],
+      "description": "Somerset Prepared signposts established voluntary agencies supporting communities before, during and after emergencies, with agency-led training and exercises.",
+      "resilience_relevance": "A route into coordinated emergency capabilities; specific roles and commitments belong to individual agencies.",
+      "employee_fit": [
+        "ongoing",
+        "individual"
+      ],
+      "duration": null,
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "Training and exercising arrangements are agency-specific; enquire with the relevant member agency.",
+      "location": {
+        "lat": 51.074695,
+        "lon": -3.042125,
+        "label": "Somerset area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "Emergency volunteering routes affecting Somerset; member agencies have different service areas.",
+      "source_url": "https://www.somersetprepared.org.uk/get-involved/volunteer/",
+      "apply_url": "https://www.somersetprepared.org.uk/contact-us/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Signposting and enquiry route only. No vacancy, deployment, place or employee volunteering day is confirmed.",
+      "evidence": [
+        {
+          "url": "https://www.somersetprepared.org.uk/get-involved/volunteer/",
+          "claim": "Describes SEVAG member capabilities and agency training and exercises, with contact and member routes."
+        }
+      ]
+    },
+    {
+      "id": "cumbria-wcrt-corporate-days",
+      "title": "River conservation team days",
+      "organisation": "West Cumbria Rivers Trust",
+      "area_ids": [
+        "cumbria"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "environment",
+        "preparedness"
+      ],
+      "description": "The trust invites companies to arrange environmental leave days and offers conservation activities tailored to team size.",
+      "resilience_relevance": "A route to a charity delivering natural flood management. Ask whether the proposed team task contributes to a specific flood-risk project.",
+      "employee_fit": [
+        "team_day"
+      ],
+      "duration": "An environmental leave day; exact timings by arrangement.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": null,
+      "location": {
+        "lat": 54.616625,
+        "lon": -2.89897,
+        "label": "Cumbria area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "West Cumbrian river catchments; the activity site is arranged with the host.",
+      "source_url": "https://www.westcumbriariverstrust.org/volunteer",
+      "apply_url": "https://www.westcumbriariverstrust.org/contact-us",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Bespoke enquiry route; no dated places or team capacity confirmed.",
+      "evidence": [
+        {
+          "url": "https://www.westcumbriariverstrust.org/volunteer",
+          "claim": "Companies can arrange tailored conservation volunteering days; the page links a costs leaflet."
+        },
+        {
+          "url": "https://www.westcumbriariverstrust.org/natural-flood-management",
+          "claim": "The trust undertakes work to slow or store water and reduce downstream flood risk."
+        }
+      ]
+    },
+    {
+      "id": "cumbria-eden-tree-nursery",
+      "title": "Eden Community Tree Nursery sessions",
+      "organisation": "Eden Rivers Trust",
+      "area_ids": [
+        "cumbria"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "environment",
+        "preparedness",
+        "community_support"
+      ],
+      "description": "Help grow native saplings and maintain a community tree nursery in Penrith. Trees support conservation projects across the Eden catchment.",
+      "resilience_relevance": "The host links the nursery to flood and drought management, accessible participation and community resilience.",
+      "employee_fit": [
+        "individual"
+      ],
+      "duration": "Usually Tuesday 13:00–16:00 or Friday 10:00–13:00; confirm each session.",
+      "team_size": null,
+      "cost": "The public session page lists participation as free.",
+      "accessibility": "Wheelchair-friendly listing; little shelter and no facilities stated. Discuss access needs before attending.",
+      "requirements": "Tell the coordinator in advance; outdoor clothing and suitable footwear required. Under-18s need an accompanying adult.",
+      "location": {
+        "lat": 54.66444356876869,
+        "lon": -2.7669282947449365,
+        "label": "Eden Community Tree Nursery, 99 Brackenber Allotments, Penrith",
+        "basis": "venue",
+        "source_url": "https://edenriverstrust.org.uk/events/eden-community-tree-nursery-drop-in-session/",
+        "precision": "host_map_pin"
+      },
+      "coverage_note": "Activity in Penrith; saplings are used at sites throughout the Eden catchment.",
+      "source_url": "https://edenriverstrust.org.uk/projects/eden-community-tree-nursery/",
+      "apply_url": "https://edenriverstrust.org.uk/events/eden-community-tree-nursery-drop-in-session/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Recurring programme. The host asks attendees to confirm arrangements because sessions can change or be cancelled.",
+      "evidence": [
+        {
+          "url": "https://edenriverstrust.org.uk/projects/eden-community-tree-nursery/",
+          "claim": "The nursery grows local native trees for river conservation and describes flood mitigation and accessibility benefits."
+        },
+        {
+          "url": "https://edenriverstrust.org.uk/events/eden-community-tree-nursery-drop-in-session/",
+          "claim": "The page supplies session times, access information, address and a venue map pin; advance contact is requested."
+        }
+      ],
+      "location_address": "99 Brackenber Allotments, Gilwilly Industrial Estate, Penrith",
+      "location_postcode": null,
+      "location_basis": "venue"
+    },
+    {
+      "id": "cumbria-eden-river-volunteering",
+      "title": "Eden river practical volunteering",
+      "organisation": "Eden Rivers Trust",
+      "area_ids": [
+        "cumbria"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "environment",
+        "preparedness"
+      ],
+      "description": "Register for seasonal river conservation work, including tree planting, riverbank maintenance and surveys.",
+      "resilience_relevance": "The trust works on river resilience and nature-based flood-risk reduction; ask which available tasks contribute to those outcomes.",
+      "employee_fit": [
+        "individual"
+      ],
+      "duration": null,
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "New volunteers register with the trust; approval is needed before booking activities.",
+      "location": {
+        "lat": 54.616625,
+        "lon": -2.89897,
+        "label": "Cumbria area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "Sites across the River Eden catchment in Cumbria; meeting places vary.",
+      "source_url": "https://edenriverstrust.org.uk/volunteer/",
+      "apply_url": "https://edenriverstrust.org.uk/volunteer-registration/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "General registration route; available activities and dates depend on the season and host schedule.",
+      "evidence": [
+        {
+          "url": "https://edenriverstrust.org.uk/volunteer/",
+          "claim": "The trust offers practical work parties and surveys and explains registration and booking."
+        },
+        {
+          "url": "https://edenriverstrust.org.uk/tackling-climate-change/",
+          "claim": "Its wider work includes nature-based approaches to flood risk and water resilience."
+        }
+      ]
+    },
+    {
+      "id": "cumbria-wildlife-wild-work-days",
+      "title": "Wild Work Days for employee teams",
+      "organisation": "Cumbria Wildlife Trust",
+      "area_ids": [
+        "cumbria"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "environment"
+      ],
+      "description": "Arrange a conservation day at a reserve or project site, with seasonal tasks such as woodland maintenance or peatland work.",
+      "resilience_relevance": "The programme describes climate-resilience benefits. Ask the host to select a task with a clear local preparedness or community benefit.",
+      "employee_fit": [
+        "team_day"
+      ],
+      "duration": "Usually 10:00–16:00; the host says timings are flexible.",
+      "team_size": "Base price covers up to 10 people; additional participants priced separately.",
+      "cost": "Published price: £500 plus VAT for up to 10 people, plus £60 per additional person. Confirm the quote.",
+      "accessibility": null,
+      "requirements": "Outdoor clothing suitable for the weather.",
+      "location": {
+        "lat": 54.616625,
+        "lon": -2.89897,
+        "label": "Cumbria area marker · activity location to be agreed",
+        "basis": "area_anchor",
+        "source_url": "https://hughlamarque-dev.github.io/england-country-atlas/data/volunteering-areas.geojson",
+        "precision": "pilot_area"
+      },
+      "coverage_note": "Reserves and project sites across Cumbria; location agreed with the host.",
+      "source_url": "https://www.cumbriawildlifetrust.org.uk/wild-work-days",
+      "apply_url": "https://www.cumbriawildlifetrust.org.uk/form/wild-work-days-enquiry-form",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Enquiry required; dates, task and site depend on season and availability.",
+      "evidence": [
+        {
+          "url": "https://www.cumbriawildlifetrust.org.uk/wild-work-days",
+          "claim": "The host publishes team-day tasks, indicative timing, pricing and an enquiry route."
+        }
+      ]
+    },
+    {
+      "id": "cumbria-carlisle-foodbank",
+      "title": "Carlisle Foodbank volunteering enquiries",
+      "organisation": "Carlisle Foodbank",
+      "area_ids": [
+        "cumbria"
+      ],
+      "kind": "programme",
+      "status": "enquiry",
+      "themes": [
+        "community_support"
+      ],
+      "description": "The foodbank invites volunteering enquiries to support its emergency food service for local people referred by community agencies.",
+      "resilience_relevance": "Supports an existing local crisis-support organisation. A specific preparedness or disaster-recovery role has not been established.",
+      "employee_fit": [
+        "unknown"
+      ],
+      "duration": null,
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": null,
+      "location": {
+        "lat": 54.896472,
+        "lon": -2.937696,
+        "basis": "office",
+        "label": "4 Tower Court, West Tower Street, Carlisle · approximate postcode position",
+        "source_url": "https://www.carlislefoodbank.org.uk/",
+        "precision": "postcode",
+        "geocode_source_url": "https://api.postcodes.io/postcodes/CA3%208QT",
+        "geocode_checked_at": "2026-09-18"
+      },
+      "coverage_note": "Carlisle local community. Published contact address is not a confirmed volunteering meeting point.",
+      "source_url": "https://www.carlislefoodbank.org.uk/",
+      "apply_url": "https://www.carlislefoodbank.org.uk/contact-us",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "General enquiry route only; tasks, one-day suitability and capacity are not published.",
+      "evidence": [
+        {
+          "url": "https://www.carlislefoodbank.org.uk/",
+          "claim": "The foodbank invites volunteers and provides emergency food through agency referrals."
+        },
+        {
+          "url": "https://www.carlislefoodbank.org.uk/contact-us",
+          "claim": "The host publishes its Carlisle contact address and enquiry form."
+        }
+      ],
+      "location_address": "4 Tower Court, West Tower Street, Carlisle",
+      "location_postcode": "CA3 8QT",
+      "location_basis": "office"
+    },
+    {
+      "id": "cumbria-bay-search-rescue",
+      "title": "Bay Search and Rescue operational membership",
+      "organisation": "Bay Search and Rescue",
+      "area_ids": [
+        "cumbria"
+      ],
+      "kind": "programme",
+      "status": "ongoing",
+      "themes": [
+        "response",
+        "preparedness"
+      ],
+      "description": "Apply to join a trained rescue team serving the South Lakes and North Lancashire.",
+      "resilience_relevance": "Builds trained response capacity, including water and flood rescue. This requires sustained commitment.",
+      "employee_fit": [
+        "individual",
+        "ongoing"
+      ],
+      "duration": "Ongoing commitment, including a 12-month probationary period.",
+      "team_size": null,
+      "cost": null,
+      "accessibility": null,
+      "requirements": "Age 18+; relevant skills or interests; suitable fitness and transport; call-out availability; attendance at least 50% of first-year training.",
+      "location": {
+        "lat": 54.157798,
+        "lon": -2.96578,
+        "basis": "venue",
+        "label": "Training HQ, Moor Lane, Flookburgh, Cumbria · approximate postcode position",
+        "source_url": "https://www.baysearchandrescue.org.uk/apply/",
+        "precision": "postcode",
+        "geocode_source_url": "https://api.postcodes.io/postcodes/LA11%207LT",
+        "geocode_checked_at": "2026-09-18"
+      },
+      "coverage_note": "South Lakes and North Lancashire; training HQ is at Flookburgh.",
+      "source_url": "https://www.baysearchandrescue.org.uk/apply/",
+      "apply_url": "https://www.baysearchandrescue.org.uk/apply/",
+      "checked_at": "2026-09-18",
+      "review_due": "2026-10-18",
+      "starts_on": null,
+      "ends_on": null,
+      "application_deadline": null,
+      "source_published": null,
+      "availability_note": "Application and selection required; not a single-day employee volunteering activity.",
+      "evidence": [
+        {
+          "url": "https://www.baysearchandrescue.org.uk/apply/",
+          "claim": "The application page sets out selection, probation and regular training requirements."
+        },
+        {
+          "url": "https://www.baysearchandrescue.org.uk/skills/",
+          "claim": "The team describes water rescue and flood operations."
+        },
+        {
+          "url": "https://www.baysearchandrescue.org.uk/contact/",
+          "claim": "The published training HQ is Moor Lane, Flookburgh, LA11 7LT."
+        }
+      ],
+      "location_address": "Training HQ, Moor Lane, Flookburgh, Cumbria",
+      "location_postcode": "LA11 7LT",
+      "location_basis": "venue"
+    }
+  ]
+}

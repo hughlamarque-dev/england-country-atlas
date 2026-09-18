@@ -1,0 +1,210 @@
+{
+  "updated": "2026-09-18",
+  "scope": "Selected volunteering brokers and community resilience networks in London, Somerset Council and Cumbria. Not an exhaustive national directory.",
+  "records": [
+    {
+      "id": "pilot-london-plus-volunteer-centres",
+      "name": "London Plus · Volunteer Centre Network",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "London",
+      "website": "https://londonplus.org/london-vc-network/",
+      "volunteering_url": "https://londonplus.org/london-vc-network/london-vc-directory/",
+      "source_url": "https://londonplus.org/london-vc-network/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connects London’s borough volunteer centres, with a directory for local volunteer matching and support to organisations involving volunteers.",
+      "verification": "Role checked against London Plus’s public page. Individual centres’ services and capacity require confirmation. Inclusion does not imply a NET relationship or participation in this pilot.",
+      "coverage_note": "Pan-London network; individual volunteer centres generally work at borough level. No service boundaries have been verified.",
+      "evidence": [
+        {
+          "url": "https://londonplus.org/london-vc-network/",
+          "claim": "London Plus facilitates a pan-London Volunteer Centre Network; centres match volunteers with local organisations and support local emergency responses."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "pilot-london-lcep",
+      "name": "London Communities Emergencies Partnership",
+      "category": "Community resilience network",
+      "region": "London",
+      "directory_area": "London",
+      "website": "https://londonplus.org/lcep/",
+      "volunteering_url": null,
+      "source_url": "https://londonplus.org/lcep/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Supports charities and community groups before, during and after emergencies through preparedness, shared learning and connections across London.",
+      "verification": "Public partnership description checked. A coordination network, not an advertised employee volunteering vacancy. Inclusion does not imply a NET relationship or participation in this pilot.",
+      "coverage_note": "London-wide partnership, co-chaired by London Plus and the VCS Emergencies Partnership. No service boundaries or available volunteer capacity have been verified.",
+      "evidence": [
+        {
+          "url": "https://londonplus.org/lcep/",
+          "claim": "The partnership supports London charities before, during and after emergencies and is co-chaired by London Plus and the VCS Emergencies Partnership."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "pilot-london-handson",
+      "name": "HandsOn London",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "London",
+      "website": "https://www.handsonlondon.org.uk/",
+      "volunteering_url": "https://www.handsonlondon.org.uk/corporate-volunteering",
+      "source_url": "https://www.handsonlondon.org.uk/corporate-volunteering",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Arranges corporate volunteering with London community organisations, including support for people in difficult circumstances and a winter coat campaign.",
+      "verification": "Corporate volunteering offer checked on the organisation’s public page. Project suitability, dates, costs and capacity must be agreed with the organisation. Inclusion does not imply a NET relationship or participation in this pilot.",
+      "coverage_note": "Activities at centres across London or at an employer’s office, subject to the agreed project. No activity venues or service boundaries have been verified here.",
+      "evidence": [
+        {
+          "url": "https://www.handsonlondon.org.uk/corporate-volunteering",
+          "claim": "Offers corporate projects from short sessions to full days, including LiftUp Lives community support and WrapUp London coat distribution; companies are directed to enquire."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "pilot-somerset-spark",
+      "name": "Spark Somerset",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Somerset",
+      "website": "https://www.sparksomerset.org.uk/",
+      "volunteering_url": "https://www.sparkachange.org.uk/",
+      "source_url": "https://www.sparksomerset.org.uk/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Supports volunteer recruitment and management for Somerset charities and community groups, and runs the Spark a Change volunteering platform.",
+      "verification": "Role and platform link checked on Spark Somerset’s public page. Each host must confirm suitability and availability; no feed access has been agreed. Inclusion does not imply a NET relationship or participation in this pilot.",
+      "coverage_note": "Somerset, as stated by Spark Somerset. Individual hosts’ service areas and activity locations vary; no service boundary has been inferred.",
+      "evidence": [
+        {
+          "url": "https://www.sparksomerset.org.uk/volunteering/",
+          "claim": "Spark Somerset supports volunteer-involving organisations and directs volunteers to its Spark a Change platform for matching by skills, interests and location."
+        }
+      ],
+      "area_ids": [
+        "somerset"
+      ]
+    },
+    {
+      "id": "pilot-somerset-prepared",
+      "name": "Somerset Prepared",
+      "category": "Community resilience network",
+      "region": "South West",
+      "directory_area": "Somerset",
+      "website": "https://www.somersetprepared.org.uk/",
+      "volunteering_url": "https://www.somersetprepared.org.uk/get-involved/volunteer/",
+      "source_url": "https://www.somersetprepared.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Multi-agency partnership providing community emergency preparedness advice, support and training, with signposting to established voluntary response agencies.",
+      "verification": "Partnership role and volunteering signpost checked on public pages. Response roles may require training and exercises; no one-day places or availability confirmed. Inclusion does not imply a NET relationship or participation in this pilot.",
+      "coverage_note": "Somerset communities. The partnership’s public volunteering page links to agencies with different capabilities; no common service boundary or deployable capacity is inferred.",
+      "evidence": [
+        {
+          "url": "https://www.somersetprepared.org.uk/",
+          "claim": "Somerset Prepared describes itself as a multi-agency partnership supporting local resilience to emergencies."
+        },
+        {
+          "url": "https://www.somersetprepared.org.uk/get-involved/volunteer/",
+          "claim": "Volunteering is signposted through Somerset Emergency Voluntary Agencies Group members, whose roles involve training and exercises."
+        }
+      ],
+      "area_ids": [
+        "somerset"
+      ]
+    },
+    {
+      "id": "pilot-somerset-thrive",
+      "name": "Thrive · Community Council for Somerset",
+      "category": "Community resilience network",
+      "region": "South West",
+      "directory_area": "Somerset",
+      "website": "https://thrivesomerset.org.uk/",
+      "volunteering_url": null,
+      "source_url": "https://thrivesomerset.org.uk/community-buildings-and-places/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Supports volunteers who manage Somerset community buildings and spaces through practical advice, training and a community spaces directory.",
+      "verification": "Community buildings support checked on Thrive’s public page. This is an organisational support route, not an advertised employee volunteering vacancy. Inclusion does not imply a NET relationship or participation in this pilot.",
+      "coverage_note": "Somerset community buildings and spaces. A listed building is not automatically an emergency hub or a volunteer host; no service boundaries have been verified.",
+      "evidence": [
+        {
+          "url": "https://thrivesomerset.org.uk/community-buildings-and-places/",
+          "claim": "Community Council for Somerset operates as Thrive and offers advice and support to volunteers running Somerset community spaces."
+        }
+      ],
+      "area_ids": [
+        "somerset"
+      ]
+    },
+    {
+      "id": "pilot-cumbria-cvs",
+      "name": "Cumbria CVS",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Cumbria",
+      "website": "https://cumbriacvs.org.uk/",
+      "volunteering_url": "https://cumbriacvs.org.uk/volunteering/employer-supported-volunteering/",
+      "source_url": "https://cumbriacvs.org.uk/volunteering/employer-supported-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Offers employer-supported volunteer brokerage, working with local organisations on practical projects and professional skills contributions.",
+      "verification": "Employer-supported volunteering offer checked on Cumbria CVS’s public page. The organisation asks employers to discuss costings and arrangements; no project capacity confirmed. Inclusion does not imply a NET relationship or participation in this pilot.",
+      "coverage_note": "Cumbria-wide support, as described by Cumbria CVS. Project locations and beneficiary areas must be agreed; no service boundaries have been inferred.",
+      "evidence": [
+        {
+          "url": "https://cumbriacvs.org.uk/volunteering/employer-supported-volunteering/",
+          "claim": "Cumbria CVS supports ESV projects across the county and offers a brokerage service to develop, deliver, manage and evaluate schemes, with costings available by discussion."
+        }
+      ],
+      "area_ids": [
+        "cumbria"
+      ]
+    },
+    {
+      "id": "pilot-cumbria-act",
+      "name": "ACTion with Communities in Cumbria",
+      "category": "Community resilience network",
+      "region": "North West",
+      "directory_area": "Cumbria",
+      "website": "https://cumbriaaction.org.uk/",
+      "volunteering_url": null,
+      "source_url": "https://cumbriaaction.org.uk/community-emergency-planning/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Supports communities across Cumbria with emergency planning, resilience guidance and community buildings, including information on community emergency hubs.",
+      "verification": "Emergency planning role checked on ACT’s public page. Coordination and community support route, not an advertised one-day placement. Inclusion does not imply a NET relationship or participation in this pilot.",
+      "coverage_note": "Across Cumbria; page provides resources for Cumberland and Westmorland and Furness. No specific hub availability or service boundaries have been verified.",
+      "evidence": [
+        {
+          "url": "https://cumbriaaction.org.uk/community-emergency-planning/",
+          "claim": "ACT supports community emergency planning across Cumbria and works with the Joint Emergency Management and Resilience Team, with resources on plans and community hubs."
+        }
+      ],
+      "area_ids": [
+        "cumbria"
+      ]
+    }
+  ]
+}
