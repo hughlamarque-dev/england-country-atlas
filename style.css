@@ -124,7 +124,7 @@
 .practical-name{font-size:12px;line-height:1.35;overflow-wrap:anywhere}
 .practical-bar strong{font-size:12px;font-weight:600;white-space:nowrap}
 .practical-track{grid-column:2/4;display:block;height:6px;background:#edf2ee;border-radius:4px;overflow:hidden}
-.practical-track>span{display:block;height:100%;background:#658e78;border-radius:4px;min-width:1px}
+.practical-track>span{display:block;height:100%;background:#658e78;border-radius:4px;min-width:0}
 #exposureCard .practical-track>span{background:#6699b4}
 .practical-bar[aria-pressed=true]{background:#fbf6ec;color:#5c4828;border-color:#e0c99f}
 .practical-bar[aria-pressed=true] .practical-track>span,#exposureCard .practical-bar[aria-pressed=true] .practical-track>span{background:#ad7628}

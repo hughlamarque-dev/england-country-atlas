@@ -1,5 +1,6 @@
 'use strict';
 let landCoverClass='all',landCoverPixelsPromise=null;
+const landCoverImages=new Map();
 
 function landCoverClasses(){
  const source=layer('landcover');
@@ -38,12 +39,12 @@ async function landCoverPixels(){
  try{return await landCoverPixelsPromise;}catch(e){landCoverPixelsPromise=null;throw e;}
 }
 async function landCoverRaster(selected){
- const source=layer('landcover');if(selected==='all')return source.files[0];
+ const source=layer('landcover');if(selected==='all')return source.files[0];if(landCoverImages.has(selected))return landCoverImages.get(selected);
  const data=await landCoverPixels(),canvas=document.createElement('canvas');canvas.width=data.width;canvas.height=data.height;
  const rgba=new Uint8ClampedArray(data.pixels.data),code=Number(selected);
  for(let i=0;i<data.classes.length;i++)if(data.classes[i]!==code)rgba[i*4+3]=0;
  canvas.getContext('2d').putImageData(new ImageData(rgba,data.width,data.height),0,0);
- const url=canvas.toDataURL('image/png');canvas.width=canvas.height=1;return url;
+ const url=canvas.toDataURL('image/png');canvas.width=canvas.height=1;landCoverImages.set(selected,url);return url;
 }
 async function inspectLandCover(latlng){
  const selected=landCoverClass,source=layer('landcover'),data=await landCoverPixels();if(primaryId!=='landcover'||selected!==landCoverClass)return;

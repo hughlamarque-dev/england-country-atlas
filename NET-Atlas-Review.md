@@ -134,3 +134,16 @@ Both charts follow the authority search. Shared links retain the indicator, sear
 ### Detailed flood downloads: confirmed limitation
 
 The Environment Agency surface-water selector was tested with just `rofsw`, “Full dataset”, and GeoPackage. It still returned a large-data warning and directed the user to a smaller area or the support route for a large dataset. National data should therefore be requested through that route rather than repeatedly attempting the same download. No support request has been sent. A small, identical pilot footprint for both hazards is an alternative; successful delivery still needs checking. The supplied `.lyr` files and `orderDetails` ZIPs contain styling or request settings, not flood geometry.
+
+
+## Practical comparisons and land-cover controls — release 2026.09.18.8
+
+Environment → Land cover now allows an individual displayed class to be isolated, including trees, grassland, cropland, built-up land, permanent water, wetland, bare/sparse vegetation and the single shrubland pixel present in this generalised display. All classes can be restored in one click. Classes without pixels in the display are omitted from the buttons; this is not a claim of ecological absence. The full existing 300 m PNG is masked by its categorical colours, without resampling or changing authority summaries. Inspection uses the displayed cell rather than the older coarser sampling grid. The source is still ESA WorldCover 2021 (10 m native data); isolated classes do not recover detail discarded by the web generalisation.
+
+Compare areas now opens with two additional practical charts: the eight highest authority values for the selected indicator, and the eight highest flood-exposure estimates. Planning shortcuts select household car availability, disability limiting activities a lot, child income deprivation, older-age income deprivation or overall income deprivation. The default is households without a car or van. Public transport availability is not measured, so the chart explicitly avoids treating car ownership as a transport-isolation score. Flood rankings switch between estimated people and percentage exposed, and between surface water and rivers/sea. Selecting bars adds or removes authorities from the six-area shortlist. The histogram and relationship scatterplot remain below these charts.
+
+Historical severe drought frequency has been removed from the map choices and comparison menu. It was not literally constant: the 295 non-missing authority summaries range from 6.12% to 7.34%, and all fit the same 5–10% legend band. The source is a 0.5° SPEI-6 grid summarised over 1901–2023. The source remains in an explicitly archived catalogue group, with original files and values retained. We have not artificially stretched colours to make small differences appear more consequential. No replacement drought dataset is claimed.
+
+The motorised healthcare comparison for more than two hours has also been removed: all 296 authority values are 0.00%. Historical travel-time source maps remain available and dated; these data cannot establish present-day access or service capacity. Future builds preserve the land-cover controls and omit this motorised comparison when its values are identical.
+
+Existing source values are unchanged. Additional file downloads were not required.

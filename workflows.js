@@ -26,7 +26,7 @@ function renderShortlist(){
 }
 function currentAtlasLink(){
  const u=new URL(location.href);u.search='';
- if(primaryId==='landcover'){u.searchParams.set('environment','land');u.searchParams.set('landcover',landCoverClass);}
+ if(primaryId==='landcover'&&!$('mapPage').hidden){u.searchParams.set('environment','land');u.searchParams.set('landcover',landCoverClass);}
  if(selectedArea)u.searchParams.set('area',selectedArea.properties.code);
  const key=!$('analysisPage').hidden?$('analysisMetric').value:primaryId?.replace('district_need_','').replace('district_flood_','');
  if(key&&(NEEDS_METRICS[key]||METRICS[key]))u.searchParams.set('indicator',key);
