@@ -27,7 +27,7 @@ function renderPreparednessControls(box,metrics){
   const label=document.createElement('label');label.className='control-label';label.textContent='Compare community needs';label.htmlFor='needsIndicator';box.append(label);
   const select=document.createElement('select');select.id='needsIndicator';select.className='control-select';select.setAttribute('aria-label','Community needs indicator');
   for(const[key,meta]of Object.entries(NEEDS_METRICS)){const option=new Option(meta.title,'district_need_'+key);option.selected=primaryId==='district_need_'+key;select.add(option);}select.onchange=e=>choose(e.target.value);box.append(select);
-  const p=document.createElement('p');p.className='measure-explanation';p.textContent=NEEDS_METRICS[primaryId?.replace('district_need_','')]?.note;metrics.append(p);
+  const p=document.createElement('p');p.className='measure-explanation';p.textContent=primaryId==='district_need_imd_top10_pct'?'Share of neighbourhoods in England’s most deprived 10%. Select an area to open its briefing.':'Published income-deprivation measure. Select an area to open its briefing.';metrics.append(p);
   const b=document.createElement('button');b.textContent='Compare all areas';b.className='wide-action';b.onclick=()=>{$('analysisMetric').value=primaryId.replace('district_need_','');showAnalysis();};metrics.append(b);
  }
  if(view==='partners'){
@@ -41,7 +41,7 @@ function renderDataContext(parent){
  if(view==='environment'&&environment==='water')text='Historical satellite observations of surface water. Flood risk and current flood warnings require separate Environment Agency data.';
  if(view==='services')text='OpenStreetMap locations. A mapped facility may be closed, duplicated or missing. Confirm current services and capacity locally.';
  if(primaryId==='built2030')text='2030 projection. This layer does not show observed buildings.';
- if(view==='needs')text='294 of 296 authorities matched. Barnsley and Sheffield are grey pending reconciliation of changed boundary codes.';
+ if(view==='needs'){const detail=document.createElement('details');detail.className='coverage-detail';detail.innerHTML='<summary>294 of 296 areas matched</summary><p>Barnsley and Sheffield have changed boundary codes and are shown without data pending reconciliation.</p>';parent.append(detail);}
  if(text){const p=document.createElement('p');p.className='data-context';p.textContent=text;parent.append(p);}
 }
 function addAreaBriefing(){
