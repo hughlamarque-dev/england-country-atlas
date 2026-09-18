@@ -38,6 +38,25 @@ def document():
     }
 
 
+def document_with_authority():
+    """Geography fixture only; never an assertion of an actual host's service area."""
+    payload = document()
+    payload.update(
+        geography_source="https://example.org/geography",
+        geography_note="Fixture boundaries, not a verified service catchment.",
+        authorities=[{
+            "code": "E09000001", "name": "City of London", "region_id": "london",
+            "county_name": "Greater London", "lat": 51.51, "lon": -0.09,
+            "aliases": [],
+        }],
+    )
+    payload["records"][0].update(
+        coverage_names=["City of London"], coverage_level="local",
+        coverage_codes=["E09000001"], partner_directory=False,
+    )
+    return payload
+
+
 class FreshnessTests(unittest.TestCase):
     def test_unknown_activity_dates_do_not_become_dates_or_promises(self):
         record = document()["records"][0]
@@ -133,6 +152,93 @@ class ValidationTests(unittest.TestCase):
             self.assertTrue(data.validate_document(payload, TODAY))
 
 
+class CoverageValidationTests(unittest.TestCase):
+    def test_valid_mapped_and_unmapped_coverage(self):
+        payload = document_with_authority()
+        self.assertEqual(data.validate_document(payload, TODAY), [])
+        payload["records"][0].update(coverage_names=["Source-defined catchment"], coverage_codes=[])
+        self.assertEqual(data.validate_document(payload, TODAY), [])
+
+    def test_unknown_duplicate_and_unexplained_coverage_codes_are_rejected(self):
+        for change, expected in (
+            ({"coverage_codes": ["E09000002"]}, "coverage_codes"),
+            ({"coverage_codes": ["E09000001", "E09000001"]}, "coverage_codes"),
+            ({"coverage_names": []}, "coverage_names"),
+        ):
+            with self.subTest(change=change):
+                payload = document_with_authority()
+                payload["records"][0].update(change)
+                self.assertIn(expected, "\n".join(data.validate_document(payload, TODAY)))
+
+    def test_coverage_lists_reject_wrong_shapes_blank_strings_and_duplicates(self):
+        for field in ("coverage_names", "coverage_codes"):
+            for value in (None, "London", [None], [" "], [["nested"]], ["City", "City"]):
+                with self.subTest(field=field, value=value):
+                    payload = document_with_authority()
+                    payload["records"][0][field] = value
+                    self.assertIn(field, "\n".join(data.validate_document(payload, TODAY)))
+
+    def test_authority_coverage_cannot_contradict_discovery_region(self):
+        payload = document_with_authority()
+        payload["areas"].append({"id": "south-east", "name": "South East", "lat": 51, "lon": 0})
+        payload["records"][0]["area_ids"] = ["south-east"]
+        self.assertIn("authority region", "\n".join(data.validate_document(payload, TODAY)))
+
+    def test_coverage_level_and_partner_flag_require_their_declared_types(self):
+        for field, values in (
+            ("coverage_level", (None, "England", 1, [])),
+            ("partner_directory", (None, "true", 1, 0, [])),
+        ):
+            for value in values:
+                with self.subTest(field=field, value=value):
+                    payload = document_with_authority()
+                    payload["records"][0][field] = value
+                    self.assertIn(field, "\n".join(data.validate_document(payload, TODAY)))
+
+    def test_authorities_must_be_array_instead_of_crashing_or_silently_accepting(self):
+        for value in (None, {}, "authorities", 7):
+            with self.subTest(value=value):
+                payload = document()
+                payload["authorities"] = value
+                self.assertIn("authorities", "\n".join(data.validate_document(payload, TODAY)))
+
+    def test_invalid_authority_identifiers_report_errors_without_crashing(self):
+        for field, values in (("code", (None, [], {}, "W06000001", "E0600001")),
+                              ("region_id", (None, [], {}, "missing-region"))):
+            for value in values:
+                with self.subTest(field=field, value=value):
+                    payload = document_with_authority()
+                    payload["authorities"][0][field] = value
+                    self.assertIn(field, "\n".join(data.validate_document(payload, TODAY)))
+
+    def test_duplicate_authority_and_invalid_coordinates_are_rejected(self):
+        payload = document_with_authority()
+        payload["authorities"].append(copy.deepcopy(payload["authorities"][0]))
+        self.assertIn("duplicate authority", "\n".join(data.validate_document(payload, TODAY)))
+        for value in (True, float("nan"), 181):
+            with self.subTest(value=value):
+                payload = document_with_authority()
+                payload["authorities"][0]["lon"] = value
+                self.assertIn("authorities[0].lon", "\n".join(data.validate_document(payload, TODAY)))
+
+    def test_authority_aliases_require_unique_english_authority_codes(self):
+        for value in (None, "E09000999", [None], [" "], ["City"],
+                      ["W06000001"], ["E09000999", "E09000999"]):
+            with self.subTest(value=value):
+                payload = document_with_authority()
+                payload["authorities"][0]["aliases"] = value
+                self.assertIn("aliases", "\n".join(data.validate_document(payload, TODAY)))
+
+    def test_geography_provenance_requires_valid_url_and_note(self):
+        for field, value in (("geography_source", "javascript:alert(1)"),
+                             ("geography_source", None), ("geography_note", ""),
+                             ("geography_note", {"unsupported": "shape"})):
+            with self.subTest(field=field, value=value):
+                payload = document_with_authority()
+                payload[field] = value
+                self.assertIn(field, "\n".join(data.validate_document(payload, TODAY)))
+
+
 class CsvTests(unittest.TestCase):
     def setUp(self):
         self.directory = tempfile.TemporaryDirectory()
@@ -176,6 +282,28 @@ class CsvTests(unittest.TestCase):
         }
         data.export_csv(payload, self.path)
         self.assertEqual(data.import_csv(self.path, payload, TODAY), payload)
+
+    def test_coverage_and_authority_metadata_survive_csv_round_trip(self):
+        payload = document_with_authority()
+        data.export_csv(payload, self.path)
+        imported = data.import_csv(self.path, payload, TODAY)
+        self.assertEqual(imported, payload)
+        self.assertIs(imported["records"][0]["partner_directory"], False)
+
+    def test_import_does_not_infer_coverage_from_base_or_office_position(self):
+        base = document_with_authority()
+        incoming = copy.deepcopy(base)
+        record = incoming["records"][0]
+        for field in ("coverage_names", "coverage_codes", "coverage_level", "partner_directory"):
+            del record[field]
+        record["location"] = {
+            "lat": 51.51, "lon": -0.09, "label": "Fixture office", "basis": "office",
+            "source_url": "https://example.org/source",
+        }
+        data.export_csv(incoming, self.path)
+        imported = data.import_csv(self.path, base, TODAY)
+        self.assertEqual(imported, incoming)
+        self.assertNotIn("coverage_codes", imported["records"][0])
 
     def test_import_does_not_inherit_missing_source_check_dates_from_base(self):
         payload = document()

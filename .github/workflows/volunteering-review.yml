@@ -14,6 +14,7 @@ on:
     paths:
       - 'data/volunteering.json'
       - 'scripts/volunteering_data.py'
+      - 'scripts/volunteering_coverage.py'
       - 'tests/test_volunteering_data.py'
       - '.github/workflows/volunteering-review.yml'
   push:
@@ -21,6 +22,7 @@ on:
     paths:
       - 'data/volunteering.json'
       - 'scripts/volunteering_data.py'
+      - 'scripts/volunteering_coverage.py'
       - 'tests/test_volunteering_data.py'
       - '.github/workflows/volunteering-review.yml'
 
@@ -39,6 +41,8 @@ jobs:
         run: python3 scripts/volunteering_data.py validate data/volunteering.json
       - name: Create editorial review queue
         run: python3 scripts/volunteering_data.py review data/volunteering.json --output volunteering-review.md
+      - name: Audit geographic coverage
+        run: python3 scripts/volunteering_coverage.py data/volunteering.json --output volunteering-coverage.json
       - name: Optional public link check
         if: github.event_name == 'workflow_dispatch' && inputs.check_links
         run: python3 scripts/volunteering_data.py check-links data/volunteering.json --output volunteering-link-report.json --timeout 10 --workers 4
@@ -49,6 +53,7 @@ jobs:
           name: volunteering-source-review
           path: |
             volunteering-review.md
+            volunteering-coverage.json
             volunteering-link-report.json
           if-no-files-found: warn
           retention-days: 30

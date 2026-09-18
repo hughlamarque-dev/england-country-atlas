@@ -1,10 +1,10 @@
-# Maintaining the community volunteering pilot
+# Maintaining the England volunteering directory
 
 18 September 2026 · England Community & Emergency Atlas
 
-**This is a public-source referral pilot for London, Somerset and Cumbria.** It helps employers and individuals find potential routes into community volunteering. Organisations have not agreed to participate in this pilot and their inclusion does not imply National Emergencies Trust endorsement. Listing an enquiry route is not confirmation that a host can accept a team on a particular date.
+**This is a public-source referral directory across England.** It helps employers and individuals find potential routes into community volunteering. Organisations have not agreed to participate in this pilot and their inclusion does not imply National Emergencies Trust endorsement. Listing an enquiry route is not confirmation that a host can accept a team on a particular date.
 
-**Keep one accountable editor and one local reviewer per pilot area.** The roles below need named people before this becomes an ongoing service. They are proposed responsibilities, not commitments made by any organisation.
+**Keep one accountable editor and regional reviewers and local broker contacts.** The roles below need named people before this becomes an ongoing service. They are proposed responsibilities, not commitments made by any organisation.
 
 | Owner | Responsibility | Cadence |
 |---|---|---|
@@ -22,7 +22,7 @@ One person can hold more than one role. Automated checks help the editor find wo
 
 The `resilience_relevance` text is an atlas assessment. Keep it modest and specific to the task, such as supporting continuity of a community service, a preparedness activity or recovery support. An attractive outdoor activity is not automatically flood protection; a high-risk area is not proof of volunteer demand. Source-derived descriptions and this assessment should remain visibly separate.
 
-For location, record whether the coordinate is an activity venue, an office or an approximate area marker. Preserve the source for a precise location. The pilot's area markers are display anchors, not destinations or claims of proximity. Postcode matching identifies a pilot search area. It does not calculate travel distance or establish host coverage. A future travel-radius search should use verified activity locations, and should separately identify the community served by remote work. Do not infer service boundaries from an office address or assume all members of a network share one catchment.
+For location, record whether the coordinate is an activity venue, an office or an approximate area marker. Preserve the source for a precise location. The pilot's area markers are display anchors, not destinations or claims of proximity. Postcode matching identifies an English council search area. It does not calculate travel distance or establish host coverage. A future travel-radius search should use verified activity locations, and should separately identify the community served by remote work. Do not infer service boundaries from an office address or assume all members of a network share one catchment.
 
 **The editorial cycle is simple.**
 
@@ -65,7 +65,7 @@ python3 -m unittest discover -s tests -p 'test_volunteering_data.py'
 
 `review` also accepts `--today YYYY-MM-DD` to test a future catalogue date. Use this to inspect ageing, not to change source-check history. `check-links` creates a report without rewriting the catalogue. Treat timeouts, 403s, redirects and other failures as review leads: some valid sites block automated requests. Conversely, a successful response can be a homepage redirect or a closed programme page. Record closure only on evidence, not on one network failure.
 
-The repository includes `.github/workflows/volunteering-review.yml` for read-only validation, tests and a review-report artifact, scheduled for Mondays at 07:23 UTC. It also checks pull requests and main-branch changes to the catalogue or pipeline. A manual run can request link checking. Reports are retained as workflow artifacts for 30 days. It does not open issues, email organisations, commit changes, or renew records. The first main-branch review run passed on 18 September 2026, including all 22 data tests, validation and report creation. Scheduled runs still need a maintainer to inspect their results. Scheduling depends on the workflow being present and enabled on the repository's default branch.
+The repository includes `.github/workflows/volunteering-review.yml` for read-only validation, tests and a review-report artifact, scheduled for Mondays at 07:23 UTC. It also checks pull requests and main-branch changes to the catalogue or pipeline. A manual run can request link checking. Reports are retained as workflow artifacts for 30 days. It does not open issues, email organisations, commit changes, or renew records. The first main-branch review run passed on 18 September 2026, including all initial data safeguards, validation and report creation. Scheduled runs still need a maintainer to inspect their results. Scheduling depends on the workflow being present and enabled on the repository's default branch.
 
 The additional organisation directory is maintained separately from opportunities. Check its role, coverage text and volunteering link when checking a related activity. The volunteering CLI validates `data/volunteering.json`; do not assume it also validates the separate partner directory. A single host can have several activities without becoming several separate organisations.
 
@@ -82,3 +82,38 @@ For workload planning, measure the first month rather than adopting an unsupport
 Assess the pilot using hosts' experience as well as employee participation: useful tasks completed, whether promised work was delivered, repeat host participation, unresolved enquiries, host time/cost, catalogue freshness and which areas lack a willing local reviewer. Clicks and volunteering hours alone do not establish improved resilience. Do not display an invented monetary impact score.
 
 The most useful next inputs are a named editor; willing local brokers; a small set of host-confirmed tasks with dates, locations and constraints; employer office areas and aggregate team/skills availability; and permission for any partner exports. No additional large geospatial download is needed to maintain this referral pilot.
+
+
+## England-wide rollout and geographic honesty
+
+The interface now supports all nine English regions and 296 local authorities. This is a discovery directory, not a complete inventory of vacancies or a host-confirmed placement service. The source register includes an `authorities` lookup, with region and administrative upper-tier county names from ONS April 2025 version-2 lookups. Existing atlas polygons supply display geometry. ONS sources: [regions](https://www.arcgis.com/home/item.html?id=1c17a07ff8fc44218883049f0afa3de1) and [counties/unitary authorities](https://www.arcgis.com/home/item.html?id=3a815d3b4fa746a98390f52b1196d37d).
+
+Each listing has two independent geographic concepts:
+
+- `area_ids`: broad discovery regions. A regional match does not establish service in every council.
+- `coverage_names` and `coverage_codes`: source-described geographic names and reviewed council matches. Broad regional programme labels alone do not populate council matches. Explicitly regional broker/network referrals may match councils in their stated region. An explicitly named town may match its containing council for discovery, without claiming the whole council is served. Read `coverage_note` for the actual scope. Named administrative counties exclude separate unitary authorities unless the evidence names them too.
+
+`coverage_level` records local, county, regional, national or unspecified scope. Map coordinates are separately labelled venue, office or area anchor. **Never populate coverage codes from an office postcode.** Unresolved catchments and broad descriptions remain in regional browsing without an invented council match. Approximate area anchors use existing atlas geometry; they are not arrival points. Composite geography such as Cumbria, Bedfordshire and Northamptonshire has been resolved to current constituent councils. Distinguish Cheshire's source meaning from individual council names during future reviews.
+
+The JSON coverage audit counts source-matched records, broker routes, activity routes and team formats for every council. Counts can overlap: one county-wide broker may match several councils. They do not measure local opportunity supply or preparedness. Rebuild after every editorial update:
+
+```sh
+python3 scripts/volunteering_coverage.py data/volunteering.json --output data/volunteering-coverage.json
+```
+
+The weekly review workflow generates a fresh audit alongside the editorial queue. The published audit is a dated snapshot; interface counts recalculate freshness when the page opens. Review date renewals remain manual. An accessible page or HTTP 200 is not evidence a programme is still operating: this research excluded live pages for programmes explicitly ended in earlier years, and consolidated organisations whose sources describe a merger.
+
+### Keeping a national directory useful
+
+Assign a named editor and regional owners before committing to ongoing service. Review dates are currently monthly, with earlier deadlines for short-lived sources. As a planning assumption, 200 listings at five to ten minutes per monthly review means roughly 17–33 editorial hours, before follow-up or new research. Measure the actual burden during a four-week maintenance trial. Automated link checks and expiry rules reduce stale display, but cannot confirm host capacity or employee suitability.
+
+Prioritise a local broker route in remaining uncovered councils, followed by concrete tasks hosts want. Ask willing partners for a modest agreed CSV feed: stable ID, title, public contact link, area served, venue postcode and location basis, employer/team suitability, time commitment, dates/deadlines, accessibility, requirements, costs, source URL, last meaningful update and review due. Preserve partner withdrawals and do not reset substantive update dates on each feed download. Unknown values remain unknown.
+
+Before adding bookings, verify actual capacity, host agreement, responsibilities, supervision, materials and cancellation handling. A national map can support referrals now; a dependable placement service requires participating hosts. No organisations were contacted by this rollout.
+
+
+### 18 September 2026 rollout snapshot
+
+The first England-wide register has 218 distinct routes: 125 brokers, 5 platforms, 69 programmes and 19 opportunity records. Status remains separate from type: 189 enquiry routes, 20 ongoing roles/programmes and 9 advertised activities. There are 49 records with a source-supported team format; this does not confirm a date or available places. All 296 councils have at least one source-geography match, but only 272 have a broker/platform record. These measures overlap and do not establish complete local inventories. The 131 volunteering/community organisations in Partners sit alongside the existing foundation and resilience-forum directories.
+
+Remaining qualitative gaps include direct brokerage in parts of Nottinghamshire and Wyre Forest, rural access, actual activity venues, accessibility information, employer costs, dates and host-confirmed capacity. Broad community/network contacts can support discovery but must not be presented as guaranteed matching services. The national CSV has been round-tripped without loss and 34 data safeguard tests pass. Browser and deployment checks are recorded with the release.

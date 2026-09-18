@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Explore sourced routes into community resilience volunteering in London, Somerset and Cumbria. An England atlas referral pilot.">
+  <meta name="description" content="Explore sourced routes into community resilience volunteering in England. A source-checked England atlas referral directory.">
   <title>Volunteering · England community &amp; emergency atlas</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="volunteering.css?v=20260918.10b">
+  <link rel="stylesheet" href="volunteering.css?v=20260918.11">
 </head>
 <body>
 <a class="skip-link" href="#filters">Skip to volunteering filters</a>
@@ -18,51 +18,54 @@
 </header>
 <main>
   <header class="page-head">
-    <div><p class="eyebrow">ENGLAND / COMMUNITY RESILIENCE</p><h1>Find a way to help locally</h1><p class="intro">Explore employee volunteering and local support routes in London, Somerset and Cumbria.</p></div>
+    <div><p class="eyebrow">ENGLAND / COMMUNITY RESILIENCE</p><h1>Find a way to help locally</h1><p class="intro">Explore employee volunteering and local support routes across England.</p></div>
     <div class="page-actions"><button id="shareView" type="button">Share this view</button><button id="exportSaved" type="button" disabled>Export shortlist <span id="savedCount">0</span></button></div>
   </header>
   <div class="pilot-note"><span class="pilot-label">Referral pilot</span><p>Source-checked opportunities and programmes. Contact the host to confirm dates, places and suitability. <a href="#aboutPilot">How this works</a></p></div>
   <section id="filters" class="filter-panel" aria-label="Find volunteering">
     <div class="filter-main">
       <label class="search-field" for="search">Search activities or organisations<input id="search" type="search" placeholder="Try food support, skills or flood readiness" autocomplete="off"></label>
-      <label for="area">Pilot area<select id="area"><option value="">All three areas</option></select></label>
+      <label for="area">Region<select id="area"><option value="">All England</option></select></label>
       <label for="theme">Community benefit<select id="theme"><option value="">All themes</option><option value="preparedness">Preparedness</option><option value="recovery">Recovery</option><option value="community_support">Community support</option><option value="environment">Environment</option><option value="skills">Charity skills &amp; capacity</option><option value="response">Emergency response</option></select></label>
       <label for="fit">Volunteer format<select id="fit"><option value="">All formats</option><option value="team_day">Team volunteering</option><option value="individual">Individual volunteering</option><option value="skills">Professional skills</option><option value="ongoing">Ongoing commitment</option><option value="unknown">Format to confirm</option></select></label>
     </div>
     <div class="filter-secondary">
+      <label for="authority">Council area<select id="authority"><option value="">All council areas</option></select></label>
+      <label for="kind">Route type<select id="kind"><option value="">Activities and local connections</option><option value="activity">Activities / programmes</option><option value="broker">Brokers / platforms</option></select></label>
       <label for="status">Route status<select id="status"><option value="">All statuses</option><option value="advertised">Published opportunity</option><option value="enquiry">Enquire with host</option><option value="ongoing">Ongoing commitment</option><option value="closed">Closed</option></select></label>
       <label for="freshness">Source freshness<select id="freshness"><option value="current">Within review period</option><option value="review">Needs review / ended</option><option value="all">All records</option></select></label>
       <label class="saved-toggle"><input id="savedOnly" type="checkbox"><span>Saved only <span id="savedInline">0</span></span></label>
       <button class="text-button" id="resetFilters" type="button">Reset filters</button>
     </div>
-    <details class="postcode-tool"><summary>Find my pilot area by postcode</summary><form id="postcodeForm"><label for="postcode">UK postcode<input id="postcode" name="postcode" type="text" autocomplete="postal-code" placeholder="e.g. SW1A 1AA" maxlength="10"></label><button id="postcodeLookup" type="submit">Find area</button></form><p class="postcode-help">Uses <a href="https://postcodes.io/" target="_blank" rel="noopener noreferrer">Postcodes.io</a> to match your postcode to a pilot council area. This finds area coverage, not travel distance. Your postcode is not saved in the atlas.</p><p id="postcodeStatus" role="status" aria-live="polite"></p></details>
+    <details class="postcode-tool"><summary>Find my council area by postcode</summary><form id="postcodeForm"><label for="postcode">UK postcode<input id="postcode" name="postcode" type="text" autocomplete="postal-code" placeholder="e.g. SW1A 1AA" maxlength="10"></label><button id="postcodeLookup" type="submit">Find area</button></form><p class="postcode-help">Uses <a href="https://postcodes.io/" target="_blank" rel="noopener noreferrer">Postcodes.io</a> to match your postcode to an English council area. This finds area coverage, not travel distance. Your postcode is not saved in the atlas.</p><p id="postcodeStatus" role="status" aria-live="polite"></p></details>
   </section>
+  <div id="coverageSummary" class="coverage-summary" aria-live="polite"></div>
   <div class="results-heading"><div><h2 id="resultTitle">Loading local routes…</h2><p id="resultSummary" role="status" aria-live="polite">Checking the published directory.</p></div><button id="exportResults" type="button" disabled>Export results · CSV</button></div>
   <div id="loadError" class="empty-state" hidden><h2>The directory could not load</h2><p id="loadErrorMessage">Please try again, or download the source data below.</p><button id="retryLoad" type="button">Try again</button></div>
   <div class="workspace">
-    <section id="results" aria-label="Volunteering results"><div class="loading-card" aria-hidden="true"></div><div class="loading-card" aria-hidden="true"></div></section>
+    <div class="results-column"><section id="results" aria-label="Volunteering results"><div class="loading-card" aria-hidden="true"></div><div class="loading-card" aria-hidden="true"></div></section><button type="button" id="showMore" class="show-more" hidden>Show more results</button></div>
     <aside class="map-column" aria-label="Map and location key">
       <div class="map-card">
         <div class="map-heading"><div><h2>Where you could help</h2><p id="mapSummary">Select a marker to explore local routes.</p></div><button id="fitMap" type="button" aria-label="Fit map to filtered results">Fit map</button></div>
-        <div id="volunteerMap" role="region" aria-label="Map of volunteering routes in the three pilot areas"></div>
+        <div id="volunteerMap" role="region" aria-label="Map of volunteering routes across England"></div>
         <p class="map-message" id="mapMessage" hidden></p>
         <div class="map-key" aria-label="Map marker key"><span><i class="key-area" aria-hidden="true"></i>Area only</span><span><i class="key-office" aria-hidden="true"></i>Organisation office</span><span><i class="key-venue" aria-hidden="true"></i>Activity venue</span></div>
-        <p class="map-precision">Dashed markers show an approximate area, not an activity address. Some site markers use approximate postcode positions. Numbers count listed routes at that marker. Pilot search boundaries do not show host service coverage.</p>
+        <p class="map-precision">Dashed markers show an approximate area, not an activity address. Some site markers use approximate postcode positions. Numbers count listed routes at that marker. Council search boundaries do not show host service coverage.</p>
       </div>
-      <section class="coverage-card" aria-label="Pilot area coverage"><h2>Explore an area</h2><div id="areaCoverage"></div><p>Listing counts describe this pilot’s coverage, not the amount of volunteering available locally.</p></section>
+      <section class="coverage-card" aria-label="Regional directory coverage"><h2>Explore an area</h2><div id="areaCoverage"></div><p>Listing counts describe this directory’s coverage, not the amount of volunteering available locally.</p></section>
     </aside>
   </div>
   <section id="aboutPilot" class="about-pilot">
     <div><p class="eyebrow">ABOUT THIS PILOT</p><h2>Useful local work, with a clear source</h2><p>The atlas brings together public volunteering routes relevant to preparedness, community support and recovery. It is a research pilot for discussion with the National Emergencies Trust; inclusion does not establish a NET partnership or endorsement.</p></div>
-    <div class="about-details"><details><summary>What the listings tell you</summary><p>A <strong>published opportunity</strong> is an activity advertised by its source. <strong>Enquire with host</strong> means dates, location or places need arranging. <strong>Ongoing commitment</strong> may involve training or regular attendance. Broker and platform entries help you find activities; they are not vacancies.</p><p>“Atlas assessment” explains our view of an activity’s community resilience relevance. Employee format, duration and requirements are taken from the linked source where stated. Unknown details remain “Confirm with host”.</p></details><details><summary>How records stay current</summary><p>Every record has a source-check date and a review deadline. Past-deadline, closed and overdue-for-review records are hidden from the default results automatically. Choose “Needs review / ended” to inspect them. A source check does not confirm live places with the host.</p><p>For owners: <a href="VOLUNTEERING-MAINTENANCE.md">maintenance guide</a> · <a href="data/volunteering-template.csv" download>data-entry template</a></p></details><details><summary>Location and coverage</summary><p>The pilot covers Greater London, the Somerset Council area, and Cumberland plus Westmorland and Furness. A marker can represent a venue, an organisation’s office, or an approximate area. Postcode-derived positions are approximate; confirm the address and meeting point with the host. Office proximity is not service coverage; the host’s coverage note is shown in each record. <a href="https://postcodes.io/docs/licences/" target="_blank" rel="noopener noreferrer">Postcode data attribution</a>.</p><p>No matching listings means no matching records in this pilot. It does not show an absence of volunteering or community capacity.</p></details></div>
+    <div class="about-details"><details><summary>What the listings tell you</summary><p>A <strong>published opportunity</strong> is an activity advertised by its source. <strong>Enquire with host</strong> means dates, location or places need arranging. <strong>Ongoing commitment</strong> may involve training or regular attendance. Broker and platform entries help you find activities; they are not vacancies.</p><p>“Atlas assessment” explains our view of an activity’s community resilience relevance. Employee format, duration and requirements are taken from the linked source where stated. Unknown details remain “Confirm with host”.</p></details><details><summary>How records stay current</summary><p>Every record has a source-check date and a review deadline. Past-deadline, closed and overdue-for-review records are hidden from the default results automatically. Choose “Needs review / ended” to inspect them. A source check does not confirm live places with the host.</p><p>For owners: <a href="VOLUNTEERING-MAINTENANCE.md">maintenance guide</a> · <a href="data/volunteering-template.csv" download>data-entry template</a></p></details><details><summary>Location and coverage</summary><p>You can browse all nine English regions and 296 local authorities. Council matching uses only the source geography recorded for a listing; broad regional browsing is not a promise of service in every council. A listing for a town can appear under its council without covering the whole council. A marker can represent a venue, an organisation’s office, or an approximate area. Postcode-derived positions are approximate; confirm the address and meeting point with the host. Office proximity is not service coverage; the host’s coverage note is shown in each record. <a href="https://postcodes.io/docs/licences/" target="_blank" rel="noopener noreferrer">Postcode data attribution</a>.</p><p><a href="data/volunteering-coverage.json">Download the coverage audit</a> · <a href="https://www.arcgis.com/home/item.html?id=1c17a07ff8fc44218883049f0afa3de1" target="_blank" rel="noopener noreferrer">ONS authority-to-region lookup</a></p><p>No matching listings means no matching records in this pilot. It does not show an absence of volunteering or community capacity.</p></details></div>
   </section>
-  <footer class="page-footer"><span>Mapping by Hugh Lamarque</span><div><span id="dataUpdated"></span><a href="data/volunteering.json" download>Source register · JSON</a><a href="VOLUNTEERING-MAINTENANCE.md" download>Maintenance notes</a></div></footer>
+  <footer class="page-footer"><span>Mapping by Hugh Lamarque · <a href="mailto:hugh.lamarque@gmail.com">Contact</a></span><div><span id="dataUpdated"></span><a href="data/volunteering.json" download>Source register · JSON</a><a href="VOLUNTEERING-MAINTENANCE.md" download>Maintenance notes</a></div></footer>
 </main>
 <dialog id="recordDialog" aria-labelledby="recordTitle"><div class="dialog-top"><p class="eyebrow">VOLUNTEERING / SOURCE RECORD</p><button type="button" class="close" id="closeRecord" aria-label="Close listing">×</button></div><div id="recordBody"></div></dialog>
 <dialog id="shareDialog" aria-labelledby="shareTitle"><div class="dialog-top"><h2 id="shareTitle">Share this view</h2><button type="button" class="close" id="closeShare" aria-label="Close sharing">×</button></div><label for="shareURL">Link to these filters</label><input id="shareURL" type="url" readonly><p>Saved listings stay in this browser and are not included in the link.</p><button id="copyShare" type="button">Copy link</button><p id="shareStatus" role="status"></p></dialog>
 <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
 <noscript><p class="noscript">Enable JavaScript to filter the directory, or <a href="data/volunteering.json">download the source register</a>.</p></noscript>
 <script src="vendor/leaflet.js"></script>
-<script src="volunteering.js?v=20260918.10b"></script>
+<script src="volunteering.js?v=20260918.11"></script>
 </body>
 </html>

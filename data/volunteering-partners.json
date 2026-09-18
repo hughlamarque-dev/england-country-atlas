@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-18",
-  "scope": "Selected volunteering brokers and community resilience networks in London, Somerset Council and Cumbria. Not an exhaustive national directory.",
+  "scope": "Selected sourced local volunteering brokers and resilience networks across England; not an exhaustive directory.",
   "records": [
     {
       "id": "pilot-london-plus-volunteer-centres",
@@ -99,7 +99,7 @@
         }
       ],
       "area_ids": [
-        "somerset"
+        "south-west"
       ]
     },
     {
@@ -128,7 +128,7 @@
         }
       ],
       "area_ids": [
-        "somerset"
+        "south-west"
       ]
     },
     {
@@ -153,7 +153,7 @@
         }
       ],
       "area_ids": [
-        "somerset"
+        "south-west"
       ]
     },
     {
@@ -178,7 +178,7 @@
         }
       ],
       "area_ids": [
-        "cumbria"
+        "north-west"
       ]
     },
     {
@@ -203,7 +203,3202 @@
         }
       ],
       "area_ids": [
-        "cumbria"
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-somerset-sevag-volunteering-route",
+      "name": "Somerset Prepared / Somerset Emergency Voluntary Agencies Group",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Somerset",
+      "website": "https://www.somersetprepared.org.uk/get-involved/volunteer/",
+      "volunteering_url": "https://www.somersetprepared.org.uk/contact-us/",
+      "source_url": "https://www.somersetprepared.org.uk/get-involved/volunteer/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Somerset Prepared signposts established voluntary agencies supporting communities before, during and after emergencies, with agency-led training and exercises.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Emergency volunteering routes affecting Somerset; member agencies have different service areas.",
+      "evidence": [
+        {
+          "url": "https://www.somersetprepared.org.uk/get-involved/volunteer/",
+          "claim": "Describes SEVAG member capabilities and agency training and exercises, with contact and member routes."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-get-involved-norfolk",
+      "name": "Voluntary Norfolk — Get InVOLved Norfolk",
+      "category": "Community resilience network",
+      "region": "East of England",
+      "directory_area": "Norfolk",
+      "website": "https://www.getinvolvednorfolk.org.uk/corporate-volunteering",
+      "volunteering_url": "https://www.getinvolvednorfolk.org.uk/corporate-volunteering",
+      "source_url": "https://www.getinvolvednorfolk.org.uk/corporate-volunteering",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Search Norfolk volunteering routes for individuals and employee teams. Employers can create a page, add members and track volunteering hours.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes Norfolk; individual arrangements and availability require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.getinvolvednorfolk.org.uk/",
+          "claim": "The platform publishes Norfolk roles and identifies Voluntary Norfolk as its provider."
+        },
+        {
+          "url": "https://www.getinvolvednorfolk.org.uk/corporate-volunteering",
+          "claim": "Corporate page describes employer accounts, team and individual applications, hour logging and potentially chargeable host activities."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-cas-volunteering",
+      "name": "Community Action Suffolk",
+      "category": "Volunteer broker",
+      "region": "East of England",
+      "directory_area": "Suffolk",
+      "website": "https://www.communityactionsuffolk.org.uk/volunteering/",
+      "volunteering_url": "https://volunteersuffolk.org.uk/volunteer-roles/",
+      "source_url": "https://www.communityactionsuffolk.org.uk/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "CAS manages Volunteer Suffolk and supports volunteer managers and employer-supported volunteering across Suffolk.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes Suffolk; individual arrangements and availability require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.communityactionsuffolk.org.uk/volunteering/",
+          "claim": "CAS states that its volunteering team covers all Suffolk local-authority boundaries, manages Volunteer Suffolk and has an employer-supported volunteering officer."
+        },
+        {
+          "url": "https://volunteersuffolk.org.uk/volunteer-roles/",
+          "claim": "CAS platform supports employer volunteering as a team or individually through a workplace."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-govolherts",
+      "name": "GoVolHerts / North Herts and Stevenage CVS",
+      "category": "Community resilience network",
+      "region": "East of England",
+      "directory_area": "Hertfordshire",
+      "website": "https://www.govolherts.org.uk/",
+      "volunteering_url": "https://www.govolherts.org.uk/",
+      "source_url": "https://www.govolherts.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Search Hertfordshire charity roles, including community support and professional or trustee opportunities. An account is required to apply through the platform.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes Hertfordshire; individual arrangements and availability require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.govolherts.org.uk/",
+          "claim": "Platform describes connecting charities and volunteers, account requirements and its operator and county-council funding."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-support-cambridgeshire",
+      "name": "Support Cambridgeshire",
+      "category": "Volunteer broker",
+      "region": "East of England",
+      "directory_area": "Cambridgeshire",
+      "website": "https://supportcambridgeshire.org.uk/volunteering/i-want-to-volunteer/how-to-find-opportunities/",
+      "volunteering_url": "https://supportcambridgeshire.org.uk/volunteering/i-want-to-volunteer/how-to-find-opportunities/",
+      "source_url": "https://supportcambridgeshire.org.uk/volunteering/i-want-to-volunteer/how-to-find-opportunities/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Find roles through Volunteer Cambs and access local volunteering support and introductions.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes Cambridgeshire; individual arrangements and availability require confirmation.",
+      "evidence": [
+        {
+          "url": "https://supportcambridgeshire.org.uk/volunteering/i-want-to-volunteer/how-to-find-opportunities/",
+          "claim": "Official page directs users to Volunteer Cambs and identifies local support in Cambridge, Fenland, Huntingdonshire, East Cambridgeshire and Peterborough."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-cvs-bedfordshire",
+      "name": "Community Voluntary Service Bedfordshire",
+      "category": "Volunteer broker",
+      "region": "East of England",
+      "directory_area": "Bedfordshire, Luton",
+      "website": "https://www.cvsbeds.org.uk/",
+      "volunteering_url": "https://www.cvsbeds.org.uk/",
+      "source_url": "https://www.cvsbeds.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "CVS matches volunteers to local opportunities and supports voluntary and community organisations. Its website links to a role search and corporate-volunteering support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes Bedfordshire, Luton; individual arrangements and availability require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.cvsbeds.org.uk/",
+          "claim": "CVS explicitly describes matching volunteers with opportunities in Bedfordshire and Luton and provides corporate-volunteering and role-search links."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-pcvs",
+      "name": "Peterborough Council for Voluntary Service",
+      "category": "Volunteer broker",
+      "region": "East of England",
+      "directory_area": "Peterborough",
+      "website": "https://www.pcvs.co.uk/what-we-do/volunteering/",
+      "volunteering_url": "https://www.pcvs.co.uk/what-we-do/volunteering/",
+      "source_url": "https://www.pcvs.co.uk/what-we-do/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The volunteer centre helps people find roles, supports volunteer managers and provides the Go Volunteer in Peterborough platform.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes Peterborough; individual arrangements and availability require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.pcvs.co.uk/what-we-do/volunteering/",
+          "claim": "PCVS describes matching volunteers, supporting volunteer managers and offering the Go-ViP Peterborough role platform."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-volunteer-essex",
+      "name": "Volunteer Essex",
+      "category": "Community resilience network",
+      "region": "East of England",
+      "directory_area": "Essex",
+      "website": "https://www.volunteeressex.org/",
+      "volunteering_url": "https://www.volunteeressex.org/",
+      "source_url": "https://www.volunteeressex.org/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Search volunteering roles by postcode, interests and activity, or seek help from a local volunteer centre.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes Essex; individual arrangements and availability require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.volunteeressex.org/",
+          "claim": "The site explicitly offers Essex postcode searching and local volunteer-centre advice."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-communities-first",
+      "name": "Communities 1st",
+      "category": "Volunteer broker",
+      "region": "East of England",
+      "directory_area": "St Albans, Hertsmere, Welwyn Hatfield",
+      "website": "https://www.communities1st.org.uk/",
+      "volunteering_url": "https://www.communities1st.org.uk/",
+      "source_url": "https://www.communities1st.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Communities 1st supports local voluntary organisations and connects people to volunteering opportunities.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Named membership remit: St Albans, Hertsmere and Welwyn Hatfield. Individual services may have different coverage.",
+      "evidence": [
+        {
+          "url": "https://www.communities1st.org.uk/",
+          "claim": "The organisation states its membership remit covers St Albans, Hertsmere and Welwyn Hatfield and publishes volunteer-centre and role-search routes."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-huntingdonshire-volunteer-centre",
+      "name": "Huntingdonshire Volunteer Centre",
+      "category": "Volunteer broker",
+      "region": "East of England",
+      "directory_area": "Huntingdonshire",
+      "website": "https://huntsvc.org.uk/",
+      "volunteering_url": "https://huntsvc.org.uk/",
+      "source_url": "https://huntsvc.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The centre matches people to local volunteering roles and runs community transport and shop services.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes Huntingdonshire; individual arrangements and availability require confirmation.",
+      "evidence": [
+        {
+          "url": "https://huntsvc.org.uk/",
+          "claim": "The centre states its Huntingdonshire remit and describes volunteer matching and car schemes in Huntingdon, St Ives, St Neots and Ramsey."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-thurrock-cvs",
+      "name": "Thurrock CVS",
+      "category": "Volunteer broker",
+      "region": "East of England",
+      "directory_area": "Thurrock",
+      "website": "https://thurrockcvs.org/volunteer-centre/",
+      "volunteering_url": "https://thurrockcvs.org/volunteer-centre/",
+      "source_url": "https://thurrockcvs.org/volunteer-centre/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Volunteer Centre Thurrock matches residents with local roles. Its business service also offers matching for employee teams, from a single team day to longer commitments.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "The volunteer centre and business pages explicitly describe Thurrock-wide services. The Grays address is an office, not a confirmed activity venue.",
+      "evidence": [
+        {
+          "url": "https://thurrockcvs.org/volunteer-centre/",
+          "claim": "The volunteer centre matches volunteers across Thurrock and publishes its Grays office address."
+        },
+        {
+          "url": "https://thurrockcvs.org/about/working-with-businesses/",
+          "claim": "The business route explicitly offers employee-team matching from single team days to longer-term commitments and accepts professional skills."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-england-savs-southend",
+      "name": "Southend Association of Voluntary Services (SAVS)",
+      "category": "Volunteer broker",
+      "region": "East of England",
+      "directory_area": "Southend-on-Sea",
+      "website": "https://www.savs-southend.org/savs-project/southend-volunteer-hub/",
+      "volunteering_url": "https://www.savs-southend.org/savs-project/southend-volunteer-hub/",
+      "source_url": "https://www.savs-southend.org/savs-project/southend-volunteer-hub/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "SAVS links people with volunteering organisations across Southend through its Volunteer Hub. Businesses can also discuss tailored local projects and professional support through its social-value service.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "The host explicitly describes organisations and business activity across the City of Southend. Its office is not a confirmed volunteering venue.",
+      "evidence": [
+        {
+          "url": "https://www.savs-southend.org/savs-project/southend-volunteer-hub/",
+          "claim": "SAVS links volunteers to organisations across Southend and supports those organisations with recruitment."
+        },
+        {
+          "url": "https://www.savs-southend.org/savs-social-value/",
+          "claim": "SAVS offers business consultations and bespoke community projects in the City of Southend, with an example of professional IT knowledge-sharing."
+        },
+        {
+          "url": "https://www.savs-southend.org/contact-us/",
+          "claim": "Official contact page publishes the Alexandra Street office address and postcode."
+        }
+      ],
+      "area_ids": [
+        "east-england"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-cvs-lincolnshire",
+      "name": "CVS Lincolnshire",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Lincolnshire",
+      "website": "https://cvslincolnshire.org.uk/employer-supported-volunteering-esv/",
+      "volunteering_url": "https://cvslincolnshire.org.uk/employer-supported-volunteering-esv/",
+      "source_url": "https://cvslincolnshire.org.uk/employer-supported-volunteering-esv/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Helps employers arrange volunteer team challenges with local community organisations and accepts enquiries from potential hosts.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Lincolnshire. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://cvslincolnshire.org.uk/employer-supported-volunteering-esv/",
+          "claim": "Employer supported team challenges are offered through an enquiry form."
+        },
+        {
+          "url": "https://cvslincolnshire.org.uk/",
+          "claim": "CVS Lincolnshire supports the Lincolnshire voluntary sector; it combines former LCVS and Voluntary Centre Services."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-nottingham-cvs",
+      "name": "Nottingham Community and Voluntary Service",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Nottingham",
+      "website": "https://www.nottinghamcvs.co.uk/volunteering/want-to-volunteer",
+      "volunteering_url": "https://www.nottinghamcvs.co.uk/volunteering/want-to-volunteer",
+      "source_url": "https://www.nottinghamcvs.co.uk/volunteering/want-to-volunteer",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Offers a searchable volunteer directory and advisor support to match interests, skills and availability with local roles.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Nottingham. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.nottinghamcvs.co.uk/volunteering/want-to-volunteer",
+          "claim": "NCVS provides volunteer advice and a database filterable by role, organisation type, time and Nottingham electoral ward."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-derbyshire-voluntary-action",
+      "name": "Derbyshire Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Derbyshire",
+      "website": "https://dva.org.uk/",
+      "volunteering_url": "https://dva.org.uk/",
+      "source_url": "https://dva.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connects charities, community groups and partners through development support and voluntary-sector forums.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Derbyshire. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://dva.org.uk/",
+          "claim": "Works with groups across Derbyshire and supports networks and community development."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-val-volunteering",
+      "name": "Voluntary Action LeicesterShire",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Leicester, Leicestershire",
+      "website": "https://valonline.org.uk/",
+      "volunteering_url": "https://volunteer.valonline.org.uk/",
+      "source_url": "https://valonline.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Supports local voluntary organisations and links people to its volunteering opportunity service.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Leicester, Leicestershire. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://valonline.org.uk/",
+          "claim": "VAL serves Leicester and Leicestershire and publishes a dedicated volunteer-search route."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-vin-corporate",
+      "name": "Voluntary Impact Northamptonshire",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Northamptonshire",
+      "website": "https://voluntaryimpact.org.uk/volunteer/corporate-volunteering/",
+      "volunteering_url": "https://voluntaryimpact.org.uk/volunteer/corporate-volunteering/",
+      "source_url": "https://voluntaryimpact.org.uk/volunteer/corporate-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Links employers and individuals to corporate volunteering opportunities and invites charities to submit tasks.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Northamptonshire. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://voluntaryimpact.org.uk/volunteer/corporate-volunteering/",
+          "claim": "Offers corporate volunteering routes for groups or individuals and collects host role descriptions."
+        },
+        {
+          "url": "https://voluntaryimpact.org.uk/",
+          "claim": "Voluntary Impact Northamptonshire is the local community-sector support organisation."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-support-staffordshire-volunteers",
+      "name": "Support Staffordshire",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Staffordshire",
+      "website": "https://supportstaffordshire.org.uk/volunteers/",
+      "volunteering_url": "https://supportstaffordshire.org.uk/volunteers/",
+      "source_url": "https://supportstaffordshire.org.uk/volunteers/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Provides volunteer brokerage and adviser support to help people identify suitable roles with local organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Staffordshire. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://supportstaffordshire.org.uk/volunteers/",
+          "claim": "Provides a free confidential volunteer brokerage service for people across Staffordshire."
+        },
+        {
+          "url": "https://supportstaffordshire.org.uk/local-emergency-resilience/",
+          "claim": "The page describes coordination on emergency volunteers, rest centres and specialist voluntary capabilities."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-shropshire-community-resource",
+      "name": "Community Resource",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Shropshire",
+      "website": "https://community-resource.org.uk/service-community-support/",
+      "volunteering_url": "https://community-resource.org.uk/service-community-support/",
+      "source_url": "https://community-resource.org.uk/service-community-support/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Supports community groups with governance, funding and local organisational development.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Shropshire. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://community-resource.org.uk/service-community-support/",
+          "claim": "The community infrastructure service provides advice and training to Shropshire voluntary and community organisations."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-hvoss-corporate",
+      "name": "hvoss",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Herefordshire",
+      "website": "https://www.hvoss.org.uk/corporate-volunteering/",
+      "volunteering_url": "https://www.hvoss.org.uk/corporate-volunteering/",
+      "source_url": "https://www.hvoss.org.uk/corporate-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Helps companies develop volunteering programmes, connect with local charities and find potential team challenges.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Herefordshire. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.hvoss.org.uk/corporate-volunteering/",
+          "claim": "Offers programme design, local charity connections and team-challenge sourcing, including practical and skilled contributions."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-wcava-business",
+      "name": "Warwickshire & Solihull Community and Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Warwickshire, Solihull",
+      "website": "https://www.wcava.org.uk/volunteering/business-volunteering-support/",
+      "volunteering_url": "https://www.wcava.org.uk/volunteering/business-volunteering-support/",
+      "source_url": "https://www.wcava.org.uk/volunteering/business-volunteering-support/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Invites employers to arrange team support for community groups or contribute one-off specialist skills.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Warwickshire, Solihull. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.wcava.org.uk/volunteering/business-volunteering-support/",
+          "claim": "Offers business volunteering support and one-off specialist skills connections."
+        },
+        {
+          "url": "https://www.wcava.org.uk/",
+          "claim": "CAVA identifies its local infrastructure coverage as Warwickshire and Solihull."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-bvsc-volunteer",
+      "name": "Birmingham Voluntary Service Council",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Birmingham",
+      "website": "https://www.bvsc.org/become-a-volunteer",
+      "volunteering_url": "https://www.bvsc.org/become-a-volunteer",
+      "source_url": "https://www.bvsc.org/become-a-volunteer",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Provides a public route into volunteering in Birmingham.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Birmingham. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.bvsc.org/become-a-volunteer",
+          "claim": "BVSC directs people to ways of getting involved in Birmingham volunteering."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-vac-volunteering",
+      "name": "Voluntary Action Coventry",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Coventry",
+      "website": "https://www.vacoventry.org.uk/volunteering-landing-page/",
+      "volunteering_url": "https://www.getinvolvedcoventry.org.uk/",
+      "source_url": "https://www.vacoventry.org.uk/volunteering-landing-page/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Helps people find local volunteering and supports organisations involving volunteers in Coventry.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Coventry. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.vacoventry.org.uk/volunteering-landing-page/",
+          "claim": "VAC supports volunteering and provides a link to the Get Involved Coventry opportunity platform."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-one-walsall-corporate",
+      "name": "One Walsall",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Walsall",
+      "website": "https://onewalsall.org/volunteering-opportunities",
+      "volunteering_url": "https://onewalsall.org/volunteering-opportunities",
+      "source_url": "https://onewalsall.org/volunteering-opportunities",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connects corporate volunteers with local charities and community organisations, including practical and skills-based challenges.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Walsall. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://onewalsall.org/volunteering-opportunities",
+          "claim": "CSR enquiry asks about team or skills challenges, offered skills and one-off or regular availability."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-scvo-volunteering",
+      "name": "Sandwell Council of Voluntary Organisations",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Sandwell",
+      "website": "https://www.scvo.info/support-services-2/volunteering-support/",
+      "volunteering_url": "https://www.scvo.info/lets-go-sandwell/",
+      "source_url": "https://www.scvo.info/support-services-2/volunteering-support/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Supports local organisations to recruit and manage volunteers and promotes opportunities through its Let’s Go portal.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Sandwell. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.scvo.info/support-services-2/volunteering-support/",
+          "claim": "SCVO supports volunteer participation across Sandwell, including work with local businesses and a public opportunity portal."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-dudley-volunteer-centre",
+      "name": "Dudley CVS",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Dudley",
+      "website": "https://www.dudleycvs.org.uk/about/who-we-are/volunteer-centre/",
+      "volunteering_url": "https://www.dudleycvs.org.uk/about/who-we-are/volunteer-centre/",
+      "source_url": "https://www.dudleycvs.org.uk/about/who-we-are/volunteer-centre/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Helps individuals find local roles and businesses connect with community organisations through volunteering or pro-bono support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Dudley. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.dudleycvs.org.uk/about/who-we-are/volunteer-centre/",
+          "claim": "Volunteer Centre Dudley serves Dudley Borough and explicitly supports businesses volunteering or offering pro-bono help."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-wolverhampton-volunteers",
+      "name": "Wolverhampton Voluntary & Community Action",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Wolverhampton",
+      "website": "https://www.wvca.org.uk/wolverhampton-volunteers/",
+      "volunteering_url": "https://www.wtonvolunteers.org/",
+      "source_url": "https://www.wvca.org.uk/wolverhampton-volunteers/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connects volunteers and local businesses with community roles and supports host organisations with recruitment and good practice.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Wolverhampton. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.wvca.org.uk/wolverhampton-volunteers/",
+          "claim": "Wolverhampton Volunteers provides a registration route and support for local volunteer-involving organisations."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-worcester-community-action",
+      "name": "Worcester Community Action",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Worcester",
+      "website": "https://worcestercommunityaction.org.uk/volunteer/",
+      "volunteering_url": "https://worcestercommunityaction.org.uk/volunteer/",
+      "source_url": "https://worcestercommunityaction.org.uk/volunteer/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Recruits volunteers for local organisations and offers a register-interest route to help people find suitable roles.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Worcester volunteer centre; this record does not establish countywide Worcestershire coverage.",
+      "evidence": [
+        {
+          "url": "https://worcestercommunityaction.org.uk/volunteer/",
+          "claim": "The volunteer centre recruits on behalf of organisations and invites people to discuss roles beyond the online listings."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-community-action-derby",
+      "name": "Community Action Derby",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Derby",
+      "website": "https://www.communityactionderby.org.uk/how-we-can-help/volunteering",
+      "volunteering_url": "https://www.communityactionderby.org.uk/how-we-can-help/volunteering",
+      "source_url": "https://www.communityactionderby.org.uk/how-we-can-help/volunteering",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Helps people find volunteering in Derby and supports local organisations that involve volunteers.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Derby city volunteering support; not assumed to cover all Derbyshire.",
+      "evidence": [
+        {
+          "url": "https://www.communityactionderby.org.uk/how-we-can-help/volunteering",
+          "claim": "The city volunteer centre provides matching advice and support for volunteer-involving organisations."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-mansfield-cvs",
+      "name": "Mansfield CVS",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Mansfield",
+      "website": "https://www.mansfieldcvs.org/",
+      "volunteering_url": "https://www.mansfieldcvs.org/",
+      "source_url": "https://www.mansfieldcvs.org/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Supports people interested in volunteering and organisations recruiting volunteers in Mansfield and district.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes Mansfield and district. Only Mansfield is assigned; the wider district wording is not expanded into neighbouring council areas.",
+      "evidence": [
+        {
+          "url": "https://www.mansfieldcvs.org/",
+          "claim": "Mansfield CVS provides volunteer information and links to roles for individuals and local organisations."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-vast-stoke",
+      "name": "VAST",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Stoke-on-Trent",
+      "website": "https://vast.org.uk/volunteering/",
+      "volunteering_url": "https://vast.org.uk/volunteering/",
+      "source_url": "https://vast.org.uk/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Matches people with local volunteering, from occasional events to longer placements, through a conversation about their interests and commitments.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Stoke-on-Trent. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://vast.org.uk/volunteering/",
+          "claim": "VAST describes individual volunteer matching and its Stoke-on-Trent volunteering network and vision."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-west-midlands-we-can-worcestershire",
+      "name": "Worcestershire Community Action Network",
+      "category": "Volunteer broker",
+      "region": "West Midlands",
+      "directory_area": "Worcestershire",
+      "website": "https://we-can.today/",
+      "volunteering_url": "https://we-can.today/",
+      "source_url": "https://we-can.today/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connects people to local community-action organisations and volunteer centres across Worcestershire.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Countywide referral network. Source explicitly says Wyre Forest has no active Volunteer Centre or CVS support and invites enquiries for signposting; do not interpret this entry as an equivalent service or a placement in every district.",
+      "evidence": [
+        {
+          "url": "https://we-can.today/",
+          "claim": "Lists six member organisations and a separate signposting enquiry for Wyre Forest."
+        },
+        {
+          "url": "https://www.worcestershire.gov.uk/council-services/communities/volunteering",
+          "claim": "Council directs county residents to We CAN for matching local people and volunteering opportunities."
+        }
+      ],
+      "area_ids": [
+        "west-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-ashfield-voluntary-action",
+      "name": "Ashfield Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Ashfield",
+      "website": "https://www.ashfieldvoluntaryaction.org.uk/our-work/volunteering/",
+      "volunteering_url": "https://www.ashfieldvoluntaryaction.org.uk/our-work/volunteering/",
+      "source_url": "https://www.ashfieldvoluntaryaction.org.uk/our-work/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Brokers volunteering across Ashfield district and supports people to find suitable roles with local organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Ashfield. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.ashfieldvoluntaryaction.org.uk/our-work/volunteering/",
+          "claim": "AVA explicitly acts as a broker across Ashfield district, uses a local opportunity database and offers an enquiry form."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-bassetlaw-bolsover-cvs",
+      "name": "Bassetlaw Community and Voluntary Service",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Bassetlaw, Bolsover",
+      "website": "https://www.bcvs.org.uk/volunteer",
+      "volunteering_url": "https://www.bcvs.org.uk/volunteer",
+      "source_url": "https://www.bcvs.org.uk/volunteer",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Publishes volunteer opportunities, registration, coordinator support and routes into trusteeship.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes work in Bassetlaw, Bolsover. Specific host locations and service areas require confirmation.",
+      "evidence": [
+        {
+          "url": "https://www.bcvs.org.uk/volunteer",
+          "claim": "Publishes opportunity search, volunteer registration and volunteer-coordinator contact."
+        },
+        {
+          "url": "https://www.bcvs.org.uk/",
+          "claim": "Host identifies its Bassetlaw and Bolsover district community and voluntary services."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-east-midlands-nottinghamshire-community-team",
+      "name": "Nottinghamshire County Council Communities Team",
+      "category": "Volunteer broker",
+      "region": "East Midlands",
+      "directory_area": "Nottinghamshire",
+      "website": "https://www.nottinghamshire.gov.uk/business-community/community-and-voluntary-sector/supporting-voluntary-sector",
+      "volunteering_url": "https://www.nottinghamshire.gov.uk/business-community/community-and-voluntary-sector/supporting-voluntary-sector",
+      "source_url": "https://www.nottinghamshire.gov.uk/business-community/community-and-voluntary-sector/supporting-voluntary-sector",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Provides community groups with practical organisational advice and information about local contacts and networks.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Countywide organisational support and signposting. This does not establish a volunteer-placement brokerage or an available activity in each Nottinghamshire district.",
+      "evidence": [
+        {
+          "url": "https://www.nottinghamshire.gov.uk/business-community/community-and-voluntary-sector/supporting-voluntary-sector",
+          "claim": "The Communities Team supports Nottinghamshire voluntary groups and offers local network contacts and advice on group management."
+        }
+      ],
+      "area_ids": [
+        "east-midlands"
+      ]
+    },
+    {
+      "id": "volunteer-northumberland-ncva-volunteer-broker",
+      "name": "Northumberland Community and Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "Northumberland",
+      "website": "https://northumberlandcva.org.uk/",
+      "volunteering_url": "https://northumberlandcva.org.uk/",
+      "source_url": "https://northumberlandcva.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "NCVA helps people find volunteering routes and supports local groups to recruit and manage volunteers.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Northumberland. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://northumberlandcva.org.uk/",
+          "claim": "The official page identifies county-wide community support and a service helping volunteers and organisations find suitable routes."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-newcastle-gateshead-connected-voice-volunteering",
+      "name": "Connected Voice",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "Newcastle upon Tyne, Gateshead",
+      "website": "https://www.connectedvoice.org.uk/services/connected-voice-volunteering",
+      "volunteering_url": "https://www.connectedvoice.org.uk/services/connected-voice-volunteering",
+      "source_url": "https://www.connectedvoice.org.uk/services/connected-voice-volunteering",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connected Voice provides Gateshead Volunteer Centre, Volunteering Newcastle and support for volunteer-involving organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Newcastle upon Tyne, Gateshead. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.connectedvoice.org.uk/services/connected-voice-volunteering",
+          "claim": "The service page names Gateshead Volunteer Centre, Volunteering Newcastle and networks across both places."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-north-tyneside-voda-volunteering",
+      "name": "North Tyneside VODA",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "North Tyneside",
+      "website": "https://voda.org.uk/",
+      "volunteering_url": "https://voda.org.uk/",
+      "source_url": "https://voda.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "VODA supports volunteers and voluntary groups in North Tyneside and links to a local opportunity search.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in North Tyneside. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://voda.org.uk/",
+          "claim": "The homepage explicitly identifies North Tyneside and offers help finding volunteering roles and support for local organisations."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-south-tyneside-inspire-network",
+      "name": "Inspire South Tyneside",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "South Tyneside",
+      "website": "https://inspiresouthtyneside.co.uk/",
+      "volunteering_url": "https://inspiresouthtyneside.co.uk/",
+      "source_url": "https://inspiresouthtyneside.co.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Inspire is the umbrella body for the voluntary and community sector across South Tyneside and hosts a voluntary-sector coalition.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in South Tyneside. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://inspiresouthtyneside.co.uk/",
+          "claim": "The homepage states borough-wide infrastructure and coalition roles and publishes contact details while the website is being rebuilt."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-sunderland-vcas-community-network",
+      "name": "Voluntary and Community Action Sunderland",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "Sunderland",
+      "website": "https://www.vcas2020.org/",
+      "volunteering_url": "https://www.vcas2020.org/",
+      "source_url": "https://www.vcas2020.org/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "VCAS supports Sunderland community organisations with connections, practical guidance and governance support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Sunderland. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.vcas2020.org/",
+          "claim": "The organisation explicitly supports Sunderland’s voluntary and community sector."
+        },
+        {
+          "url": "https://www.sunderlandvsa.co.uk/volunteer",
+          "claim": "The Sunderland Voluntary Sector Alliance lists VCAS among local organisations that can signpost volunteer opportunities."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-durham-dca-volunteer-broker",
+      "name": "Durham Community Action",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "County Durham",
+      "website": "https://www.durhamcommunityaction.org.uk/",
+      "volunteering_url": "https://www.countydurhamvolunteering.org.uk/",
+      "source_url": "https://www.durhamcommunityaction.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Durham Community Action provides volunteering brokerage and support to community groups across County Durham.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in County Durham. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.durhamcommunityaction.org.uk/",
+          "claim": "The official homepage describes county-wide volunteering brokerage and links to the County Durham volunteering register."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-stockton-catalyst-volunteer-broker",
+      "name": "Catalyst Stockton",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "Stockton-on-Tees",
+      "website": "https://www.stocktonvolunteers.co.uk/",
+      "volunteering_url": "https://www.stocktonvolunteers.co.uk/",
+      "source_url": "https://www.stocktonvolunteers.co.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Stockton Volunteers lists local roles and lets businesses offer staff volunteering support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Stockton-on-Tees. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.stocktonvolunteers.co.uk/",
+          "claim": "The site identifies itself as Stockton-on-Tees volunteering provision, lists opportunities and invites business offers of help."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-middlesbrough-volunteering-academy",
+      "name": "Middlesbrough Voluntary Development Agency",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "Middlesbrough",
+      "website": "https://mvda.info/volunteering",
+      "volunteering_url": "https://mvda.info/volunteering",
+      "source_url": "https://mvda.info/volunteering",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "MVDA’s Volunteering Academy brings together volunteer enquiries, training and support for local organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Middlesbrough. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://mvda.info/volunteering",
+          "claim": "The service page explicitly describes a volunteering hub for Middlesbrough and links to routes for volunteers and organisations."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-redcar-cleveland-rcvda-volunteering",
+      "name": "Redcar and Cleveland Voluntary Development Agency",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "Redcar and Cleveland",
+      "website": "https://www.rcvda.org.uk/",
+      "volunteering_url": "https://www.rcvda.org.uk/",
+      "source_url": "https://www.rcvda.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "RCVDA connects people with local opportunities and helps organisations recruit and retain volunteers.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Redcar and Cleveland. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.rcvda.org.uk/",
+          "claim": "The official homepage states support across Redcar and Cleveland and describes volunteer matching and organisational support."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-hartlepool-community-trust-network",
+      "name": "Hartlepool Community Trust",
+      "category": "Volunteer broker",
+      "region": "North East",
+      "directory_area": "Hartlepool",
+      "website": "https://www.hartlepoolcommunitytrust.org.uk/",
+      "volunteering_url": "https://www.hartlepoolcommunitytrust.org.uk/",
+      "source_url": "https://www.hartlepoolcommunitytrust.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Hartlepool Community Trust supports local charities and community groups through advice, networks and collaborative projects.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Hartlepool. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.hartlepoolcommunitytrust.org.uk/",
+          "claim": "The homepage describes a development service for Hartlepool’s voluntary sector and lists local charity support and food projects."
+        }
+      ],
+      "area_ids": [
+        "north-east"
+      ]
+    },
+    {
+      "id": "volunteer-york-cvs-volunteer-centre",
+      "name": "York CVS",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "York",
+      "website": "https://yorkcvs.org.uk/",
+      "volunteering_url": "https://yorkcvs.org.uk/",
+      "source_url": "https://yorkcvs.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "York CVS’s volunteer centre helps people find volunteering and supports organisations with volunteer management.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in York. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://yorkcvs.org.uk/",
+          "claim": "The official homepage explicitly describes York Volunteers as its volunteer centre serving volunteering in York."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-north-yorkshire-community-first-volunteering",
+      "name": "Community First Yorkshire",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "North Yorkshire",
+      "website": "https://www.communityfirstyorkshire.org.uk/",
+      "volunteering_url": "https://www.communityfirstyorkshire.org.uk/portfolio-item/i-want-to-volunteer/",
+      "source_url": "https://www.communityfirstyorkshire.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Community First Yorkshire supports North Yorkshire charities and community groups and helps people explore volunteering.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in North Yorkshire. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.communityfirstyorkshire.org.uk/",
+          "claim": "The homepage explicitly describes volunteering support across North Yorkshire and provides a route for people who want to volunteer."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-sheffield-volunteer-centre",
+      "name": "Voluntary Action Sheffield",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "Sheffield",
+      "website": "https://www.sheffieldvolunteercentre.org.uk/",
+      "volunteering_url": "https://www.sheffieldvolunteercentre.org.uk/",
+      "source_url": "https://www.sheffieldvolunteercentre.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Sheffield Volunteer Centre connects people with local roles and provides a 2026 directory for group, employee and one-off volunteering enquiries.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Sheffield. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.sheffieldvolunteercentre.org.uk/",
+          "claim": "The centre states that it supports volunteering in Sheffield and provides routes for individual volunteers and organisations."
+        },
+        {
+          "url": "https://www.sheffieldvolunteercentre.org.uk/group-and-employee-volunteering-opportunities/",
+          "claim": "The official page links to a 2026 list of organisations accepting groups and one-off volunteers and provides employer planning guidance."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-hull-cvs-volunteer-centre",
+      "name": "Hull CVS",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "Kingston upon Hull",
+      "website": "https://www.hullcvs.org.uk/",
+      "volunteering_url": "https://www.hullcvs.org.uk/",
+      "source_url": "https://www.hullcvs.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Hull CVS runs a volunteer centre and helps local organisations recruit volunteers and strengthen their services.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Kingston upon Hull. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.hullcvs.org.uk/",
+          "claim": "The official homepage identifies a Hull volunteer centre and local volunteer recruitment support."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-barnsley-cvs-volunteering",
+      "name": "Barnsley CVS",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "Barnsley",
+      "website": "https://www.barnsleycvs.org.uk/",
+      "volunteering_url": "https://www.barnsleycvs.org.uk/",
+      "source_url": "https://www.barnsleycvs.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Barnsley CVS advertises volunteer roles and supports members of the public and local organisations with volunteering.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Barnsley. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.barnsleycvs.org.uk/",
+          "claim": "The homepage identifies Barnsley Borough service coverage and links to volunteering support for residents and organisations."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-bradford-inclusive-volunteering",
+      "name": "Volunteering Bradford",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "Bradford",
+      "website": "https://inclusivevolunteering.org/",
+      "volunteering_url": "https://inclusivevolunteering.org/",
+      "source_url": "https://inclusivevolunteering.org/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Volunteering Bradford helps adults with SEND and people with mental health needs access suitable volunteering.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Bradford. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://inclusivevolunteering.org/",
+          "claim": "The official site identifies Bradford and district, describes tailored inclusion support and links to local volunteering roles."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-calderdale-kirklees-vac-network",
+      "name": "Voluntary & Community (VAC)",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "Calderdale, Kirklees",
+      "website": "https://www.cvac.org.uk/",
+      "volunteering_url": "https://www.cvac.org.uk/",
+      "source_url": "https://www.cvac.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "VAC supports voluntary and community organisations across Calderdale and Kirklees through advice, networks and practical support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Calderdale, Kirklees. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.cvac.org.uk/",
+          "claim": "The homepage explicitly states both Calderdale and Kirklees coverage and links to volunteering and requests for support."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-east-riding-north-lincolnshire-community-vision",
+      "name": "Community VISION",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "East Riding of Yorkshire, North Lincolnshire",
+      "website": "https://communityvision.org.uk/services/volunteering/",
+      "volunteering_url": "https://communityvision.org.uk/services/volunteering/",
+      "source_url": "https://communityvision.org.uk/services/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Community VISION supports volunteers and recruiting organisations through local volunteer hubs and opportunity promotion.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in East Riding of Yorkshire, North Lincolnshire. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://communityvision.org.uk/services/volunteering/",
+          "claim": "The volunteering page names the VCS Alliance Volunteer Hub in North Lincolnshire and Time2Volunteer in East Riding, and describes independent brokerage."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-leeds-volunteer-centre",
+      "name": "Voluntary Action Leeds",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "Leeds",
+      "website": "https://doinggoodleeds.org.uk/volunteering/",
+      "volunteering_url": "https://doinggoodleeds.org.uk/volunteering/",
+      "source_url": "https://doinggoodleeds.org.uk/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Volunteer Centre Leeds offers advice and a dedicated volunteering platform to connect people with local organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Leeds. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://doinggoodleeds.org.uk/volunteering/",
+          "claim": "The page explicitly describes the Leeds volunteer centre and its dedicated Leeds volunteering platform."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-rotherham-volunteer-centre",
+      "name": "Voluntary Action Rotherham",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "Rotherham",
+      "website": "https://www.varotherham.org.uk/page/volunteering-",
+      "volunteering_url": "https://www.varotherham.org.uk/page/volunteering-",
+      "source_url": "https://www.varotherham.org.uk/page/volunteering-",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The volunteer centre supports individual volunteers and provides employers with a brochure of local projects seeking team support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Rotherham. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.varotherham.org.uk/page/volunteering-",
+          "claim": "The page describes Rotherham volunteer brokerage and a specific enquiry route for local employers planning team volunteering days."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-wakefield-nova-community-network",
+      "name": "Nova Wakefield District",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "Wakefield",
+      "website": "https://www.nova-wd.org.uk/",
+      "volunteering_url": "https://www.nova-wd.org.uk/",
+      "source_url": "https://www.nova-wd.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Nova supports Wakefield District voluntary, community and social enterprise organisations through advice, networks and a member directory.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Wakefield. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://www.nova-wd.org.uk/",
+          "claim": "The official homepage explicitly identifies Wakefield District service coverage and its organisational support and networking role."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-doncaster-vad-volunteering",
+      "name": "Voluntary Action Doncaster",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "Doncaster",
+      "website": "https://voluntaryactiondoncaster.org.uk/jobs-and-volunteering/",
+      "volunteering_url": "https://voluntaryactiondoncaster.org.uk/jobs-and-volunteering/",
+      "source_url": "https://voluntaryactiondoncaster.org.uk/jobs-and-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Voluntary Action Doncaster promotes volunteer opportunities and connects people with local voluntary, community and faith organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in Doncaster. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://voluntaryactiondoncaster.org.uk/jobs-and-volunteering/",
+          "claim": "The official page explicitly describes Doncaster volunteering and provides a volunteer-role filter alongside paid vacancies."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-north-east-lincolnshire-vanel-volunteering",
+      "name": "Voluntary Action North East Lincolnshire",
+      "category": "Volunteer broker",
+      "region": "Yorkshire and the Humber",
+      "directory_area": "North East Lincolnshire",
+      "website": "https://vanel.org.uk/vanel/volunteering/",
+      "volunteering_url": "https://vanel.org.uk/vanel/volunteering/",
+      "source_url": "https://vanel.org.uk/vanel/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "VANEL’s volunteer centre helps people explore volunteering and supports organisations through its volunteer development service and managers’ network.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes support in North East Lincolnshire. Confirm the geography of each role with the host.",
+      "evidence": [
+        {
+          "url": "https://vanel.org.uk/vanel/volunteering/",
+          "claim": "The current VANEL volunteering page describes a volunteer centre enquiry service and organisational volunteering support."
+        }
+      ],
+      "area_ids": [
+        "yorkshire-humber"
+      ]
+    },
+    {
+      "id": "volunteer-nw-salford-centre",
+      "name": "Salford CVS / Volunteer Centre Salford",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Salford",
+      "website": "https://www.salfordcvs.co.uk/volunteer-centre",
+      "volunteering_url": "https://www.salfordcvs.co.uk/volunteer-centre",
+      "source_url": "https://www.salfordcvs.co.uk/volunteer-centre",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Volunteer brokerage and support for residents and organisations serving Salford.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Salford. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://www.salfordcvs.co.uk/volunteer-centre",
+          "claim": "Volunteer brokerage and support for residents and organisations serving Salford."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-action-together",
+      "name": "Action Together",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Oldham, Rochdale, Tameside",
+      "website": "https://www.actiontogether.org.uk/",
+      "volunteering_url": "https://www.actiontogether.org.uk/volunteering",
+      "source_url": "https://www.actiontogether.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The local infrastructure organisation connects volunteers and community groups and provides a searchable roles directory.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Oldham; Rochdale; Tameside. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://www.actiontogether.org.uk/",
+          "claim": "The organisation explicitly serves Oldham, Rochdale and Tameside and links its volunteering directory."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-community-cvs",
+      "name": "Community CVS",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Blackburn with Darwen, Preston",
+      "website": "https://volunteer.communitycvs.org.uk/",
+      "volunteering_url": "https://volunteer.communitycvs.org.uk/",
+      "source_url": "https://volunteer.communitycvs.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local volunteering directory with postcode, interest and commitment filters.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Blackburn with Darwen; Preston. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://volunteer.communitycvs.org.uk/",
+          "claim": "Local volunteering directory with postcode, interest and commitment filters."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-bprcvs",
+      "name": "BPRCVS",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Burnley, Pendle, Rossendale",
+      "website": "https://bprcvs.co.uk/volunteering-for-wellbeing--community-hub.html",
+      "volunteering_url": "https://bprcvs.getvolunteering.co.uk/",
+      "source_url": "https://bprcvs.co.uk/volunteering-for-wellbeing--community-hub.html",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The volunteer centre helps individuals find roles and community organisations recruit volunteers across three boroughs.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Burnley; Pendle; Rossendale. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://bprcvs.co.uk/volunteering-for-wellbeing--community-hub.html",
+          "claim": "The volunteer centre helps individuals find roles and community organisations recruit volunteers across three boroughs."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-lancaster-centre",
+      "name": "Lancaster District Community & Voluntary Solutions",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Lancaster",
+      "website": "https://lancastercvs.org.uk/volunteer-centre/",
+      "volunteering_url": "https://volunteering.lancastercvs.org.uk/",
+      "source_url": "https://lancastercvs.org.uk/volunteer-centre/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The volunteer centre links people to local volunteering and helps organisations recruit.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Lancaster District. The published registered address is an office reference, not an activity venue.",
+      "evidence": [
+        {
+          "url": "https://lancastercvs.org.uk/volunteer-centre/",
+          "claim": "The volunteer centre links people to local volunteering and helps organisations recruit."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-cheshire-east-cvs",
+      "name": "CVS Cheshire East",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Cheshire East",
+      "website": "https://www.cvsce.org.uk/",
+      "volunteering_url": "https://volunteering.cvsce.org.uk/index-classic",
+      "source_url": "https://www.cvsce.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "CVS links to its Cheshire East volunteering platform and supports local voluntary organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Cheshire East. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://www.cvsce.org.uk/",
+          "claim": "The organisation offers Cheshire East volunteering support and a roles platform."
+        },
+        {
+          "url": "https://www.cvsce.org.uk/emergency-planning-organistions-and-individuals",
+          "claim": "CVS separately advertises emergency-planning training for local groups, subject to availability through October 2026."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-warrington-va",
+      "name": "Warrington Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Warrington",
+      "website": "https://www.warringtonva.org.uk/",
+      "volunteering_url": "https://volunteering.warringtonva.org.uk/index-classic",
+      "source_url": "https://www.warringtonva.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "WVA connects residents to local groups needing volunteer support through its volunteering platform.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Warrington. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://www.warringtonva.org.uk/",
+          "claim": "WVA connects residents to local groups needing volunteer support through its volunteering platform."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-halton-sthelens-vca",
+      "name": "Halton & St Helens VCA",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Halton, St Helens",
+      "website": "https://www.haltonsthelensvca.org.uk/volunteering",
+      "volunteering_url": "https://volunteering.haltonsthelensvca.org.uk/",
+      "source_url": "https://www.haltonsthelensvca.org.uk/volunteering",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The local VCA offers a volunteering portal and support for organisations recruiting volunteers.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Halton; St Helens. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://www.haltonsthelensvca.org.uk/volunteering",
+          "claim": "The local VCA offers a volunteering portal and support for organisations recruiting volunteers."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-sefton-corporate",
+      "name": "Sefton 4 Good / Sefton CVS",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Sefton",
+      "website": "https://sefton4good.org.uk/support-us/corporate-volunteering/",
+      "volunteering_url": "https://sefton4good.org.uk/support-us/corporate-volunteering/",
+      "source_url": "https://sefton4good.org.uk/support-us/corporate-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connects companies, teams and individuals with Sefton causes, including foodbank warehouse support and professional skills.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Sefton. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://sefton4good.org.uk/support-us/corporate-volunteering/",
+          "claim": "Connects companies, teams and individuals with Sefton causes, including foodbank warehouse support and professional skills."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-cheshire-west-va",
+      "name": "Cheshire West Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Cheshire West and Chester",
+      "website": "https://cwva.org.uk/support-with-volunteering/",
+      "volunteering_url": "https://volunteernowcwva.com/index-classic",
+      "source_url": "https://cwva.org.uk/support-with-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Runs a roles platform and matches organisations or individuals seeking employer-supported volunteering with local hosts.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Cheshire West and Chester. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://cwva.org.uk/support-with-volunteering/",
+          "claim": "Supports volunteer-involving organisations and provides a platform for people to find roles."
+        },
+        {
+          "url": "https://cwva.org.uk/support-with-volunteering/",
+          "claim": "Employee-volunteering matching is explicitly offered for individuals and groups."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-liverpool-lcvs",
+      "name": "Liverpool Charity and Voluntary Services",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Liverpool",
+      "website": "https://www.lcvs.org.uk/lcvs-volunteer-portal/",
+      "volunteering_url": "https://volunteering.lcvs.org.uk/index-classic",
+      "source_url": "https://www.lcvs.org.uk/lcvs-volunteer-portal/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The portal connects volunteers with Liverpool charities and community organisations and helps hosts advertise roles.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Liverpool. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://www.lcvs.org.uk/lcvs-volunteer-portal/",
+          "claim": "The portal connects volunteers with Liverpool charities and community organisations and helps hosts advertise roles."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-bury-csr",
+      "name": "Bury VCFA",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Bury",
+      "website": "https://buryvcfa.org.uk/corporate-social-responsibility-csr",
+      "volunteering_url": "https://buryvcfa.org.uk/contact",
+      "source_url": "https://buryvcfa.org.uk/corporate-social-responsibility-csr",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The local CSR service helps employees find charity volunteering and businesses offer professional support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Bury. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://buryvcfa.org.uk/corporate-social-responsibility-csr",
+          "claim": "The local CSR service helps employees find charity volunteering and businesses offer professional support."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-stockport-hub",
+      "name": "Sector 3 / Stockport Volunteer Hub",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Stockport",
+      "website": "https://www.stockportvolunteerhub.org.uk/volunteers/",
+      "volunteering_url": "https://www.stockportvolunteerhub.org.uk/corporate-volunteering/",
+      "source_url": "https://www.stockportvolunteerhub.org.uk/volunteers/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Search local volunteer roles, with options for short projects, ongoing commitments and staff volunteering.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Stockport. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://www.stockportvolunteerhub.org.uk/volunteers/",
+          "claim": "Search local volunteer roles, with options for short projects, ongoing commitments and staff volunteering."
+        },
+        {
+          "url": "https://www.stockportvolunteerhub.org.uk/corporate-volunteering/",
+          "claim": "Offers company matching and examples of staff volunteering, skill sharing and support to foodbanks."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-bolton-cvs",
+      "name": "Bolton CVS",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Bolton",
+      "website": "https://www.boltoncvs.org.uk/services/volunteering/",
+      "volunteering_url": "https://www.boltoncvs.org.uk/services/volunteering/volunteer-opportunities/",
+      "source_url": "https://www.boltoncvs.org.uk/services/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The local CVS offers volunteering information and routes to become a volunteer or search opportunities.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Bolton. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://www.boltoncvs.org.uk/services/volunteering/",
+          "claim": "The local CVS offers volunteering information and routes to become a volunteer or search opportunities."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-manchester-centre",
+      "name": "Macc / Volunteer Centre Manchester",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Manchester",
+      "website": "https://manchestercommunitycentral.org/volunteer-centre-manchester",
+      "volunteering_url": "https://manchestercommunitycentral.org/volunteer-centre-manchester/employer-supported-volunteering-0",
+      "source_url": "https://manchestercommunitycentral.org/volunteer-centre-manchester",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Provides volunteering information, support and training for Manchester residents and volunteer-involving organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Manchester. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://manchestercommunitycentral.org/volunteer-centre-manchester",
+          "claim": "Provides volunteering information, support and training for Manchester residents and volunteer-involving organisations."
+        },
+        {
+          "url": "https://manchestercommunitycentral.org/volunteer-centre-manchester/employer-supported-volunteering-0",
+          "claim": "Explicitly supports time off for individual or team volunteering and gives an ESV contact."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-lancashire-partnership",
+      "name": "Lancashire Volunteer Partnership",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Lancashire",
+      "website": "https://lancsvp.org.uk/",
+      "volunteering_url": "https://lancsvp.org.uk/opportunities/",
+      "source_url": "https://lancsvp.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Search volunteering by postcode or town, including neighbourhood and community support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Lancashire. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://lancsvp.org.uk/",
+          "claim": "Search volunteering by postcode or town, including neighbourhood and community support."
+        },
+        {
+          "url": "https://lancsvp.org.uk/csr/",
+          "claim": "Offers companies an enquiry route for practical community projects; historical examples are not current bookable dates."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-lcr-platform",
+      "name": "Liverpool City Region Volunteer Centres",
+      "category": "Community resilience network",
+      "region": "North West",
+      "directory_area": "Halton, St Helens, Knowsley, Liverpool, Sefton, Wirral",
+      "website": "https://volunteeringlcr.org/index-classic",
+      "volunteering_url": "https://volunteeringlcr.org/index-classic",
+      "source_url": "https://volunteeringlcr.org/index-classic",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Shared volunteer-search platform managed by the volunteer centres for six named boroughs.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Halton; St Helens; Knowsley; Liverpool; Sefton; Wirral. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://volunteeringlcr.org/index-classic",
+          "claim": "The hub explicitly names Halton and St Helens, Knowsley, Liverpool, Sefton and Wirral as its volunteer-centre coverage."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-trafford-collective",
+      "name": "Trafford Community Collective",
+      "category": "Volunteer broker",
+      "region": "North West",
+      "directory_area": "Trafford",
+      "website": "https://traffordcollective.org.uk/home/volunteer/",
+      "volunteering_url": "https://traffordcollective.org.uk/home/volunteer/",
+      "source_url": "https://traffordcollective.org.uk/home/volunteer/",
+      "checked": "2026-09-18",
+      "review_due": "2026-09-25",
+      "directory_updated": "Not stated",
+      "role": "A shared roles database and community-hub coordinators match volunteers with local organisations across Trafford.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Trafford. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://traffordcollective.org.uk/home/volunteer/",
+          "claim": "Offers Trafford-wide roles search, application advice and local hub contacts; states the project runs until September 2026."
+        },
+        {
+          "url": "https://10gm.org.uk/local-areas/trafford/",
+          "claim": "Identifies the Collective as Trafford local infrastructure organisation since autumn 2025; page reviewed 2 September 2026."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-nw-wigan-hub",
+      "name": "Wigan Council / Wigan Borough Volunteering Hub",
+      "category": "Community resilience network",
+      "region": "North West",
+      "directory_area": "Wigan",
+      "website": "https://www.wigan.gov.uk/Council/Volunteering/index.aspx",
+      "volunteering_url": "https://www.wiganboroughvolunteerhub.co.uk/",
+      "source_url": "https://www.wigan.gov.uk/Council/Volunteering/index.aspx",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Council-backed hub for residents to find roles and community organisations to recruit volunteers across Wigan borough.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Wigan. Confirm the specific activity location with the host.",
+      "evidence": [
+        {
+          "url": "https://www.wigan.gov.uk/Council/Volunteering/index.aspx",
+          "claim": "Council-backed hub for residents to find roles and community organisations to recruit volunteers across Wigan borough."
+        }
+      ],
+      "area_ids": [
+        "north-west"
+      ]
+    },
+    {
+      "id": "volunteer-se-rother-volunteer-hub",
+      "name": "Rother Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Rother",
+      "website": "https://www.rva.uk.com/volunteer-hub/",
+      "volunteering_url": "https://www.rva.uk.com/volunteer-hub/",
+      "source_url": "https://www.rva.uk.com/volunteer-hub/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Volunteer Hub promotes local roles and supports volunteers and volunteer-involving organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Rother. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.rva.uk.com/volunteer-hub/",
+          "claim": "Volunteer Hub promotes local roles and supports volunteers and volunteer-involving organisations."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-arun-chichester-volunteering",
+      "name": "Voluntary Action Arun & Chichester",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Arun, Chichester",
+      "website": "https://www.vaac.org.uk/",
+      "volunteering_url": "https://www.vaac.org.uk/volunteering",
+      "source_url": "https://www.vaac.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connect with a local voluntary-sector support organisation and its volunteering service.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Arun, Chichester. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.vaac.org.uk/",
+          "claim": "Connect with a local voluntary-sector support organisation and its volunteering service."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-brighton-community-resilience",
+      "name": "Community Works",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Brighton and Hove",
+      "website": "https://www.communityworks.org.uk/whats-new/community-resilience-project-update/",
+      "volunteering_url": "https://www.communityworks.org.uk/whats-new/community-resilience-project-update/",
+      "source_url": "https://www.communityworks.org.uk/whats-new/community-resilience-project-update/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Enquire about a community project helping local people prepare for emergencies, delivered with local community organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Brighton and Hove. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.communityworks.org.uk/whats-new/community-resilience-project-update/",
+          "claim": "Enquire about a community project helping local people prepare for emergencies, delivered with local community organisations."
+        },
+        {
+          "url": "https://www.communityworks.org.uk/volunteering/",
+          "claim": "Volunteer and trustee search plus support for organisations involving volunteers."
+        },
+        {
+          "url": "https://www.communityworks.org.uk/help-guidance/our-offer/",
+          "claim": "Explicit service coverage across Adur, Worthing and Brighton and Hove, and volunteer-coordinator forum."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-eastbourne-lewes-wealden-volunteering",
+      "name": "Community Action East Sussex",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Eastbourne, Lewes, Wealden",
+      "website": "https://communityactioneastsussex.org.uk/",
+      "volunteering_url": "https://communityactioneastsussex.org.uk/",
+      "source_url": "https://communityactioneastsussex.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local infrastructure organisation links volunteers to roles and supports community organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Eastbourne, Lewes, Wealden. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://communityactioneastsussex.org.uk/",
+          "claim": "Local infrastructure organisation links volunteers to roles and supports community organisations."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-community-first-volunteer-broker",
+      "name": "Community First",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "East Hampshire, Havant, Fareham, Winchester, New Forest",
+      "website": "https://www.cfirst.org.uk/volunteering/",
+      "volunteering_url": "https://www.volunteerfirst.co.uk/",
+      "source_url": "https://www.cfirst.org.uk/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Volunteer service supports individuals and businesses to find suitable local roles.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "The source explicitly lists East Hampshire, Havant, Fareham, Winchester and New Forest for its advertised positions; do not interpret the Hampshire label as universal coverage.",
+      "evidence": [
+        {
+          "url": "https://www.cfirst.org.uk/volunteering/",
+          "claim": "Volunteer service supports individuals and businesses to find suitable local roles."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-portsmouth-hive-volunteers",
+      "name": "HIVE Portsmouth",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Portsmouth",
+      "website": "https://hiveportsmouth.org.uk/",
+      "volunteering_url": "https://volunteer.hiveportsmouth.com/",
+      "source_url": "https://hiveportsmouth.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local volunteering helpdesk and recruitment portal connect people with community organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Portsmouth. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://hiveportsmouth.org.uk/",
+          "claim": "Local volunteering helpdesk and recruitment portal connect people with community organisations."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-isle-wight-volunteer-centre",
+      "name": "Community Action Isle of Wight",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Isle of Wight",
+      "website": "https://iwvolunteer.org/",
+      "volunteering_url": "https://iwvolunteer.org/",
+      "source_url": "https://iwvolunteer.org/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Search locally listed volunteer opportunities by postcode, interests and activities.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Isle of Wight. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://iwvolunteer.org/",
+          "claim": "Search locally listed volunteer opportunities by postcode, interests and activities."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-oxfordshire-employee-volunteer-broker",
+      "name": "Oxfordshire Community & Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Oxfordshire",
+      "website": "https://ocva.org.uk/volunteering/employee-volunteering/",
+      "volunteering_url": "https://ocva.org.uk/volunteering/employee-volunteering/",
+      "source_url": "https://ocva.org.uk/volunteering/employee-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Advice for employees and teams, with a route to Oxfordshire volunteer listings.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Oxfordshire. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://ocva.org.uk/volunteering/employee-volunteering/",
+          "claim": "Advice for employees and teams, with a route to Oxfordshire volunteer listings."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-reading-volunteer-broker",
+      "name": "Reading Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Reading",
+      "website": "https://rva.org.uk/",
+      "volunteering_url": "https://rva.org.uk/",
+      "source_url": "https://rva.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Matches volunteers to opportunities and helps local voluntary organisations develop.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Reading. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://rva.org.uk/",
+          "claim": "Matches volunteers to opportunities and helps local voluntary organisations develop."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-southampton-employee-volunteer-broker",
+      "name": "Southampton Voluntary Services",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Southampton",
+      "website": "https://southamptonvs.org.uk/volunteering/corporate-social-responsibility-csr-days/",
+      "volunteering_url": "https://southamptonvs.org.uk/volunteering/corporate-social-responsibility-csr-days/",
+      "source_url": "https://southamptonvs.org.uk/volunteering/corporate-social-responsibility-csr-days/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Register interest in corporate community projects or support using administrative, marketing and other skills.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Southampton. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://southamptonvs.org.uk/volunteering/corporate-social-responsibility-csr-days/",
+          "claim": "Register interest in corporate community projects or support using administrative, marketing and other skills."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-west-berkshire-volunteer-broker",
+      "name": "Volunteer Centre West Berkshire",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "West Berkshire",
+      "website": "https://www.volunteerwestberks.org.uk/",
+      "volunteering_url": "https://vcwb.getvolunteering.co.uk/",
+      "source_url": "https://www.volunteerwestberks.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local volunteering advice and a searchable opportunity portal for individuals and community organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in West Berkshire. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.volunteerwestberks.org.uk/",
+          "claim": "Local volunteering advice and a searchable opportunity portal for individuals and community organisations."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-london-camden-teamup",
+      "name": "Volunteer Centre Camden",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "Camden, London",
+      "website": "https://volunteercentrecamden.org.uk/team-up-business-volunteers/",
+      "volunteering_url": "https://volunteercentrecamden.org.uk/team-up-business-volunteers/",
+      "source_url": "https://volunteercentrecamden.org.uk/team-up-business-volunteers/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Managed employee volunteering connects businesses with community projects and skills contributions.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Based in Camden; the source describes projects across Camden and London. Specific activity sites are agreed with the service.",
+      "evidence": [
+        {
+          "url": "https://volunteercentrecamden.org.uk/team-up-business-volunteers/",
+          "claim": "Managed employee volunteering connects businesses with community projects and skills contributions."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "volunteer-london-richmond-volunteer-broker",
+      "name": "Richmond CVS",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "Richmond upon Thames",
+      "website": "https://richmondcvs.org.uk/",
+      "volunteering_url": "https://richmondcvs.org.uk/richmond-volunteering/",
+      "source_url": "https://richmondcvs.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local volunteering service and support for voluntary and community organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Richmond upon Thames. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://richmondcvs.org.uk/",
+          "claim": "Local volunteering service and support for voluntary and community organisations."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "volunteer-london-merton-volunteer-broker",
+      "name": "Merton Connected",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "Merton",
+      "website": "https://www.mertonconnected.co.uk/",
+      "volunteering_url": "https://www.mertonconnected.co.uk/volunteers",
+      "source_url": "https://www.mertonconnected.co.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connect with local organisations through Merton Connected’s volunteer service.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Merton. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.mertonconnected.co.uk/",
+          "claim": "Connect with local organisations through Merton Connected’s volunteer service."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "volunteer-london-bromley-community-links",
+      "name": "Community Links Bromley",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "Bromley",
+      "website": "https://www.communitylinksbromley.org.uk/",
+      "volunteering_url": "https://www.communitylinksbromley.org.uk/",
+      "source_url": "https://www.communitylinksbromley.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Integrated volunteer centre and voluntary-sector support organisation serving the London Borough of Bromley.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Bromley. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.communitylinksbromley.org.uk/",
+          "claim": "Integrated volunteer centre and voluntary-sector support organisation serving the London Borough of Bromley."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "volunteer-se-kent-volunteers-referral",
+      "name": "Kent Volunteer Partnership / Kent County Council",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Kent",
+      "website": "https://www.kent.gov.uk/leisure-and-community/volunteering/find-volunteering-opportunities",
+      "volunteering_url": "https://www.kent.gov.uk/leisure-and-community/volunteering/find-volunteering-opportunities",
+      "source_url": "https://www.kent.gov.uk/leisure-and-community/volunteering/find-volunteering-opportunities",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Council referral to Kent Volunteers, which connects people with local opportunities by area and interest.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Kent. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.kent.gov.uk/leisure-and-community/volunteering/find-volunteering-opportunities",
+          "claim": "Council referral to Kent Volunteers, which connects people with local opportunities by area and interest."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-london-bexley-volunteer-broker",
+      "name": "Bexley Voluntary Service Council",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "Bexley",
+      "website": "https://www.bvsc.co.uk/",
+      "volunteering_url": "https://volunteering.bvsc.co.uk/",
+      "source_url": "https://www.bvsc.co.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Volunteer Centre connects residents with volunteering across the London Borough of Bexley.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Bexley. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.bvsc.co.uk/",
+          "claim": "Volunteer Centre connects residents with volunteering across the London Borough of Bexley."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "volunteer-london-kingston-employer-broker",
+      "name": "Volunteering Kingston / Groundwork London",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "Kingston upon Thames",
+      "website": "https://www.volunteeringkingston.org.uk/volunteers/employer-and-group-volunteering/",
+      "volunteering_url": "https://www.volunteeringkingston.org.uk/volunteers/employer-and-group-volunteering/",
+      "source_url": "https://www.volunteeringkingston.org.uk/volunteers/employer-and-group-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Register team interests, skills and budget so the local service can look for a suitable community match.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Kingston upon Thames. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.volunteeringkingston.org.uk/volunteers/employer-and-group-volunteering/",
+          "claim": "Employer registration considers interests, skills and budget; a suitable placement may not be immediately available."
+        },
+        {
+          "url": "https://www.volunteeringkingston.org.uk/",
+          "claim": "The service supports volunteering in Kingston upon Thames."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "volunteer-london-hackney-city-corporate-broker",
+      "name": "Volunteer Centre Hackney",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "Hackney, City of London",
+      "website": "https://vchackney.org/services/corporate-volunteering/",
+      "volunteering_url": "https://vchackney.org/services/corporate-volunteering/",
+      "source_url": "https://vchackney.org/services/corporate-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Managed team activities can include cooking, sorting essential donations and improving community spaces.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Hackney, City of London. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://vchackney.org/services/corporate-volunteering/",
+          "claim": "Managed team activities can include cooking, sorting essential donations and improving community spaces."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "volunteer-se-buckinghamshire-volunteer-broker",
+      "name": "Community Impact Bucks",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Buckinghamshire",
+      "website": "https://www.volunteerbucks.org.uk/",
+      "volunteering_url": "https://www.volunteerbucks.org.uk/",
+      "source_url": "https://www.volunteerbucks.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local volunteer platform connects people and community organisations across Buckinghamshire.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source explicitly describes Buckinghamshire coverage. Milton Keynes has a separate record; do not infer its coverage from the county label.",
+      "evidence": [
+        {
+          "url": "https://www.volunteerbucks.org.uk/",
+          "claim": "Local volunteer platform connects people and community organisations across Buckinghamshire."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-milton-keynes-employee-referral",
+      "name": "Community Action MK",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Milton Keynes",
+      "website": "https://communityactionmk.org/corporate-volunteering/",
+      "volunteering_url": "https://volunteeringhub.communityactionmk.org",
+      "source_url": "https://communityactionmk.org/corporate-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local volunteering hub and guidance help employers identify possible team and skills opportunities.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Milton Keynes. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://communityactionmk.org/corporate-volunteering/",
+          "claim": "No dedicated employee brokerage at present; employers can use the local hub, request local charity information and explore skills support."
+        },
+        {
+          "url": "https://communityactionmk.org/",
+          "claim": "Community Action MK supports the local voluntary and community sector in Milton Keynes."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-ashford-volunteer-broker",
+      "name": "Ashford Volunteer Centre",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Ashford",
+      "website": "https://ashfordvc.org.uk/",
+      "volunteering_url": "https://ashfordvc.org.uk/",
+      "source_url": "https://ashfordvc.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local volunteer centre matches people with organisations and supports community volunteering.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Ashford. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://ashfordvc.org.uk/",
+          "claim": "Volunteer matching service and support for community organisations serving Ashford Borough."
+        },
+        {
+          "url": "https://ashfordvc.org.uk/contact-us",
+          "claim": "Official office address: Berwick House, 8 Elwick Road, Ashford TN23 1PF."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-london-islington-volunteer-centre",
+      "name": "Voluntary Action Islington",
+      "category": "Volunteer broker",
+      "region": "London",
+      "directory_area": "Islington",
+      "website": "https://vai.org.uk/",
+      "volunteering_url": "https://vai.org.uk/",
+      "source_url": "https://vai.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Accredited volunteer centre offers local opportunity advice and support to community organisations.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Islington. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://vai.org.uk/",
+          "claim": "Accredited volunteer centre offers local opportunity advice and support to community organisations."
+        }
+      ],
+      "area_ids": [
+        "london"
+      ]
+    },
+    {
+      "id": "volunteer-se-kent-medway-voluntary-emergency-network",
+      "name": "Kent and Medway Resilience Forum",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Kent, Medway",
+      "website": "https://www.kentprepared.org.uk/our-volunteer-partners",
+      "volunteering_url": "https://www.kentprepared.org.uk/our-volunteer-partners",
+      "source_url": "https://www.kentprepared.org.uk/our-volunteer-partners",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "A coordination route for voluntary organisations contributing to emergency preparedness and incident support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Kent, Medway. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.kentprepared.org.uk/our-volunteer-partners",
+          "claim": "A coordination route for voluntary organisations contributing to emergency preparedness and incident support."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-hastings-volunteer-broker",
+      "name": "Hastings Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Hastings",
+      "website": "https://hastingsvoluntaryaction.org.uk/",
+      "volunteering_url": "https://hastingsvoluntaryaction.org.uk/",
+      "source_url": "https://hastingsvoluntaryaction.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local infrastructure charity helps people find roles and community organisations recruit volunteers.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Hastings. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://hastingsvoluntaryaction.org.uk/",
+          "claim": "Local infrastructure charity helps people find roles and community organisations recruit volunteers."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-crawley-volunteer-broker",
+      "name": "Crawley Community Action",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Crawley",
+      "website": "https://www.crawleycommunityaction.org/",
+      "volunteering_url": "https://www.crawleycommunityaction.org/",
+      "source_url": "https://www.crawleycommunityaction.org/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Connect with local charities through the Crawley Volunteers service and community-sector support organisation.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Crawley. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.crawleycommunityaction.org/",
+          "claim": "Connect with local charities through the Crawley Volunteers service and community-sector support organisation."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-mid-sussex-volunteer-broker",
+      "name": "Community People",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Mid Sussex",
+      "website": "https://communitypeople.org.uk/what-we-do/volunteering/search",
+      "volunteering_url": "https://communitypeople.org.uk/what-we-do/volunteering/search",
+      "source_url": "https://communitypeople.org.uk/what-we-do/volunteering/search",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Search volunteer opportunities in Mid Sussex and connect with the local voluntary-sector support organisation.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Mid Sussex. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://communitypeople.org.uk/what-we-do/volunteering/search",
+          "claim": "Local Mid Sussex volunteer search and office address."
+        },
+        {
+          "url": "https://communitypeople.org.uk/about-us",
+          "claim": "Organisation explicitly works across Mid Sussex; wider West Sussex collaboration is not treated as district-wide vacancy coverage."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-horsham-volunteer-broker",
+      "name": "Horsham District Council",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Horsham",
+      "website": "https://www.horsham.gov.uk/voluntary-sector-support",
+      "volunteering_url": "https://www.horsham.gov.uk/voluntary-sector-support",
+      "source_url": "https://www.horsham.gov.uk/voluntary-sector-support",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Council team connects new volunteers with opportunities and helps community groups recruit and develop.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Horsham. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.horsham.gov.uk/voluntary-sector-support",
+          "claim": "Council team connects new volunteers with opportunities and helps community groups recruit and develop."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-slough-volunteer-broker",
+      "name": "Slough Council for Voluntary Service",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Slough",
+      "website": "https://sloughcvs.org/volunteering/",
+      "volunteering_url": "https://sloughcvs.org/volunteering/",
+      "source_url": "https://sloughcvs.org/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local volunteer officer and Simply Connects recruitment service help residents find suitable community opportunities.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Slough. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://sloughcvs.org/volunteering/",
+          "claim": "Local volunteer officer and Simply Connects recruitment service help residents find suitable community opportunities."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-windsor-maidenhead-volunteer-broker",
+      "name": "WAM Get Involved / Slough CVS",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Windsor and Maidenhead",
+      "website": "https://sloughcvs.org/wam-get-involved/",
+      "volunteering_url": "https://sloughcvs.org/wam-get-involved/",
+      "source_url": "https://sloughcvs.org/wam-get-involved/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Voluntary-sector partnership offers a volunteering platform, training and support across Windsor, Ascot and Maidenhead.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes service across the Royal Borough, including Windsor, Ascot and Maidenhead. The contact address is the host organisation’s Slough office, not an activity site.",
+      "evidence": [
+        {
+          "url": "https://sloughcvs.org/wam-get-involved/",
+          "claim": "Voluntary-sector partnership offers a volunteering platform, training and support across Windsor, Ascot and Maidenhead."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-medway-volunteer-broker",
+      "name": "Medway Voluntary Action",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Medway",
+      "website": "https://www.mva.org.uk/volunteering-individuals/volunteering-opportunities-in-medway",
+      "volunteering_url": "https://www.mva.org.uk/volunteering-individuals/volunteering-opportunities-in-medway",
+      "source_url": "https://www.mva.org.uk/volunteering-individuals/volunteering-opportunities-in-medway",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Search local volunteer roles and contact the volunteer support team for help finding a suitable match.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Medway. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://www.mva.org.uk/volunteering-individuals/volunteering-opportunities-in-medway",
+          "claim": "Search local volunteer roles and contact the volunteer support team for help finding a suitable match."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-bracknell-volunteer-broker",
+      "name": "Involve Community Services",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Bracknell Forest",
+      "website": "https://involve.community/volunteering/",
+      "volunteering_url": "https://involve.community/volunteering/",
+      "source_url": "https://involve.community/volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Volunteer centre matches people with local community organisations and provides role-selection advice.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Bracknell Forest. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://involve.community/volunteering/",
+          "claim": "Explicitly acts as volunteer centre for Bracknell Forest; refers Wokingham residents to a separate volunteer centre."
+        },
+        {
+          "url": "https://www.bracknell-forest.gov.uk/jobs/volunteering",
+          "claim": "Council refers local volunteers and recruiting groups to Involve."
+        },
+        {
+          "url": "https://involve.community/contact-us/",
+          "claim": "Official Bracknell office address is RG12 1AE; Wokingham office is separate."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-se-wokingham-volunteer-broker",
+      "name": "Wokingham Volunteer Centre",
+      "category": "Volunteer broker",
+      "region": "South East",
+      "directory_area": "Wokingham",
+      "website": "https://wokinghamvolunteercentre.org.uk/",
+      "volunteering_url": "https://wokinghamvolunteercentre.org.uk/volunteer/",
+      "source_url": "https://wokinghamvolunteercentre.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Local brokerage works with individuals and businesses to find volunteering with organisations across the borough.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source describes activity or support in Wokingham. Specific placements have their own locations and requirements.",
+      "evidence": [
+        {
+          "url": "https://wokinghamvolunteercentre.org.uk/",
+          "claim": "Local brokerage works with individuals and businesses to find volunteering with organisations across the borough."
+        },
+        {
+          "url": "https://wokinghamvolunteercentre.org.uk/volunteer/",
+          "claim": "Borough-wide brokerage, opportunity portal and individual advice appointments."
+        }
+      ],
+      "area_ids": [
+        "south-east"
+      ]
+    },
+    {
+      "id": "volunteer-sw-volunteer-cornwall",
+      "name": "Volunteer Cornwall",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Cornwall",
+      "website": "https://www.volunteercornwall.org.uk/",
+      "volunteering_url": "https://opportunities.volunteercornwall.org.uk/",
+      "source_url": "https://www.volunteercornwall.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Volunteer Cornwall connects people with local charities and community organisations through a searchable volunteering directory.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Cornwall. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.volunteercornwall.org.uk/",
+          "claim": "Volunteer Cornwall connects people with local charities and community organisations through a searchable volunteering directory."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-cornwall-flood-forum",
+      "name": "Cornwall Community Flood Forum",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Cornwall",
+      "website": "https://www.cornwallcommunityfloodforum.org.uk/",
+      "volunteering_url": "https://www.cornwallcommunityfloodforum.org.uk/",
+      "source_url": "https://www.cornwallcommunityfloodforum.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The forum supports Cornwall communities with flood plans, recovery and flood-warden training. Individual and organisational membership is open.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Cornwall. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.cornwallcommunityfloodforum.org.uk/",
+          "claim": "The forum supports Cornwall communities with flood plans, recovery and flood-warden training. Individual and organisational membership is open."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-devon-communities-together",
+      "name": "Devon Communities Together",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Devon",
+      "website": "https://www.devoncommunities.org.uk/projects/devon-community-resilience-forum",
+      "volunteering_url": "https://www.devoncommunities.org.uk/projects/devon-community-resilience-forum",
+      "source_url": "https://www.devoncommunities.org.uk/projects/devon-community-resilience-forum",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The forum supports Devon communities to prepare community emergency plans, connect with other groups and use resilience resources.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Devon. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.devoncommunities.org.uk/projects/devon-community-resilience-forum",
+          "claim": "The named partnership supports community emergency plans and twice-yearly forum events; the project runs to 31 March 2027."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-volunteer-centre-dorset",
+      "name": "Volunteer Centre Dorset",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Dorset",
+      "website": "https://www.volunteeringdorset.org.uk/",
+      "volunteering_url": "https://www.volunteeringdorset.org.uk/",
+      "source_url": "https://www.volunteeringdorset.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "The centre helps people find volunteer roles and supports organisations recruiting volunteers.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Dorset. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.volunteeringdorset.org.uk/",
+          "claim": "The centre helps people find volunteer roles and supports organisations recruiting volunteers."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-voscur-bristol",
+      "name": "Voscur",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Bristol",
+      "website": "https://voscur.org/volunteering-support-for-organisations/",
+      "volunteering_url": "https://voscur.org/volunteering-support-for-organisations/",
+      "source_url": "https://voscur.org/volunteering-support-for-organisations/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Voscur supports Bristol voluntary organisations and directs volunteers to local advertisements and Can Do Bristol.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Bristol. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://voscur.org/volunteering-support-for-organisations/",
+          "claim": "Voscur supports Bristol voluntary organisations and directs volunteers to local advertisements and Can Do Bristol."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-wessex-employer-volunteering",
+      "name": "Wessex Community Action",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Wiltshire",
+      "website": "https://www.wessexcommunityaction.org.uk/volunteers/employer-supported-volunteering/",
+      "volunteering_url": "https://www.wessexcommunityaction.org.uk/volunteers/employer-supported-volunteering/",
+      "source_url": "https://www.wessexcommunityaction.org.uk/volunteers/employer-supported-volunteering/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Wessex Community Action offers support finding employer-supported volunteering roles and links to Wiltshire Together.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Wiltshire. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.wessexcommunityaction.org.uk/volunteers/employer-supported-volunteering/",
+          "claim": "Wessex Community Action offers support finding employer-supported volunteering roles and links to Wiltshire Together."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-grcc-community-resilience",
+      "name": "GRCC",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Gloucestershire",
+      "website": "https://www.grcc.org.uk/",
+      "volunteering_url": "https://www.grcc.org.uk/",
+      "source_url": "https://www.grcc.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "GRCC supports Gloucestershire communities with emergency plans, community buildings and volunteer management.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Gloucestershire. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.grcc.org.uk/",
+          "claim": "GRCC supports Gloucestershire communities with emergency plans, community buildings and volunteer management."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-vans-volunteering",
+      "name": "Voluntary Action North Somerset",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "North Somerset",
+      "website": "https://www.vansweb.org.uk/volunteering",
+      "volunteering_url": "https://www.vansweb.org.uk/volunteering",
+      "source_url": "https://www.vansweb.org.uk/volunteering",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "VANS operates a volunteer recruitment service and online centre connecting people with North Somerset opportunities.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies North Somerset. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.vansweb.org.uk/volunteering",
+          "claim": "VANS operates a volunteer recruitment service and online centre connecting people with North Somerset opportunities."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-3sg-banes",
+      "name": "3SG",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Bath and North East Somerset",
+      "website": "https://www.3sg.org.uk/",
+      "volunteering_url": "https://www.3sg.org.uk/",
+      "source_url": "https://www.3sg.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "3SG connects charities and community groups in Bath and North East Somerset and provides local volunteering information.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Bath and North East Somerset. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.3sg.org.uk/",
+          "claim": "3SG connects charities and community groups in Bath and North East Somerset and provides local volunteering information."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-torbay-communities",
+      "name": "Torbay Communities",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Torbay",
+      "website": "https://www.torbaycommunities.com/",
+      "volunteering_url": "https://volunteertorbay.com/",
+      "source_url": "https://www.torbaycommunities.com/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Torbay Communities connects volunteers and local organisations through Volunteer Torbay, Torbay Together and its community network.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Torbay. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.torbaycommunities.com/",
+          "claim": "Torbay Communities connects volunteers and local organisations through Volunteer Torbay, Torbay Together and its community network."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-can-volunteering",
+      "name": "Community Action Network",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Dorset, Bournemouth, Christchurch and Poole",
+      "website": "https://can100.org/volunteering-hub/volunteering-opportunities/",
+      "volunteering_url": "https://can100.org/volunteering-hub/volunteering-opportunities/",
+      "source_url": "https://can100.org/volunteering-hub/volunteering-opportunities/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "CAN supports charities and community groups across Dorset and runs a volunteering hub with online roles and personal support.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "The hub describes Dorset-wide roles; CAN also explicitly supports recruitment in Bournemouth, Christchurch and Poole through volunteer fairs.",
+      "evidence": [
+        {
+          "url": "https://can100.org/about-us/",
+          "claim": "CAN supports groups across Dorset and is a volunteer hub; its office is in Poole."
+        },
+        {
+          "url": "https://can100.org/volunteering-hub/volunteering-opportunities/",
+          "claim": "The volunteering hub provides a local role-search route."
+        },
+        {
+          "url": "https://can100.org/volunteering-hub/interested-in-volunteering/",
+          "claim": "CAN identifies Bournemouth, Christchurch and Poole recruitment in its volunteering service."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-cvs-south-gloucestershire",
+      "name": "CVS South Gloucestershire",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "South Gloucestershire",
+      "website": "https://www.cvs-sg.org.uk/",
+      "volunteering_url": "https://www.cvs-sg.org.uk/",
+      "source_url": "https://www.cvs-sg.org.uk/",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "CVS South Gloucestershire supports local charities, voluntary groups and social enterprises with organisational development and governance.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies South Gloucestershire. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.cvs-sg.org.uk/",
+          "claim": "CVS South Gloucestershire supports local charities, voluntary groups and social enterprises with organisational development and governance."
+        }
+      ],
+      "area_ids": [
+        "south-west"
+      ]
+    },
+    {
+      "id": "volunteer-sw-exeter-connect",
+      "name": "Exeter Community Initiatives — Exeter Connect",
+      "category": "Volunteer broker",
+      "region": "South West",
+      "directory_area": "Exeter",
+      "website": "https://www.eci.org.uk/projects/exeter-connect",
+      "volunteering_url": "https://www.eci.org.uk/projects/exeter-connect",
+      "source_url": "https://www.eci.org.uk/projects/exeter-connect",
+      "checked": "2026-09-18",
+      "review_due": "2026-10-18",
+      "directory_updated": "Not stated",
+      "role": "Exeter Connect supports the city’s voluntary sector with volunteering, collaboration and organisational development, including local pages on Devon Connect.",
+      "verification": "Public-source referral record. Current capacity and specific employee placements require host confirmation. Inclusion does not establish a NET partnership.",
+      "coverage_note": "Source identifies Exeter. Confirm the relevant local role or activity with the organisation.",
+      "evidence": [
+        {
+          "url": "https://www.eci.org.uk/projects/exeter-connect",
+          "claim": "Exeter Connect supports the city’s voluntary sector with volunteering, collaboration and organisational development, including local pages on Devon Connect."
+        }
+      ],
+      "area_ids": [
+        "south-west"
       ]
     }
   ]

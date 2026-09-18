@@ -13,7 +13,8 @@
   };
   const COLOURS = {preparedness:'#527d9a',recovery:'#a17837',community_support:'#437b62',environment:'#7b883c',skills:'#866298',response:'#b36052'};
   const STORAGE_KEY = 'england-atlas-volunteering-shortlist-v1';
-  const FILTERS = ['area','theme','fit','status','freshness'];
+  const FILTERS = ['area','authority','kind','theme','fit','status','freshness'];
+  const PAGE_SIZE = 24; let visibleCount = PAGE_SIZE;
   const validDate = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0,10) === value;
   const today = () => new Date().toISOString().slice(0,10);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -59,7 +60,7 @@
   function readFilters() {return Object.fromEntries([...FILTERS.map(key=>[key,$(key).value]),['q',$('search').value.trim().toLowerCase()],['saved',$('savedOnly').checked]]);}
   function matches(record, f) {
     const fresh=freshness(record).state;
-    return (!f.area || arr(record.area_ids).includes(f.area)) && (!f.theme || arr(record.themes).includes(f.theme)) && (!f.fit || arr(record.employee_fit).includes(f.fit)) && (!f.status || record.status===f.status) && (f.freshness==='all' || (f.freshness==='review' ? fresh!=='current' : fresh==='current')) && (!f.saved || saved.has(record.id)) && (!f.q || [record.title,record.organisation,record.description,record.resilience_relevance,record.coverage_note,record.requirements,record.location_postcode,record.location?.label,areaNames(record),...arr(record.themes).map(t=>LABELS.theme[t]||t)].join(' ').toLowerCase().includes(f.q));
+    return (!f.area || arr(record.area_ids).includes(f.area)) && (!f.authority || arr(record.coverage_codes).includes(f.authority)) && (!f.kind || (f.kind==='broker' ? isBroker(record) : !isBroker(record))) && (!f.theme || arr(record.themes).includes(f.theme)) && (!f.fit || arr(record.employee_fit).includes(f.fit)) && (!f.status || record.status===f.status) && (f.freshness==='all' || (f.freshness==='review' ? fresh!=='current' : fresh==='current')) && (!f.saved || saved.has(record.id)) && (!f.q || [record.title,record.organisation,record.description,record.resilience_relevance,record.coverage_note,record.requirements,record.location_postcode,record.location?.label,...arr(record.coverage_names),areaNames(record),...arr(record.themes).map(t=>LABELS.theme[t]||t)].join(' ').toLowerCase().includes(f.q));
   }
   function shareURL() {
     const url=new URL(location.href);url.search='';url.hash='';
@@ -73,7 +74,7 @@
     for (const key of FILTERS) if ([...$(key).options].some(o=>o.value===p.get(key))) $(key).value=p.get(key);
     $('search').value=(p.get('q')||'').slice(0,250);
   }
-  function resetFilters() {for (const key of FILTERS) $(key).value=key==='freshness'?'current':'';$('search').value='';$('savedOnly').checked=false;render(true);}
+  function resetFilters() {for (const key of FILTERS) $(key).value=key==='freshness'?'current':'';$('search').value='';$('savedOnly').checked=false;populateAuthorities();render(true);}
 
   // Start with formats most useful for employee volunteering allowances.
   // This orders published formats; it is not an assessment of host need or capacity.
@@ -99,18 +100,37 @@
       <div class="card-bottom"><div class="card-actions">${external(actionURL(record),primaryAction(record),'button-link '+(f.state==='current'?'primary-link':''))}<button type="button" data-details="${esc(record.id)}">Details &amp; source</button></div><div class="card-source">${external(record.source_url,'Source checked')}<br>${esc(dateLabel(record.checked_at))}${f.reason&&f.state==='current'?'<br>Review due today':''}</div></div>
     </article>`;
   }
-  function render(fitBounds = false) {
+  function render(fitBounds = false, keepPage = false) {
     if (!data.records) return;
-    const f=readFilters();
+    const f=readFilters();if (!keepPage) visibleCount=PAGE_SIZE;
     filtered=data.records.filter(r=>matches(r,f)).sort((a,b)=>routeOrder(a)-routeOrder(b) || a.title.localeCompare(b.title));
     const activities=filtered.filter(r=>!isBroker(r)).length, brokers=filtered.length-activities;
-    $('resultTitle').textContent=filtered.length+' local '+(filtered.length===1?'route':'routes')+(f.saved?' saved':'');
+    $('resultTitle').textContent=filtered.length+' '+(filtered.length===1?'route':'routes')+(f.saved?' saved':'');
     const stale=data.records.filter(r=>freshness(r).state!=='current').length;
     $('resultSummary').textContent=`${activities} activity / programme ${activities===1?'route':'routes'} · ${brokers} ${brokers===1?'broker or platform':'brokers / platforms'}`+(f.freshness==='current'&&stale?` · ${stale} older ${stale===1?'record':'records'} hidden`:'')+(f.freshness!=='current'?' · Review status is shown on each record.':'');
-    $('results').innerHTML=filtered.length?filtered.map(cardHTML).join(''):`<div class="empty-state"><h2>${f.saved?'No saved listings match':'No matching routes recorded'}</h2><p>${f.saved?'Save listings using the star button, or reset the filters to see your full shortlist.':'Try another area, theme or volunteer format. This pilot does not yet cover every local organisation or opportunity.'}</p><button type="button" data-reset>Reset filters</button>${f.freshness==='current'&&stale?'<p style="margin-top:14px;margin-bottom:0"><button class="text-button" type="button" data-review>Inspect records needing review</button></p>':''}</div>`;
+    $('results').innerHTML=filtered.length?filtered.slice(0,visibleCount).map(cardHTML).join(''):`<div class="empty-state"><h2>${f.saved?'No saved listings match':'No matching routes recorded'}</h2><p>${f.saved?'Save listings using the star button, or reset the filters to see your full shortlist.':'Try another area, theme or volunteer format. The directory does not yet cover every local organisation or opportunity. A blank result is a research gap, not an absence of local volunteering.'}</p><button type="button" data-reset>Reset filters</button>${f.freshness==='current'&&stale?'<p style="margin-top:14px;margin-bottom:0"><button class="text-button" type="button" data-review>Inspect records needing review</button></p>':''}</div>`;
+    $('showMore').hidden=visibleCount>=filtered.length;$('showMore').textContent=`Show ${Math.min(PAGE_SIZE,Math.max(0,filtered.length-visibleCount))} more · ${Math.min(visibleCount,filtered.length)} of ${filtered.length}`;
+    renderScope();
     $('exportResults').disabled=!filtered.length;updateSavedControls();renderCoverage();
-    if (mapReady) renderMap(fitBounds || lastArea!==f.area);
-    lastArea=f.area;writeURL();
+    if (mapReady) renderMap(fitBounds || lastArea!==f.area+f.authority);
+    lastArea=f.area+f.authority;writeURL();
+  }
+  function populateAuthorities(selected = '') {
+    const rows=arr(data.authorities).filter(a=>!$('area').value||a.region_id===$('area').value);
+    $('authority').replaceChildren(new Option('All council areas',''),...rows.map(a=>new Option(a.name,a.code)));
+    if (rows.some(a=>a.code===selected)) $('authority').value=selected;
+  }
+  function renderScope() {
+    const current=data.records.filter(r=>freshness(r).state==='current'), selected=$('authority').value;
+    const authority=arr(data.authorities).find(a=>a.code===selected);
+    if (authority) {
+      const local=current.filter(r=>arr(r.coverage_codes).includes(selected));
+      const regional=current.filter(r=>arr(r.area_ids).includes(authority.region_id)&&!arr(r.coverage_codes).includes(selected)).length;
+      $('coverageSummary').innerHTML=`<strong>${esc(authority.name)}</strong><span>${local.length} current records have a source geography matched to this council, including ${local.filter(isBroker).length} broker / platform routes. Town-based listings may serve only part of the council. Confirm the host’s area note.</span>${regional?`<button type="button" data-broaden>Explore ${regional} other regional routes</button>`:''}`;
+    } else {
+      const covered=new Set(current.flatMap(r=>arr(r.coverage_codes)));
+      $('coverageSummary').innerHTML=`<strong>England-wide discovery · locally uneven coverage</strong><span>${current.length} current records across ${data.areas.length} regions. Source geography matched in ${covered.size} of ${arr(data.authorities).length} councils. These counts describe the directory, not available places or local resilience.</span><a href="data/volunteering-coverage.json" target="_blank" rel="noopener noreferrer">Coverage audit ↗</a>`;
+    }
   }
   function renderCoverage() {
     const rows=data.areas.map(area=>({...area,count:data.records.filter(r=>arr(r.area_ids).includes(area.id)&&freshness(r).state==='current').length}));
@@ -141,18 +161,18 @@
   }
   async function initialiseMap() {
     if (!window.L) {$('mapMessage').hidden=false;$('mapMessage').textContent='Map unavailable. All route details remain available in the list.';return;}
-    map=L.map('volunteerMap',{scrollWheelZoom:false,minZoom:4,maxZoom:18}).setView([53,-2.5],6);
+    map=L.map('volunteerMap',{preferCanvas:true,scrollWheelZoom:false,minZoom:4,maxZoom:18}).setView([53,-2.5],6);
     L.control.scale({imperial:false}).addTo(map);
     map.attributionControl.addAttribution('<a href="https://postcodes.io/docs/licences/" target="_blank" rel="noopener noreferrer">Postcode data</a>');
     let tileError=false,tileSuccess=false;
     const tiles=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxNativeZoom:16,maxZoom:18,attribution:'Esri, HERE, Garmin, © OpenStreetMap contributors'}).addTo(map);
-    tiles.on('tileerror',()=>{if (!tileError && !tileSuccess) {$('mapMessage').hidden=false;$('mapMessage').textContent='Background map tiles could not load. Pilot markers and the results list remain available.';}tileError=true;});
+    tiles.on('tileerror',()=>{if (!tileError && !tileSuccess) {$('mapMessage').hidden=false;$('mapMessage').textContent='Background map tiles could not load. Route markers and the results list remain available.';}tileError=true;});
     tiles.on('tileload',()=>{tileSuccess=true;if (tileError) $('mapMessage').hidden=true;});
     markers=L.layerGroup().addTo(map);mapReady=true;renderMap(true);
     try {
-      const response=await fetch('data/volunteering-areas.geojson');if (!response.ok) return;
+      const response=await fetch('data/volunteering-areas.geojson',{cache:'no-cache'});if (!response.ok) return;
       const boundaries=await response.json();
-      boundaryLayer=L.geoJSON(boundaries,{style:()=>({color:'#789380',weight:1,fillColor:'#9aaf9b',fillOpacity:.055}),onEachFeature:(feature,layer)=>{layer.bindTooltip(esc(feature.properties?.name||'Pilot area')+' · pilot search boundary',{sticky:true,className:'area-tooltip'});layer.on('click',()=>{const id=feature.properties?.area_id;if (data.areas.some(a=>a.id===id)) {$('area').value=id;render(true);}});}}).addTo(map);
+      boundaryLayer=L.geoJSON(boundaries,{style:()=>({color:'#789380',weight:1,fillColor:'#9aaf9b',fillOpacity:.055}),onEachFeature:(feature,layer)=>{layer.bindTooltip(esc(feature.properties?.name||'Council area')+' · select council',{sticky:true,className:'area-tooltip'});layer.on('click',()=>{const id=feature.properties?.area_id;if (data.areas.some(a=>a.id===id)) {$('area').value=id;populateAuthorities(feature.properties.code);render(true);}});}}).addTo(map);
       boundaryLayer.bringToBack();fitMap();
     } catch { /* The independently useful list and point markers need no boundary file. */ }
   }
@@ -176,9 +196,9 @@
   }
   function fitMap() {
     if (!mapReady) return;
-    const selected=$('area').value,points=groupedLocations(filtered).map(g=>[g.location.lat,g.location.lon]);
+    const selected=$('area').value,authority=$('authority').value,points=groupedLocations(filtered).map(g=>[g.location.lat,g.location.lon]);
     if (selected && !boundaryLayer) {const area=data.areas.find(a=>a.id===selected);if (area?.bounds) {map.fitBounds(area.bounds,{padding:[25,25],maxZoom:10});return;}}
-    if (selected && boundaryLayer) {const bounds=L.latLngBounds([]);boundaryLayer.eachLayer(layer=>{if (layer.feature.properties.area_id===selected) bounds.extend(layer.getBounds());});if (bounds.isValid()) {map.fitBounds(bounds,{padding:[25,25],maxZoom:10});return;}}
+    if ((selected || authority) && boundaryLayer) {const bounds=L.latLngBounds([]);boundaryLayer.eachLayer(layer=>{if (authority ? layer.feature.properties.code===authority : layer.feature.properties.area_id===selected) bounds.extend(layer.getBounds());});if (bounds.isValid()) {map.fitBounds(bounds,{padding:[25,25],maxZoom:10});return;}}
     if (points.length) map.fitBounds(L.latLngBounds(points),{padding:[45,45],maxZoom:selected?9:7});
     else if (selected) {const area=data.areas.find(a=>a.id===selected);if (area) map.setView([area.lat,area.lon],8);}
     else if (data.areas.length) map.fitBounds(L.latLngBounds(data.areas.map(a=>[a.lat,a.lon])),{padding:[40,40],maxZoom:7});
@@ -198,9 +218,9 @@
   }
   function exportCSV(records,name) {
     if (!records.length) return;
-    const cols=['id','title','organisation','kind','area','coverage_note','themes','employee_fit','status','review_state','description','resilience_relevance_atlas_assessment','duration','team_size','cost','accessibility','requirements','availability_note','location_label','location_basis','location_precision','geocode_source_url','latitude','longitude','source_url','apply_url','checked_at','review_due','starts_on','ends_on','application_deadline','exported_at'];
+    const cols=['id','title','organisation','kind','area','coverage_names','coverage_codes','coverage_note','themes','employee_fit','status','review_state','description','resilience_relevance_atlas_assessment','duration','team_size','cost','accessibility','requirements','availability_note','location_label','location_basis','location_precision','geocode_source_url','latitude','longitude','source_url','apply_url','checked_at','review_due','starts_on','ends_on','application_deadline','exported_at'];
     const stamp=new Date().toISOString();
-    const rows=records.map(r=>({...r,area:areaNames(r),themes:arr(r.themes).map(t=>LABELS.theme[t]||t).join(' | '),employee_fit:arr(r.employee_fit).map(f=>LABELS.fit[f]||f).join(' | '),status:LABELS.status[r.status]||r.status,review_state:freshness(r).state,resilience_relevance_atlas_assessment:r.resilience_relevance,location_label:r.location?.label,location_basis:r.location?.basis,location_precision:r.location?.precision,geocode_source_url:r.location?.geocode_source_url,latitude:r.location?.lat,longitude:r.location?.lon,exported_at:stamp}));
+    const rows=records.map(r=>({...r,area:areaNames(r),coverage_names:arr(r.coverage_names).join(' | '),coverage_codes:arr(r.coverage_codes).join(' | '),themes:arr(r.themes).map(t=>LABELS.theme[t]||t).join(' | '),employee_fit:arr(r.employee_fit).map(f=>LABELS.fit[f]||f).join(' | '),status:LABELS.status[r.status]||r.status,review_state:freshness(r).state,resilience_relevance_atlas_assessment:r.resilience_relevance,location_label:r.location?.label,location_basis:r.location?.basis,location_precision:r.location?.precision,geocode_source_url:r.location?.geocode_source_url,latitude:r.location?.lat,longitude:r.location?.lon,exported_at:stamp}));
     const csv='\uFEFF'+[cols.map(csvValue).join(','),...rows.map(row=>cols.map(c=>csvValue(row[c])).join(','))].join('\r\n');
     const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'})),link=document.createElement('a');link.href=url;link.download=name+'-'+today()+'.csv';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);notice(`${records.length} ${records.length===1?'record':'records'} exported with source dates and location precision.`);
   }
@@ -210,11 +230,13 @@
     if (button.dataset.save) toggleSaved(button.dataset.save);
     if (button.dataset.details) openRecord(button.dataset.details);
     if (button.dataset.map) locateRecord(button.dataset.map);
-    if (button.dataset.area) {$('area').value=$('area').value===button.dataset.area?'':button.dataset.area;render(true);}
+    if (button.dataset.area) {$('area').value=$('area').value===button.dataset.area?'':button.dataset.area;populateAuthorities();render(true);}
+    if (button.hasAttribute('data-broaden')) {const a=arr(data.authorities).find(a=>a.code===$('authority').value);if (a) $('area').value=a.region_id;populateAuthorities();render(true);}
     if (button.hasAttribute('data-reset')) resetFilters();
     if (button.hasAttribute('data-review')) {$('freshness').value='review';render(false);}
   });
-  FILTERS.forEach(key=>$(key).addEventListener('change',()=>{if (key==='status' && $('status').value==='closed' && $('freshness').value==='current') $('freshness').value='all';render(key==='area');}));
+  $('showMore').addEventListener('click',()=>{const first=filtered[visibleCount]?.id;visibleCount+=PAGE_SIZE;render(false,true);if(first) document.querySelector(`[data-details="${CSS.escape(first)}"]`)?.focus();});
+  FILTERS.forEach(key=>$(key).addEventListener('change',()=>{if (key==='area') populateAuthorities();if (key==='authority'&&$('authority').value) {const code=$('authority').value;const a=arr(data.authorities).find(a=>a.code===code);if(a){$('area').value=a.region_id;populateAuthorities(code);}}if (key==='status' && $('status').value==='closed' && $('freshness').value==='current') $('freshness').value='all';render(key==='area'||key==='authority');}));
   $('search').addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>render(false),160);});
   $('savedOnly').addEventListener('change',()=>render(false));$('resetFilters').addEventListener('click',resetFilters);$('fitMap').addEventListener('click',fitMap);
   $('exportResults').addEventListener('click',()=>exportCSV(filtered,'England-volunteering-results'));
@@ -236,8 +258,11 @@
       if (incoming.schema_version!==1 || !Array.isArray(incoming.records) || !Array.isArray(incoming.areas)) throw new Error('The source register has an unsupported format.');
       if (incoming.records.some(r=>!r.id||!r.title||!r.organisation) || new Set(incoming.records.map(r=>r.id)).size!==incoming.records.length) throw new Error('The source register contains incomplete or duplicate record identifiers.');
       data=incoming;
-      $('area').replaceChildren(new Option('All three areas',''),...data.areas.map(area=>new Option(area.name,area.id)));
-      restoreFilters();$('dataUpdated').textContent='Register updated '+dateLabel(data.updated);render(true);if (!mapReady) await initialiseMap();
+      $('area').replaceChildren(new Option('All England',''),...data.areas.map(area=>new Option(area.name,area.id)));
+      const params=new URL(location.href).searchParams;const legacy=params.get('area');
+      if (legacy==='somerset') {params.set('area','south-west');params.set('authority','E06000066');history.replaceState(null,'','?'+params);}
+      if (legacy==='cumbria') {params.set('area','north-west');params.set('q','Cumbria');history.replaceState(null,'','?'+params);}
+      populateAuthorities();restoreFilters();populateAuthorities($('authority').value);$('dataUpdated').textContent='Register updated '+dateLabel(data.updated);render(true);if (!mapReady) await initialiseMap();
       if (!storageAvailable) notice('Browser storage is unavailable. Export your shortlist to keep a copy.');
     } catch (error) {
       $('loadError').hidden=false;$('loadErrorMessage').textContent='The source register could not be read. '+error.message+' Please try again.';$('results').replaceChildren();$('resultTitle').textContent='Directory unavailable';$('resultSummary').textContent='The source register can also be downloaded at the foot of this page.';$('exportResults').disabled=true;
@@ -254,11 +279,11 @@
       if (response.status===404) {$('postcodeStatus').textContent='That postcode was not found. Check it and try again.';return;}
       if (!response.ok) throw new Error('Lookup service unavailable');
       const result=(await response.json()).result,code=result?.codes?.admin_district;
-      const area=/^E090000\d{2}$/.test(code||'')?'london':code==='E06000066'?'somerset':['E06000063','E06000064'].includes(code)?'cumbria':null;
-      if (!area) {$('postcodeStatus').textContent=(result?.postcode||input)+' is outside this pilot’s three areas. Choose London, Somerset or Cumbria to explore the recorded routes.';return;}
-      $('area').value=area;render(true);
-      $('postcodeStatus').textContent=(result.postcode||input)+' is in the '+data.areas.find(a=>a.id===area).name+' pilot area. Results are filtered to that area; confirm activity locations with the host.';
-    } catch {$('postcodeStatus').textContent='The postcode service could not be reached. You can still choose a pilot area above.';}
+      const authority=arr(data.authorities).find(a=>a.code===code||arr(a.aliases).includes(code));
+      if (!authority) {$('postcodeStatus').textContent=(result?.postcode||input)+' could not be matched to an English council in this directory. Choose a council manually; this service covers England only.';return;}
+      $('area').value=authority.region_id;populateAuthorities(authority.code);render(true);
+      $('postcodeStatus').textContent=(result.postcode||input)+' is in '+authority.name+'. Results use recorded source geography. Confirm the host’s service area and activity location.';
+    } catch {$('postcodeStatus').textContent='The postcode service could not be reached. You can still choose a council area above.';}
     finally {clearTimeout(timer);$('postcodeLookup').disabled=false;}
   });
   $('retryLoad').addEventListener('click',load);load();

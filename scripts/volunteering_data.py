@@ -49,7 +49,7 @@ RECORD_FIELDS = (
     "application_deadline", "source_published", "availability_note", "evidence",
 )
 LOCATION_FIELDS = ("lat", "lon", "label", "basis", "source_url")
-RECORD_OPTIONAL_FIELDS = ("location_postcode", "location_address", "location_basis", "location_source_url")
+RECORD_OPTIONAL_FIELDS = ("location_postcode", "location_address", "location_basis", "location_source_url", "coverage_names", "coverage_level", "coverage_codes", "partner_directory")
 LOCATION_OPTIONAL_FIELDS = ("precision", "geocode_source_url", "geocode_checked_at")
 CSV_FIELDS = tuple(
     column for field in RECORD_FIELDS
@@ -149,7 +149,7 @@ def validate_document(document, today=None):
             error(path + "." + name, message)
 
     if not keys(document, ("schema_version", "updated", "scope", "areas", "records"), "document",
-                ("description", "location_note", "geocoding_attribution")):
+                ("description", "location_note", "geocoding_attribution", "authorities", "geography_source", "geography_note")):
         return errors
     if type(document.get("schema_version")) is not int or document["schema_version"] != 1:
         error("document.schema_version", "must be integer 1")
@@ -157,9 +157,11 @@ def validate_document(document, today=None):
     if updated and updated > today:
         error("document.updated", "cannot be in the future")
     text(document, "scope", "document")
-    for name in ("description", "location_note", "geocoding_attribution"):
+    for name in ("description", "location_note", "geocoding_attribution", "geography_note"):
         if name in document:
             text(document, name, "document")
+    if "geography_source" in document:
+        url(document, "geography_source", "document")
     area_ids = set()
     areas = document.get("areas")
     if not isinstance(areas, list) or not areas:
@@ -192,6 +194,36 @@ def validate_document(document, today=None):
         for coordinate, low, high in (("lat", -90, 90), ("lon", -180, 180)):
             if not number_in_range(area.get(coordinate), low, high):
                 error(path + "." + coordinate, "must be a finite geographic coordinate")
+    authority_codes = set()
+    authorities = document.get("authorities", [])
+    if not isinstance(authorities, list):
+        error("document.authorities", "must be an array")
+        authorities = []
+    authority_regions = {}
+    for index, authority in enumerate(authorities):
+        path = f"authorities[{index}]"
+        if not keys(authority, ("code", "name", "region_id", "county_name", "lat", "lon"), path, ("aliases",)):
+            continue
+        for name in ("code", "name", "region_id", "county_name"):
+            text(authority, name, path)
+        code = authority.get("code")
+        if not isinstance(code, str) or not re.fullmatch(r"E(?:06|07|08|09)000\d{3}", code):
+            error(path + ".code", "must be an English local authority code")
+        elif code in authority_codes:
+            error(path + ".code", "duplicate authority code")
+        if isinstance(code, str):
+            authority_codes.add(code)
+            authority_regions[code] = authority.get("region_id")
+        aliases = authority.get("aliases", [])
+        if not isinstance(aliases, list) or any(not isinstance(a, str) or not re.fullmatch(r"E(?:06|07|08|09)000\d{3}", a) for a in aliases):
+            error(path + ".aliases", "must be an array of English local authority codes")
+        elif len(set(aliases)) != len(aliases):
+            error(path + ".aliases", "must not contain duplicates")
+        if not isinstance(authority.get("region_id"), str) or authority.get("region_id") not in area_ids:
+            error(path + ".region_id", "must identify a listed region")
+        for coordinate, low, high in (("lat", -90, 90), ("lon", -180, 180)):
+            if not number_in_range(authority.get(coordinate), low, high):
+                error(path + "." + coordinate, "must be a finite geographic coordinate")
     records = document.get("records")
     if not isinstance(records, list):
         error("document.records", "must be an array")
@@ -212,6 +244,26 @@ def validate_document(document, today=None):
             error(path + ".location_basis", "must be venue, office, area_anchor or null")
         if record.get("location_source_url") is not None:
             url(record, "location_source_url", path)
+        for field in ("coverage_names", "coverage_codes"):
+            if field in record:
+                values = record[field]
+                if not isinstance(values, list) or any(not isinstance(v, str) or not v.strip() for v in values):
+                    error(path + "." + field, "must be an array of non-empty strings")
+                elif len(set(values)) != len(values):
+                    error(path + "." + field, "must not contain duplicates")
+                elif field == "coverage_codes" and set(values) - authority_codes:
+                    error(path + ".coverage_codes", "contains unknown authority codes")
+        codes = record.get("coverage_codes", [])
+        regions = record.get("area_ids", [])
+        if isinstance(codes, list) and all(isinstance(c, str) for c in codes) and isinstance(regions, list):
+            if any(authority_regions.get(c) not in regions for c in codes if c in authority_regions):
+                error(path + ".coverage_codes", "authority region must appear in area_ids")
+        if "coverage_level" in record and record["coverage_level"] not in ("local", "county", "regional", "national", "unspecified"):
+            error(path + ".coverage_level", "must be local, county, regional, national or unspecified")
+        if "partner_directory" in record and type(record["partner_directory"]) is not bool:
+            error(path + ".partner_directory", "must be a boolean")
+        if record.get("coverage_codes") and not record.get("coverage_names"):
+            error(path + ".coverage_names", "required when authority coverage is assigned")
         identifier = record.get("id")
         if not isinstance(identifier, str) or not SLUG.fullmatch(identifier):
             error(path + ".id", "must be a lowercase stable slug")
@@ -252,8 +304,8 @@ def validate_document(document, today=None):
             if location.get("basis") not in ("venue", "office", "area_anchor"):
                 error(path + ".location.basis", "must be venue, office or area_anchor")
             url(location, "source_url", path + ".location")
-            if "precision" in location and location["precision"] not in ("pilot_area", "postcode", "host_map_pin"):
-                error(path + ".location.precision", "must be pilot_area, postcode or host_map_pin")
+            if "precision" in location and location["precision"] not in ("pilot_area", "area", "postcode", "host_map_pin"):
+                error(path + ".location.precision", "must be area, pilot_area, postcode or host_map_pin")
             if "geocode_source_url" in location:
                 url(location, "geocode_source_url", path + ".location")
             if "geocode_checked_at" in location:
@@ -547,7 +599,7 @@ def main(argv=None):
         document = load_json(args.input)
         assert_valid(document, getattr(args, "today", None))
         if args.command == "validate":
-            print(f"Valid: {len(document['records'])} records; {len(document['areas'])} pilot areas.")
+            print(f"Valid: {len(document['records'])} records; {len(document['areas'])} discovery regions.")
         elif args.command == "export":
             args.output.parent.mkdir(parents=True, exist_ok=True)
             export_csv(document, args.output)

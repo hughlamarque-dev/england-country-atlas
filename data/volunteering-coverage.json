@@ -1,0 +1,4225 @@
+{
+  "generated_on": "2026-09-18",
+  "data_updated": "2026-09-18",
+  "notice": "Counts describe this researched directory, not volunteering supply, capacity, partnerships or resilience. A source town may match a containing council without serving the whole council. Regional discovery tags and map positions never assign local coverage. Multiple councils may share the same route; do not sum council counts as unique records.",
+  "current_records": 218,
+  "regions": [
+    {
+      "id": "north-east",
+      "name": "North East",
+      "current_records": 15
+    },
+    {
+      "id": "north-west",
+      "name": "North West",
+      "current_records": 38
+    },
+    {
+      "id": "yorkshire-humber",
+      "name": "Yorkshire and the Humber",
+      "current_records": 16
+    },
+    {
+      "id": "east-midlands",
+      "name": "East Midlands",
+      "current_records": 15
+    },
+    {
+      "id": "west-midlands",
+      "name": "West Midlands",
+      "current_records": 19
+    },
+    {
+      "id": "east-england",
+      "name": "East of England",
+      "current_records": 27
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "current_records": 19
+    },
+    {
+      "id": "south-east",
+      "name": "South East",
+      "current_records": 34
+    },
+    {
+      "id": "south-west",
+      "name": "South West",
+      "current_records": 37
+    }
+  ],
+  "councils_total": 296,
+  "councils_with_source_matched_route": 296,
+  "councils_with_broker_route": 272,
+  "councils_with_activity_route": 143,
+  "records_without_council_match": [
+    "london-thames21-corporate-river-days",
+    "london-sar-support-skills",
+    "london-sar-search-technician",
+    "london-handson-wrapup-2026",
+    "london-felix-green-scheme",
+    "cumbria-eden-river-volunteering",
+    "cumbria-bay-search-rescue",
+    "east-england-harp-corporate",
+    "midlands-fareshare-admin",
+    "teesside-catalyst-business-support",
+    "calder-valley-slow-the-flow-skills",
+    "nw-ribble-team-days",
+    "nw-congleton-wellbeing",
+    "sw-wrt-freshwater-action",
+    "sw-wrt-citizen-science",
+    "sw-fareshare-pro-bono",
+    "sw-glos-water-guardians",
+    "sw-churn-flood-citizen-science"
+  ],
+  "authorities": [
+    {
+      "code": "E07000223",
+      "name": "Adur",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-adur-worthing-community-works"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000032",
+      "name": "Amber Valley",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-derbyshire-voluntary-action"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000224",
+      "name": "Arun",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-arun-chichester-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000170",
+      "name": "Ashfield",
+      "region_id": "east-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-ashfield-voluntary-action",
+        "east-midlands-nottinghamshire-community-team"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000105",
+      "name": "Ashford",
+      "region_id": "south-east",
+      "current_routes": 5,
+      "broker_routes": 3,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-ashford-volunteer-broker",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000200",
+      "name": "Babergh",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-cas-volunteering",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000002",
+      "name": "Barking and Dagenham",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000003",
+      "name": "Barnet",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000038",
+      "name": "Barnsley",
+      "region_id": "yorkshire-humber",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "barnsley-cvs-volunteering",
+        "yorkshire-fareshare-corporate-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000066",
+      "name": "Basildon",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000084",
+      "name": "Basingstoke and Deane",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000171",
+      "name": "Bassetlaw",
+      "region_id": "east-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-bassetlaw-bolsover-cvs",
+        "east-midlands-nottinghamshire-community-team"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000022",
+      "name": "Bath and North East Somerset",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-3sg-banes",
+        "sw-genesis-bath-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000055",
+      "name": "Bedford",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-cvs-bedfordshire",
+        "east-england-emmaus-carlton-teams",
+        "east-england-food-etc-cookery"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000004",
+      "name": "Bexley",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 4,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "london-bexley-volunteer-broker",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000025",
+      "name": "Birmingham",
+      "region_id": "west-midlands",
+      "current_routes": 4,
+      "broker_routes": 1,
+      "activity_routes": 3,
+      "team_routes": 2,
+      "record_ids": [
+        "west-midlands-bvsc-volunteer",
+        "midlands-fareshare-corporate",
+        "west-midlands-fareshare-kitchen",
+        "west-midlands-sifa-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000129",
+      "name": "Blaby",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-val-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000008",
+      "name": "Blackburn with Darwen",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-community-cvs"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000009",
+      "name": "Blackpool",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 0,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-blackpool-food-project",
+        "nw-blackpool-alley"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000033",
+      "name": "Bolsover",
+      "region_id": "east-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-derbyshire-voluntary-action",
+        "east-midlands-bassetlaw-bolsover-cvs"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000001",
+      "name": "Bolton",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-bolton-cvs"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000136",
+      "name": "Boston",
+      "region_id": "east-midlands",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-cvs-lincolnshire",
+        "east-midlands-lincolnshire-ready-anything",
+        "east-midlands-lincolnshire-community-plans"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000058",
+      "name": "Bournemouth, Christchurch and Poole",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-can-volunteering",
+        "sw-faithworks-poole-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000036",
+      "name": "Bracknell Forest",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-bracknell-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000032",
+      "name": "Bradford",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "bradford-inclusive-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000067",
+      "name": "Braintree",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000143",
+      "name": "Breckland",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-get-involved-norfolk",
+        "east-england-norfolk-skills-exchange",
+        "east-england-mind-norfolk-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000005",
+      "name": "Brent",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000068",
+      "name": "Brentwood",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000043",
+      "name": "Brighton and Hove",
+      "region_id": "south-east",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-brighton-community-resilience",
+        "se-fareshare-brighton-volunteers",
+        "se-adur-worthing-community-works"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000023",
+      "name": "Bristol, City of",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-voscur-bristol",
+        "sw-fareshare-team-days"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000144",
+      "name": "Broadland",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-get-involved-norfolk",
+        "east-england-norfolk-skills-exchange",
+        "east-england-mind-norfolk-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000006",
+      "name": "Bromley",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 4,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "london-bromley-community-links",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000234",
+      "name": "Bromsgrove",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-we-can-worcestershire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000095",
+      "name": "Broxbourne",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-govolherts",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000172",
+      "name": "Broxtowe",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-nottinghamshire-community-team"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000060",
+      "name": "Buckinghamshire",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-buckinghamshire-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000117",
+      "name": "Burnley",
+      "region_id": "north-west",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-bprcvs",
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000002",
+      "name": "Bury",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-bury-csr"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000033",
+      "name": "Calderdale",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "calderdale-kirklees-vac-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000008",
+      "name": "Cambridge",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-support-cambridgeshire",
+        "east-england-wintercomfort-volunteers"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000007",
+      "name": "Camden",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000192",
+      "name": "Cannock Chase",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-support-staffordshire-volunteers",
+        "west-midlands-support-staffordshire-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000106",
+      "name": "Canterbury",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000069",
+      "name": "Castle Point",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000056",
+      "name": "Central Bedfordshire",
+      "region_id": "east-england",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-cvs-bedfordshire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000130",
+      "name": "Charnwood",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-val-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000070",
+      "name": "Chelmsford",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-community360-drivers",
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000078",
+      "name": "Cheltenham",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-grcc-community-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000177",
+      "name": "Cherwell",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-oxfordshire-employee-volunteer-broker",
+        "se-homeless-oxfordshire-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000049",
+      "name": "Cheshire East",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-cheshire-east-cvs",
+        "nw-cheshire-sar"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000050",
+      "name": "Cheshire West and Chester",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-cheshire-west-va",
+        "nw-cheshire-sar"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000034",
+      "name": "Chesterfield",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-derbyshire-voluntary-action"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000225",
+      "name": "Chichester",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-arun-chichester-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000118",
+      "name": "Chorley",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000001",
+      "name": "City of London",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 4,
+      "activity_routes": 0,
+      "team_routes": 2,
+      "record_ids": [
+        "london-camden-teamup",
+        "london-hackney-city-corporate-broker",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000071",
+      "name": "Colchester",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-community360-drivers",
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000052",
+      "name": "Cornwall",
+      "region_id": "south-west",
+      "current_routes": 5,
+      "broker_routes": 2,
+      "activity_routes": 3,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-volunteer-cornwall",
+        "sw-cornwall-flood-forum",
+        "sw-newquay-orchard",
+        "sw-cornwall-lifeline",
+        "sw-cornwall-community-drivers"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000079",
+      "name": "Cotswold",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-grcc-community-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000047",
+      "name": "County Durham",
+      "region_id": "north-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "durham-dca-volunteer-broker",
+        "durham-employer-supported-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000026",
+      "name": "Coventry",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-vac-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000226",
+      "name": "Crawley",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-crawley-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000008",
+      "name": "Croydon",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000063",
+      "name": "Cumberland",
+      "region_id": "north-west",
+      "current_routes": 6,
+      "broker_routes": 2,
+      "activity_routes": 4,
+      "team_routes": 2,
+      "record_ids": [
+        "cumbria-wcrt-corporate-days",
+        "cumbria-wildlife-wild-work-days",
+        "cumbria-carlisle-foodbank",
+        "nw-stjohn-logistics",
+        "pilot-cumbria-cvs",
+        "pilot-cumbria-act"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000096",
+      "name": "Dacorum",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-dens-business-skills",
+        "east-england-govolherts",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000005",
+      "name": "Darlington",
+      "region_id": "north-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "darlington-dad-access-inclusion"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000107",
+      "name": "Dartford",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000015",
+      "name": "Derby",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-community-action-derby"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000035",
+      "name": "Derbyshire Dales",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-derbyshire-voluntary-action"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000017",
+      "name": "Doncaster",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "doncaster-vad-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000059",
+      "name": "Dorset",
+      "region_id": "south-west",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-volunteer-centre-dorset",
+        "sw-can-volunteering",
+        "sw-faithworks-money-advice"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000108",
+      "name": "Dover",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000027",
+      "name": "Dudley",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-dudley-volunteer-centre"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000009",
+      "name": "Ealing",
+      "region_id": "london",
+      "current_routes": 5,
+      "broker_routes": 3,
+      "activity_routes": 2,
+      "team_routes": 2,
+      "record_ids": [
+        "london-city-harvest-corporate",
+        "london-city-harvest-individual",
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000009",
+      "name": "East Cambridgeshire",
+      "region_id": "east-england",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-support-cambridgeshire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000040",
+      "name": "East Devon",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-devon-communities-together",
+        "sw-eci-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000085",
+      "name": "East Hampshire",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-community-first-volunteer-broker",
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000242",
+      "name": "East Hertfordshire",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-govolherts",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000137",
+      "name": "East Lindsey",
+      "region_id": "east-midlands",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-cvs-lincolnshire",
+        "east-midlands-lincolnshire-ready-anything",
+        "east-midlands-lincolnshire-community-plans"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000011",
+      "name": "East Riding of Yorkshire",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-riding-north-lincolnshire-community-vision"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000193",
+      "name": "East Staffordshire",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-support-staffordshire-volunteers",
+        "west-midlands-support-staffordshire-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000244",
+      "name": "East Suffolk",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-cas-volunteering",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000061",
+      "name": "Eastbourne",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-eastbourne-lewes-wealden-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000086",
+      "name": "Eastleigh",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000207",
+      "name": "Elmbridge",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E09000010",
+      "name": "Enfield",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000072",
+      "name": "Epping Forest",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000208",
+      "name": "Epsom and Ewell",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000036",
+      "name": "Erewash",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-derbyshire-voluntary-action"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000041",
+      "name": "Exeter",
+      "region_id": "south-west",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-devon-communities-together",
+        "sw-exeter-connect",
+        "sw-eci-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000087",
+      "name": "Fareham",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-community-first-volunteer-broker",
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000010",
+      "name": "Fenland",
+      "region_id": "east-england",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-support-cambridgeshire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000112",
+      "name": "Folkestone and Hythe",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000080",
+      "name": "Forest of Dean",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-grcc-community-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000119",
+      "name": "Fylde",
+      "region_id": "north-west",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics",
+        "nw-blackpool-food-project"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000037",
+      "name": "Gateshead",
+      "region_id": "north-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "newcastle-gateshead-connected-voice-volunteering",
+        "newcastle-gateshead-sector-connector"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000173",
+      "name": "Gedling",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-nottinghamshire-community-team"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000081",
+      "name": "Gloucester",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-grcc-community-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000088",
+      "name": "Gosport",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000109",
+      "name": "Gravesham",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000145",
+      "name": "Great Yarmouth",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-get-involved-norfolk",
+        "east-england-norfolk-skills-exchange",
+        "east-england-mind-norfolk-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000011",
+      "name": "Greenwich",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 3,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "london-thames21-oxleas-20260929",
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000209",
+      "name": "Guildford",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 0,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours",
+        "se-fareshare-guildford-drivers"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E09000012",
+      "name": "Hackney",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 4,
+      "activity_routes": 0,
+      "team_routes": 2,
+      "record_ids": [
+        "london-camden-teamup",
+        "london-hackney-city-corporate-broker",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000006",
+      "name": "Halton",
+      "region_id": "north-west",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-halton-sthelens-vca",
+        "nw-cheshire-sar",
+        "nw-lcr-platform"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000013",
+      "name": "Hammersmith and Fulham",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000131",
+      "name": "Harborough",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-val-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000014",
+      "name": "Haringey",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000073",
+      "name": "Harlow",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000015",
+      "name": "Harrow",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000089",
+      "name": "Hart",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E06000001",
+      "name": "Hartlepool",
+      "region_id": "north-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "hartlepool-community-trust-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000062",
+      "name": "Hastings",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-hastings-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000090",
+      "name": "Havant",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-community-first-volunteer-broker",
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000016",
+      "name": "Havering",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000019",
+      "name": "Herefordshire, County of",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "west-midlands-hvoss-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000098",
+      "name": "Hertsmere",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-govolherts",
+        "east-england-communities-first",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000037",
+      "name": "High Peak",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-derbyshire-voluntary-action"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000017",
+      "name": "Hillingdon",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000132",
+      "name": "Hinckley and Bosworth",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-val-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000227",
+      "name": "Horsham",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-horsham-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000018",
+      "name": "Hounslow",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000011",
+      "name": "Huntingdonshire",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-support-cambridgeshire",
+        "east-england-huntingdonshire-volunteer-centre"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000120",
+      "name": "Hyndburn",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000202",
+      "name": "Ipswich",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-cas-volunteering",
+        "east-england-essex-suffolk-river-teams",
+        "east-england-find-ipswich-drivers"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000046",
+      "name": "Isle of Wight",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-isle-wight-volunteer-centre"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000053",
+      "name": "Isles of Scilly",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-scilly-community-volunteering"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E09000019",
+      "name": "Islington",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 4,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "london-islington-volunteer-centre",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000020",
+      "name": "Kensington and Chelsea",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000146",
+      "name": "King's Lynn and West Norfolk",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-get-involved-norfolk",
+        "east-england-norfolk-skills-exchange",
+        "east-england-mind-norfolk-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000010",
+      "name": "Kingston upon Hull, City of",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "hull-cvs-volunteer-centre"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000021",
+      "name": "Kingston upon Thames",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 4,
+      "activity_routes": 0,
+      "team_routes": 2,
+      "record_ids": [
+        "london-camden-teamup",
+        "london-kingston-employer-broker",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000034",
+      "name": "Kirklees",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "calderdale-kirklees-vac-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000011",
+      "name": "Knowsley",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-lcr-platform"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000022",
+      "name": "Lambeth",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000121",
+      "name": "Lancaster",
+      "region_id": "north-west",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-lancaster-centre",
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000035",
+      "name": "Leeds",
+      "region_id": "yorkshire-humber",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "leeds-volunteer-centre",
+        "leeds-digital-volunteering-partnership",
+        "yorkshire-fareshare-corporate-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000016",
+      "name": "Leicester",
+      "region_id": "east-midlands",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-val-volunteering",
+        "midlands-fareshare-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000063",
+      "name": "Lewes",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-eastbourne-lewes-wealden-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000023",
+      "name": "Lewisham",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000194",
+      "name": "Lichfield",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-support-staffordshire-volunteers",
+        "west-midlands-support-staffordshire-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000138",
+      "name": "Lincoln",
+      "region_id": "east-midlands",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-cvs-lincolnshire",
+        "east-midlands-lincolnshire-ready-anything",
+        "east-midlands-lincolnshire-community-plans"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000012",
+      "name": "Liverpool",
+      "region_id": "north-west",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-liverpool-lcvs",
+        "nw-whitechapel-driver",
+        "nw-lcr-platform"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000032",
+      "name": "Luton",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-cvs-bedfordshire",
+        "east-england-luton-foodbank-warehouse"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000110",
+      "name": "Maidstone",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000074",
+      "name": "Maldon",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-community360-drivers",
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000235",
+      "name": "Malvern Hills",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-we-can-worcestershire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000003",
+      "name": "Manchester",
+      "region_id": "north-west",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 3,
+      "record_ids": [
+        "nw-manchester-centre",
+        "nw-booth-corporate",
+        "nw-mustard-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000174",
+      "name": "Mansfield",
+      "region_id": "east-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-mansfield-cvs",
+        "east-midlands-nottinghamshire-community-team"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000035",
+      "name": "Medway",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-medway-voluntary-emergency-network",
+        "se-medway-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000133",
+      "name": "Melton",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-val-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000024",
+      "name": "Merton",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 4,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "london-merton-volunteer-broker",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000042",
+      "name": "Mid Devon",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-devon-communities-together",
+        "sw-eci-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000203",
+      "name": "Mid Suffolk",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-cas-volunteering",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000228",
+      "name": "Mid Sussex",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-mid-sussex-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000002",
+      "name": "Middlesbrough",
+      "region_id": "north-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "middlesbrough-volunteering-academy"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000042",
+      "name": "Milton Keynes",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "se-milton-keynes-employee-referral"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000210",
+      "name": "Mole Valley",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000091",
+      "name": "New Forest",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-community-first-volunteer-broker",
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000175",
+      "name": "Newark and Sherwood",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-nottinghamshire-community-team"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000021",
+      "name": "Newcastle upon Tyne",
+      "region_id": "north-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "newcastle-gateshead-connected-voice-volunteering",
+        "newcastle-gateshead-sector-connector"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000195",
+      "name": "Newcastle-under-Lyme",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-support-staffordshire-volunteers",
+        "west-midlands-support-staffordshire-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000025",
+      "name": "Newham",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000043",
+      "name": "North Devon",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-devon-communities-together",
+        "sw-eci-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000038",
+      "name": "North East Derbyshire",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-derbyshire-voluntary-action"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000012",
+      "name": "North East Lincolnshire",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "north-east-lincolnshire-vanel-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000099",
+      "name": "North Hertfordshire",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-govolherts",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000139",
+      "name": "North Kesteven",
+      "region_id": "east-midlands",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-cvs-lincolnshire",
+        "east-midlands-lincolnshire-ready-anything",
+        "east-midlands-lincolnshire-community-plans"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000013",
+      "name": "North Lincolnshire",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-riding-north-lincolnshire-community-vision"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000147",
+      "name": "North Norfolk",
+      "region_id": "east-england",
+      "current_routes": 4,
+      "broker_routes": 1,
+      "activity_routes": 3,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-get-involved-norfolk",
+        "east-england-norfolk-skills-exchange",
+        "east-england-mind-norfolk-corporate",
+        "east-england-north-norfolk-community-coordinator"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000061",
+      "name": "North Northamptonshire",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-vin-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000024",
+      "name": "North Somerset",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-vans-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000022",
+      "name": "North Tyneside",
+      "region_id": "north-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "north-tyneside-voda-volunteering",
+        "north-tyneside-voda-sector-connector"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000218",
+      "name": "North Warwickshire",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "west-midlands-wcava-business"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000134",
+      "name": "North West Leicestershire",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-val-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000065",
+      "name": "North Yorkshire",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "north-yorkshire-community-first-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000057",
+      "name": "Northumberland",
+      "region_id": "north-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "northumberland-ncva-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000148",
+      "name": "Norwich",
+      "region_id": "east-england",
+      "current_routes": 5,
+      "broker_routes": 1,
+      "activity_routes": 4,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-get-involved-norfolk",
+        "east-england-red-cross-norwich-response",
+        "east-england-norwich-foodbank-distribution",
+        "east-england-norfolk-skills-exchange",
+        "east-england-mind-norfolk-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000018",
+      "name": "Nottingham",
+      "region_id": "east-midlands",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-nottingham-cvs",
+        "midlands-fareshare-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000219",
+      "name": "Nuneaton and Bedworth",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "west-midlands-wcava-business"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000135",
+      "name": "Oadby and Wigston",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-val-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000004",
+      "name": "Oldham",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-action-together",
+        "nw-cwtc-digital"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000178",
+      "name": "Oxford",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-oxfordshire-employee-volunteer-broker",
+        "se-homeless-oxfordshire-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000122",
+      "name": "Pendle",
+      "region_id": "north-west",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-bprcvs",
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000031",
+      "name": "Peterborough",
+      "region_id": "east-england",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-pcvs"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000026",
+      "name": "Plymouth",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-fareshare-team-days"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E06000044",
+      "name": "Portsmouth",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-portsmouth-hive-volunteers"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000123",
+      "name": "Preston",
+      "region_id": "north-west",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-community-cvs",
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics",
+        "nw-preston-food-warehouse"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000038",
+      "name": "Reading",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-reading-volunteer-broker",
+        "se-reading-launchpad-team-days"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000026",
+      "name": "Redbridge",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000003",
+      "name": "Redcar and Cleveland",
+      "region_id": "north-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "redcar-cleveland-rcvda-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000236",
+      "name": "Redditch",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-we-can-worcestershire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000211",
+      "name": "Reigate and Banstead",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000124",
+      "name": "Ribble Valley",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000027",
+      "name": "Richmond upon Thames",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 4,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "london-richmond-volunteer-broker",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000005",
+      "name": "Rochdale",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-action-together"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000075",
+      "name": "Rochford",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000125",
+      "name": "Rossendale",
+      "region_id": "north-west",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-bprcvs",
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000064",
+      "name": "Rother",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-rother-volunteer-hub"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000018",
+      "name": "Rotherham",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "rotherham-volunteer-centre"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000220",
+      "name": "Rugby",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "west-midlands-wcava-business"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000212",
+      "name": "Runnymede",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000176",
+      "name": "Rushcliffe",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-nottinghamshire-community-team"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000092",
+      "name": "Rushmoor",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E06000017",
+      "name": "Rutland",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-rutland-early-help"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E08000006",
+      "name": "Salford",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-salford-centre"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000028",
+      "name": "Sandwell",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-scvo-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000014",
+      "name": "Sefton",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-sefton-corporate",
+        "nw-lcr-platform"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000111",
+      "name": "Sevenoaks",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000039",
+      "name": "Sheffield",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "sheffield-volunteer-centre"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000051",
+      "name": "Shropshire",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-shropshire-community-resource",
+        "west-midlands-community-resource-buddy"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000039",
+      "name": "Slough",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-slough-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000029",
+      "name": "Solihull",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "west-midlands-wcava-business"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000066",
+      "name": "Somerset",
+      "region_id": "south-west",
+      "current_routes": 9,
+      "broker_routes": 2,
+      "activity_routes": 7,
+      "team_routes": 1,
+      "record_ids": [
+        "somerset-spark-skillshare",
+        "somerset-spark-digital-champions",
+        "somerset-taunton-foodbank-business",
+        "somerset-emergency-community-contact",
+        "somerset-act-to-adapt",
+        "somerset-minehead-eye-maintenance",
+        "somerset-minehead-eye-centre-assistant",
+        "somerset-sevag-volunteering-route",
+        "pilot-somerset-thrive"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000012",
+      "name": "South Cambridgeshire",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-support-cambridgeshire",
+        "east-england-emmaus-cambridge"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000039",
+      "name": "South Derbyshire",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-midlands-derbyshire-voluntary-action"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000025",
+      "name": "South Gloucestershire",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-cvs-south-gloucestershire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000044",
+      "name": "South Hams",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-devon-communities-together",
+        "sw-eci-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000140",
+      "name": "South Holland",
+      "region_id": "east-midlands",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-cvs-lincolnshire",
+        "east-midlands-lincolnshire-ready-anything",
+        "east-midlands-lincolnshire-community-plans"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000141",
+      "name": "South Kesteven",
+      "region_id": "east-midlands",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-cvs-lincolnshire",
+        "east-midlands-lincolnshire-ready-anything",
+        "east-midlands-lincolnshire-community-plans"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000149",
+      "name": "South Norfolk",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-get-involved-norfolk",
+        "east-england-norfolk-skills-exchange",
+        "east-england-mind-norfolk-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000179",
+      "name": "South Oxfordshire",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-oxfordshire-employee-volunteer-broker",
+        "se-homeless-oxfordshire-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000126",
+      "name": "South Ribble",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000196",
+      "name": "South Staffordshire",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-support-staffordshire-volunteers",
+        "west-midlands-support-staffordshire-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000023",
+      "name": "South Tyneside",
+      "region_id": "north-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "south-tyneside-inspire-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000045",
+      "name": "Southampton",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "se-southampton-employee-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000033",
+      "name": "Southend-on-Sea",
+      "region_id": "east-england",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-savs-southend"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000028",
+      "name": "Southwark",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000213",
+      "name": "Spelthorne",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000240",
+      "name": "St Albans",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-govolherts",
+        "east-england-communities-first",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000013",
+      "name": "St. Helens",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-halton-sthelens-vca",
+        "nw-lcr-platform"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000197",
+      "name": "Stafford",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-support-staffordshire-volunteers",
+        "west-midlands-support-staffordshire-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000198",
+      "name": "Staffordshire Moorlands",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-support-staffordshire-volunteers",
+        "west-midlands-support-staffordshire-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000243",
+      "name": "Stevenage",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-govolherts",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000007",
+      "name": "Stockport",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-stockport-hub"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000004",
+      "name": "Stockton-on-Tees",
+      "region_id": "north-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "stockton-catalyst-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000021",
+      "name": "Stoke-on-Trent",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-vast-stoke"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000221",
+      "name": "Stratford-on-Avon",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "west-midlands-wcava-business"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000082",
+      "name": "Stroud",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-grcc-community-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000024",
+      "name": "Sunderland",
+      "region_id": "north-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sunderland-vcas-community-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000214",
+      "name": "Surrey Heath",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E09000029",
+      "name": "Sutton",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000113",
+      "name": "Swale",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000030",
+      "name": "Swindon",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-swindon-food-collective"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E08000008",
+      "name": "Tameside",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-action-together"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000199",
+      "name": "Tamworth",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-support-staffordshire-volunteers",
+        "west-midlands-support-staffordshire-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000215",
+      "name": "Tandridge",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000045",
+      "name": "Teignbridge",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-devon-communities-together",
+        "sw-eci-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000020",
+      "name": "Telford and Wrekin",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-community-resource-buddy"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000076",
+      "name": "Tendring",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000093",
+      "name": "Test Valley",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000083",
+      "name": "Tewkesbury",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-grcc-community-resilience"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000114",
+      "name": "Thanet",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000102",
+      "name": "Three Rivers",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-govolherts",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000034",
+      "name": "Thurrock",
+      "region_id": "east-england",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-thurrock-cvs"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000115",
+      "name": "Tonbridge and Malling",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000027",
+      "name": "Torbay",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "sw-torbay-communities"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000046",
+      "name": "Torridge",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-devon-communities-together",
+        "sw-eci-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000030",
+      "name": "Tower Hamlets",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 3,
+      "activity_routes": 1,
+      "team_routes": 2,
+      "record_ids": [
+        "london-felix-team-shifts",
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000009",
+      "name": "Trafford",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-trafford-collective"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000116",
+      "name": "Tunbridge Wells",
+      "region_id": "south-east",
+      "current_routes": 4,
+      "broker_routes": 2,
+      "activity_routes": 2,
+      "team_routes": 0,
+      "record_ids": [
+        "se-kent-volunteers-referral",
+        "se-kent-digital-champions",
+        "se-kent-search-rescue-support",
+        "se-kent-medway-voluntary-emergency-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000077",
+      "name": "Uttlesford",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "east-england-volunteer-essex",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000180",
+      "name": "Vale of White Horse",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-oxfordshire-employee-volunteer-broker",
+        "se-homeless-oxfordshire-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000036",
+      "name": "Wakefield",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "wakefield-nova-community-network"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000030",
+      "name": "Walsall",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "west-midlands-one-walsall-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000031",
+      "name": "Waltham Forest",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 3,
+      "activity_routes": 1,
+      "team_routes": 2,
+      "record_ids": [
+        "london-city-harvest-corporate",
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000032",
+      "name": "Wandsworth",
+      "region_id": "london",
+      "current_routes": 4,
+      "broker_routes": 3,
+      "activity_routes": 1,
+      "team_routes": 2,
+      "record_ids": [
+        "london-city-harvest-corporate",
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000007",
+      "name": "Warrington",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-warrington-va",
+        "nw-cheshire-sar"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000222",
+      "name": "Warwick",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "west-midlands-wcava-business"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000103",
+      "name": "Watford",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-govolherts",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000216",
+      "name": "Waverley",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E07000065",
+      "name": "Wealden",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-eastbourne-lewes-wealden-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000241",
+      "name": "Welwyn Hatfield",
+      "region_id": "east-england",
+      "current_routes": 3,
+      "broker_routes": 2,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "east-england-govolherts",
+        "east-england-communities-first",
+        "east-england-herts-young-homeless"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000037",
+      "name": "West Berkshire",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-west-berkshire-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000047",
+      "name": "West Devon",
+      "region_id": "south-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-devon-communities-together",
+        "sw-eci-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000127",
+      "name": "West Lancashire",
+      "region_id": "north-west",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000142",
+      "name": "West Lindsey",
+      "region_id": "east-midlands",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-cvs-lincolnshire",
+        "east-midlands-lincolnshire-ready-anything",
+        "east-midlands-lincolnshire-community-plans"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000062",
+      "name": "West Northamptonshire",
+      "region_id": "east-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "east-midlands-vin-corporate"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000181",
+      "name": "West Oxfordshire",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-oxfordshire-employee-volunteer-broker",
+        "se-homeless-oxfordshire-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000245",
+      "name": "West Suffolk",
+      "region_id": "east-england",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 2,
+      "record_ids": [
+        "east-england-cas-volunteering",
+        "east-england-essex-suffolk-river-teams"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E09000033",
+      "name": "Westminster",
+      "region_id": "london",
+      "current_routes": 3,
+      "broker_routes": 3,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "london-camden-teamup",
+        "pilot-london-plus-volunteer-centres",
+        "pilot-london-lcep"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000064",
+      "name": "Westmorland and Furness",
+      "region_id": "north-west",
+      "current_routes": 5,
+      "broker_routes": 2,
+      "activity_routes": 3,
+      "team_routes": 1,
+      "record_ids": [
+        "cumbria-eden-tree-nursery",
+        "cumbria-wildlife-wild-work-days",
+        "nw-stjohn-logistics",
+        "pilot-cumbria-cvs",
+        "pilot-cumbria-act"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000010",
+      "name": "Wigan",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-wigan-hub"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000054",
+      "name": "Wiltshire",
+      "region_id": "south-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 1,
+      "record_ids": [
+        "sw-wessex-employer-volunteering"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000094",
+      "name": "Winchester",
+      "region_id": "south-east",
+      "current_routes": 2,
+      "broker_routes": 1,
+      "activity_routes": 1,
+      "team_routes": 1,
+      "record_ids": [
+        "se-community-first-volunteer-broker",
+        "se-hampshire-search-rescue"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000040",
+      "name": "Windsor and Maidenhead",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-windsor-maidenhead-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000015",
+      "name": "Wirral",
+      "region_id": "north-west",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "nw-lcr-platform"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000217",
+      "name": "Woking",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 0,
+      "activity_routes": 1,
+      "team_routes": 0,
+      "record_ids": [
+        "se-surrey-good-neighbours"
+      ],
+      "coverage_gap": "no_broker_recorded"
+    },
+    {
+      "code": "E06000041",
+      "name": "Wokingham",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-wokingham-volunteer-broker"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E08000031",
+      "name": "Wolverhampton",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-wolverhampton-volunteers"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000237",
+      "name": "Worcester",
+      "region_id": "west-midlands",
+      "current_routes": 2,
+      "broker_routes": 2,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-worcester-community-action",
+        "west-midlands-we-can-worcestershire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000229",
+      "name": "Worthing",
+      "region_id": "south-east",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "se-adur-worthing-community-works"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000238",
+      "name": "Wychavon",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-we-can-worcestershire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000128",
+      "name": "Wyre",
+      "region_id": "north-west",
+      "current_routes": 3,
+      "broker_routes": 1,
+      "activity_routes": 2,
+      "team_routes": 1,
+      "record_ids": [
+        "nw-lancashire-partnership",
+        "nw-stjohn-logistics",
+        "nw-blackpool-food-project"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E07000239",
+      "name": "Wyre Forest",
+      "region_id": "west-midlands",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "west-midlands-we-can-worcestershire"
+      ],
+      "coverage_gap": null
+    },
+    {
+      "code": "E06000014",
+      "name": "York",
+      "region_id": "yorkshire-humber",
+      "current_routes": 1,
+      "broker_routes": 1,
+      "activity_routes": 0,
+      "team_routes": 0,
+      "record_ids": [
+        "york-cvs-volunteer-centre"
+      ],
+      "coverage_gap": null
+    }
+  ]
+}

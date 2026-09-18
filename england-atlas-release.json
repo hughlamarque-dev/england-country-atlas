@@ -2,7 +2,7 @@
   "application": "england-country-atlas",
   "instance": "86c5813386074b2aaa701180ee0a5946",
   "build_id": "b01682e5760d79745d5d10a1f67dcef23d03ac07e9f5a1e08d1bbb3a9887210f",
-  "manifest_sha256": "4aee2bdcbb2cac13955d774168a963513ace3e3c02f465a690baa6747969e32f",
+  "manifest_sha256": "ef97e742e59d89eb937bd2d768960e37767784a122932d4a77525408bfff5c9d",
   "files": [
     ".github/workflows/volunteering-review.yml",
     ".gitignore",
@@ -1658,7 +1658,9 @@
     "volunteering.css",
     "volunteering.html",
     "volunteering.js",
-    "workflows.js"
+    "workflows.js",
+    "data/volunteering-coverage.json",
+    "scripts/volunteering_coverage.py"
   ],
-  "web_version": "2026.09.18.10"
+  "web_version": "2026.09.18.11"
 }
