@@ -75,14 +75,25 @@
   }
   function resetFilters() {for (const key of FILTERS) $(key).value=key==='freshness'?'current':'';$('search').value='';$('savedOnly').checked=false;render(true);}
 
+  // Start with formats most useful for employee volunteering allowances.
+  // This orders published formats; it is not an assessment of host need or capacity.
+  function routeOrder(record) {
+    if (isBroker(record)) return 5;
+    if (record.status==='ongoing') return 4;
+    if (arr(record.employee_fit).includes('team_day')) return 0;
+    if (arr(record.employee_fit).includes('skills')) return 1;
+    if (arr(record.employee_fit).includes('individual')) return 2;
+    return 3;
+  }
+
   function cardHTML(record) {
-    const f=freshness(record), fit=arr(record.employee_fit).map(v=>LABELS.fit[v]||v), theme=arr(record.themes)[0];
+    const f=freshness(record), fit=arr(record.employee_fit).filter(v=>!(v==='ongoing'&&record.status==='ongoing')).map(v=>LABELS.fit[v]||v), themes=arr(record.themes).slice(0,2);
     const duration=record.duration?`<span><strong>Time:</strong> ${esc(record.duration)}</span>`:'';
     const dates=record.starts_on?`<span><strong>Date:</strong> ${esc(dateLabel(record.starts_on))}${record.ends_on&&record.ends_on!==record.starts_on?' – '+esc(dateLabel(record.ends_on)):''}</span>`:record.application_deadline?`<span><strong>Apply by:</strong> ${esc(dateLabel(record.application_deadline))}</span>`:'';
     return `<article class="route-card" id="route-${esc(record.id)}" style="--theme-color:${colour(record)}">
       <div class="card-top"><div><p class="card-kind">${esc(LABELS.kind[record.kind]||'Route')} · ${esc(areaNames(record))}</p><h3>${esc(record.title)}</h3><p class="organisation">${esc(record.organisation)}</p></div><button type="button" class="save-button" data-save="${esc(record.id)}" aria-pressed="${saved.has(record.id)}" aria-label="Save to shortlist: ${esc(record.title)}">☆</button></div>
       <p class="card-description">${esc(record.description)}</p>
-      <div class="tag-row">${statusBadge(record)}${theme?`<span class="tag theme-tag">${esc(LABELS.theme[theme]||theme)}</span>`:''}${fit.slice(0,2).map(v=>`<span class="tag">${esc(v)}</span>`).join('')}</div>
+      <div class="tag-row">${statusBadge(record)}${themes.map(theme=>`<span class="tag theme-tag">${esc(LABELS.theme[theme]||theme)}</span>`).join('')}${fit.slice(0,2).map(v=>`<span class="tag">${esc(v)}</span>`).join('')}</div>
       ${duration||record.team_size||dates?`<div class="card-facts">${dates}${duration}${record.team_size?`<span><strong>Team:</strong> ${esc(record.team_size)}</span>`:''}</div>`:''}
       ${f.state!=='current'?`<p class="stale-note">${esc(f.reason)}</p>`:''}
       <div class="card-bottom"><div class="card-actions">${external(actionURL(record),primaryAction(record),'button-link '+(f.state==='current'?'primary-link':''))}<button type="button" data-details="${esc(record.id)}">Details &amp; source</button></div><div class="card-source">${external(record.source_url,'Source checked')}<br>${esc(dateLabel(record.checked_at))}${f.reason&&f.state==='current'?'<br>Review due today':''}</div></div>
@@ -91,7 +102,7 @@
   function render(fitBounds = false) {
     if (!data.records) return;
     const f=readFilters();
-    filtered=data.records.filter(r=>matches(r,f)).sort((a,b)=>Number(isBroker(a))-Number(isBroker(b)) || a.title.localeCompare(b.title));
+    filtered=data.records.filter(r=>matches(r,f)).sort((a,b)=>routeOrder(a)-routeOrder(b) || a.title.localeCompare(b.title));
     const activities=filtered.filter(r=>!isBroker(r)).length, brokers=filtered.length-activities;
     $('resultTitle').textContent=filtered.length+' local '+(filtered.length===1?'route':'routes')+(f.saved?' saved':'');
     const stale=data.records.filter(r=>freshness(r).state!=='current').length;
@@ -181,7 +192,8 @@
   }
 
   function csvValue(value) {
-    let text=String(value??'');if (typeof value !== 'number' && /^[\s\uFEFF]*[=+@-]/.test(text)) text="'"+text;
+    if (typeof value === 'number' && Number.isFinite(value)) return String(value);
+    let text=String(value??'');if (/^[\s\uFEFF]*[=+@-]/.test(text)) text="'"+text;
     return '"'+text.replace(/"/g,'""')+'"';
   }
   function exportCSV(records,name) {
