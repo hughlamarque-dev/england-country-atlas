@@ -30,22 +30,25 @@ function currentAtlasLink(){
  const key=!$('analysisPage').hidden?$('analysisMetric').value:primaryId?.replace('district_need_','').replace('district_flood_','');
  if(key&&(NEEDS_METRICS[key]||METRICS[key]))u.searchParams.set('indicator',key);
  if(shortlist.size)u.searchParams.set('compare',[...shortlist].join(','));
+ if(!$('analysisPage').hidden){u.searchParams.set('floodChart',comparisonHazard);if(inspectedAuthority)u.searchParams.set('inspect',inspectedAuthority);if($('areaSearch').value)u.searchParams.set('search',$('areaSearch').value);u.searchParams.set('sort',$('analysisSort').value);}
  if(!$('partnersPage').hidden){if($('partnerSearch').value)u.searchParams.set('partner',$('partnerSearch').value);if($('partnerRegion').value)u.searchParams.set('region',$('partnerRegion').value);if($('partnerType').value)u.searchParams.set('partnerType',$('partnerType').value);if($('partnerSaved').checked)u.searchParams.set('saved',filteredPartners().map(p=>p.id).join(','));}
  return u.href;
 }
 function shareAtlasView(){
- $('shareURL').value=currentAtlasLink();$('shareStatus').textContent='The link includes the selected area, indicator, shortlist and directory filters, where applicable.';
+ $('shareURL').value=currentAtlasLink();$('shareStatus').textContent='The link includes the selected area, indicator, shortlist, comparison charts and filters, where applicable.';
  $('shareDialog').showModal();$('shareURL').focus();$('shareURL').select();
 }
 async function restoreAtlasState(){
  await loadAreas();shortlist=new Set([...shortlist].filter(code=>areas.some(a=>a.properties.code===code)));
  if(initialAtlasState.has('compare'))shortlist=new Set(initialAtlasState.get('compare').split(',').filter(code=>areas.some(a=>a.properties.code===code)).slice(0,6));
+ comparisonHazard=initialAtlasState.get('floodChart')==='rofrs'?'rofrs':'rofsw';inspectedAuthority=initialAtlasState.get('inspect')||'';
+ $('areaSearch').value=initialAtlasState.get('search')||'';if(['asc','desc','name'].includes(initialAtlasState.get('sort')))$('analysisSort').value=initialAtlasState.get('sort');
  saveShortlist();const metric=initialAtlasState.get('indicator');
  if(metric&&METRICS[metric]){if(!$('analysisPage').hidden){$('analysisMetric').value=metric;renderAnalysis();}else if(view==='flood'&&FLOOD_METRICS[metric])choose('district_flood_'+metric);else if(view==='needs'&&NEEDS_METRICS[metric])choose('district_need_'+metric);else if(view==='population'&&['population_2025','density_km2'].includes(metric))choose(metric==='population_2025'?'district_population':'district_density');}
  const area=areas.find(a=>a.properties.code===initialAtlasState.get('area'));if(area)selectArea(area,{zoom:true});
  if(initialAtlasState.has('partner'))$('partnerSearch').value=initialAtlasState.get('partner');
  if(initialAtlasState.has('region'))$('partnerRegion').value=initialAtlasState.get('region');
- if(initialAtlasState.has('partnerType'))$('partnerType').value=initialAtlasState.get('partnerType');if(initialAtlasState.has('saved')){savedPartners=new Set(initialAtlasState.get('saved').split(',').filter(id=>partnerRecords.some(p=>p.id===id)));$('partnerSaved').checked=true;}if(!$('partnersPage').hidden)renderPartners();renderShortlist();
+ if(initialAtlasState.has('partnerType'))$('partnerType').value=initialAtlasState.get('partnerType');if(initialAtlasState.has('saved')){savedPartners=new Set(initialAtlasState.get('saved').split(',').filter(id=>partnerRecords.some(p=>p.id===id)));$('partnerSaved').checked=true;}if(!$('partnersPage').hidden)renderPartners();renderShortlist();if(!$('analysisPage').hidden)renderAnalysis();
 }
 function initialiseWorkflows(){
  for(const id of ['shareView','shareComparison','sharePartners'])$(id).onclick=shareAtlasView;
