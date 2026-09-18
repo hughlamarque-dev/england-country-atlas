@@ -88,7 +88,7 @@ Added a searchable source catalogue, grouped filters, CSV and JSON provenance ex
 
 This is an England planning atlas, not a UK-wide incident management system. There are no live warning feeds, confirmed incident footprints, current service-capacity data, verified organisation service boundaries or grant case records. The atlas links to the live EA warning service. Historical water observations are clearly separate from flood risk.
 
-The most useful next inputs are the two EA Key Summary Information ZIPs, followed by the actual RoFRS and RoFSW spatial layers. See [NET-Data-Download-Guide.html](NET-Data-Download-Guide.html). A NET-confirmed partner-coverage table would also be valuable. The guide distinguishes data already loaded from proposed additions.
+Both EA Key Summary Information ZIPs are now integrated. The next spatial inputs are the actual RoFRS and RoFSW geometries. See [NET-Data-Download-Guide.html](NET-Data-Download-Guide.html). A NET-confirmed partner-coverage table would also be valuable. The guide distinguishes data already loaded from proposed additions.
 
 
 ## Supplied flood data — release 2026.09.18.6
@@ -111,3 +111,26 @@ The builder includes the original five workbooks and two product PDFs, extractio
 ### Next useful uploads
 
 No further summary downloads are needed. To map precise long-term flood zones, upload the **rofrs_4band** and **rofsw** spatial layers as GeoPackages, with their metadata, preferably for the same pilot area first. Optional 0.3 m depth-threshold layers can support a separate depth view. NET-verified partner coverage, eligibility, referral routes and accessibility provision remain a useful operational addition.
+
+
+## Navigation and comparison iteration — release 2026.09.18.7
+
+All eleven map views are now exposed in the sidebar, ordered from orientation and population through needs, flood exposure, services, partners, infrastructure and environment. The view grid stays above the scrolling controls. Infrastructure overlays use labelled switches with layer symbols, keyboard focus and clear checked states. Major roads load below towns in explicit map panes, independent of network timing. The roads switch now reflects its initially enabled state, and duplicate road switches have been removed from the towns view.
+
+Compare areas opens with two graphs above the shortlist and table:
+
+- A histogram of the selected indicator, with exact bin counts, an unweighted authority median and shortlist markers. The median describes authorities, not an England-wide population rate.
+- An income-deprivation versus flood-exposure scatterplot, switching between surface water and rivers/sea. Each dot is one authority; a selector gives exact values and can add the area to the shortlist. This does not identify which low-income households are exposed. Source periods and missing-data counts are shown.
+
+Both charts follow the authority search. Shared links retain the indicator, search, sort order, flood-chart choice, inspected authority and shortlist. Environmental comparison rows now open their relevant source map, with a notice that the table is an authority summary. Existing underlying source records are unchanged.
+
+### Valuable next additions
+
+1. **Verified support coverage and referral routes.** NET-confirmed areas served, eligibility, practical and emotional support, accessibility, languages and verification dates would make the atlas more useful for signposting. Office locations alone cannot answer who can help. This priority reflects the information, financial support and recovery gaps in [NET’s Stories After The Storms research](https://nationalemergenciestrust.org.uk/new-report-stories-after-the-storms/).
+2. **A small-area pilot.** Combine verified neighbourhood age, unpaid-care, language and housing characteristics with detailed flood geometry for one chosen area. Preserve source dates and denominators and do not infer household-level combinations from separate area totals.
+3. **A recovery monitoring view, once approved aggregates exist.** Compare applications, awards, time to payment and unmet support needs over time. Keep event location separate from survivors’ home locations.
+4. **UK coverage as a separate workstream.** NET’s remit is UK-wide; the current atlas is England-only. An extension needs nation-specific datasets and explicit comparability rules.
+
+### Detailed flood downloads: confirmed limitation
+
+The Environment Agency surface-water selector was tested with just `rofsw`, “Full dataset”, and GeoPackage. It still returned a large-data warning and directed the user to a smaller area or the support route for a large dataset. National data should therefore be requested through that route rather than repeatedly attempting the same download. No support request has been sent. A small, identical pilot footprint for both hazards is an alternative; successful delivery still needs checking. The supplied `.lyr` files and `orderDetails` ZIPs contain styling or request settings, not flood geometry.

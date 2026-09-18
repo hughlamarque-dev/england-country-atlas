@@ -4,7 +4,7 @@ let comparisonHazard='rofsw',inspectedAuthority='';
 // Five equal-width intervals, with readable limits and no discarded extremes.
 function chartExtent(values){
  const low=Math.min(0,...values),high=Math.max(0,...values),span=high-low||1;
- const power=10**Math.floor(Math.log10(span/5)),step=Math.ceil(span/5/power)*power;
+ const power=10**Math.floor(Math.log10(span/5)),normal=span/5/power,step=([1,2,2.5,5,10].find(n=>n>=normal)||10)*power;
  const min=Math.floor(low/step)*step,max=Math.ceil(high/step)*step;
  return {min,max:max===min?min+step:max,step};
 }
@@ -21,8 +21,8 @@ function chartNumber(value){
 function chartSVG(title,description,body){
  return '<svg viewBox="0 0 480 224" role="img" aria-label="'+esc(title)+'"><title>'+esc(title)+'</title><desc>'+esc(description)+'</desc>'+body+'</svg>';
 }
-function chartGrid(x,y,w,h,maxY){
- let svg='';for(let i=0;i<=4;i++){const value=maxY*i/4,cy=y+h-h*i/4;svg+='<line class="chart-gridline" x1="'+x+'" y1="'+cy+'" x2="'+(x+w)+'" y2="'+cy+'"/><text class="chart-tick" x="'+(x-9)+'" y="'+(cy+4)+'" text-anchor="end">'+chartNumber(value)+'</text>';}
+function chartGrid(x,y,w,h,maxY,steps){
+ let svg='';for(let i=0;i<=steps;i++){const value=maxY*i/steps,cy=y+h-h*i/steps;svg+='<line class="chart-gridline" x1="'+x+'" y1="'+cy+'" x2="'+(x+w)+'" y2="'+cy+'"/><text class="chart-tick" x="'+(x-9)+'" y="'+(cy+4)+'" text-anchor="end">'+chartNumber(value)+'</text>';}
  return svg;
 }
 function renderComparisonCharts(){
@@ -36,8 +36,9 @@ function renderDistributionChart(){
  let html='<div class="chart-heading"><div><p class="eyebrow">THE SELECTED INDICATOR</p><h2>How do areas compare?</h2></div><span class="chart-badge">'+rows.length+' with data</span></div><p class="chart-subtitle">'+esc(meta.title)+' · '+esc(meta.unit)+(period?' · '+esc(period):'')+'</p>';
  if(!values.length){box.innerHTML=html+'<p class="chart-empty">No matching authorities have data for this indicator. Change the search or indicator.</p>';return;}
  const data=histogramData(values),middle=Math.floor(values.length/2),median=values.length%2?values[middle]:(values[middle-1]+values[middle])/2;
- const x=44,y=22,w=416,h=153,maxY=Math.max(4,Math.ceil(Math.max(...data.bins.map(b=>b.count))/4)*4),sx=v=>x+(v-data.min)/(data.max-data.min)*w;
- let svg=chartGrid(x,y,w,h,maxY)+'<text class="chart-axis-caption" x="44" y="12">Number of authorities</text>';
+ const countExtent=chartExtent(data.bins.map(b=>b.count)),maxY=Math.max(1,countExtent.max),steps=maxY/Math.max(1,countExtent.step);
+ const x=44,y=22,w=416,h=153,sx=v=>x+(v-data.min)/(data.max-data.min)*w;
+ let svg=chartGrid(x,y,w,h,maxY,steps)+'<text class="chart-axis-caption" x="44" y="12">Number of authorities</text>';
  data.bins.forEach((b,i)=>{const bx=sx(b.low),bw=w/data.bins.length,bh=b.count/maxY*h;svg+='<rect class="histogram-bar" x="'+(bx+3)+'" y="'+(y+h-bh)+'" width="'+(bw-6)+'" height="'+bh+'"><title>'+esc(chartNumber(b.low)+' to '+chartNumber(b.high)+': '+b.count+' authorities')+'</title></rect>';});
  for(let i=0;i<=data.bins.length;i++){const value=data.min+i*data.step;svg+='<text class="chart-tick" x="'+sx(value)+'" y="195" text-anchor="middle">'+chartNumber(value)+'</text>';}
  svg+='<line class="median-line" x1="'+sx(median)+'" y1="'+y+'" x2="'+sx(median)+'" y2="'+(y+h)+'"><title>Median authority: '+esc(metricValue(median,metric,meta.decimals))+'</title></line>';
@@ -54,9 +55,9 @@ function renderRelationshipChart(){
  if(!rows.some(p=>p.code===inspectedAuthority))inspectedAuthority='';
  let html='<div class="chart-heading"><div><p class="eyebrow">TWO PLANNING PERSPECTIVES</p><h2>Income & flood exposure</h2></div><span class="chart-badge">'+rows.length+' matched</span></div><div class="chart-hazards" role="group" aria-label="Flood source for relationship chart"><button data-hazard="rofsw" aria-pressed="'+(comparisonHazard==='rofsw')+'">Surface water</button><button data-hazard="rofrs" aria-pressed="'+(comparisonHazard==='rofrs')+'">Rivers & sea</button></div>';
  if(rows.length){
-  const x=44,y=22,w=416,h=153,maxX=chartExtent(rows.map(p=>p.income_deprivation_pct)).max,maxY=chartExtent(rows.map(p=>p[key])).max,sx=v=>x+v/maxX*w,sy=v=>y+h-v/maxY*h;
-  let svg=chartGrid(x,y,w,h,maxY)+'<text class="chart-axis-caption" x="44" y="12">Estimated people exposed · % of EA population</text>';
-  for(let i=0;i<=4;i++)svg+='<text class="chart-tick" x="'+(x+w*i/4)+'" y="195" text-anchor="middle">'+chartNumber(maxX*i/4)+'</text>';
+  const x=44,y=22,w=416,h=153,xExtent=chartExtent(rows.map(p=>p.income_deprivation_pct)),yExtent=chartExtent(rows.map(p=>p[key])),maxX=xExtent.max,maxY=yExtent.max,sx=v=>x+v/maxX*w,sy=v=>y+h-v/maxY*h;
+  let svg=chartGrid(x,y,w,h,maxY,maxY/yExtent.step)+'<text class="chart-axis-caption" x="44" y="12">Estimated people exposed · % of EA population</text>';
+  for(let i=0;i<=maxX/xExtent.step;i++)svg+='<text class="chart-tick" x="'+sx(i*xExtent.step)+'" y="195" text-anchor="middle">'+chartNumber(i*xExtent.step)+'</text>';
   for(const p of [...rows].sort((a,b)=>Number(shortlist.has(a.code))-Number(shortlist.has(b.code))))svg+='<circle class="scatter-dot '+(shortlist.has(p.code)?'shortlisted':'')+'" data-authority="'+p.code+'" cx="'+sx(p.income_deprivation_pct)+'" cy="'+sy(p[key])+'" r="'+(shortlist.has(p.code)?5:3.8)+'"><title>'+esc(p.name+' · Income deprivation '+fmt(p.income_deprivation_pct,1)+'%; flood exposure '+metricValue(p[key],key,1))+'</title></circle>';
   const inspected=rows.find(p=>p.code===inspectedAuthority);
   if(inspected)svg+='<circle class="inspected-dot" cx="'+sx(inspected.income_deprivation_pct)+'" cy="'+sy(inspected[key])+'" r="8"/>';
