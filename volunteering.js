@@ -215,9 +215,9 @@
     const selected=$('area').value,authority=$('authority').value,points=groupedLocations(filtered).map(g=>[g.location.lat,g.location.lon]);
     if (selected && !boundaryLayer) {const area=data.areas.find(a=>a.id===selected);if (area?.bounds) {map.fitBounds(area.bounds,{padding:[25,25],maxZoom:10});return;}}
     if ((selected || authority) && boundaryLayer) {const bounds=L.latLngBounds([]);boundaryLayer.eachLayer(layer=>{if (authority ? layer.feature.properties.code===authority : layer.feature.properties.area_id===selected) bounds.extend(layer.getBounds());});if (bounds.isValid()) {map.fitBounds(bounds,{padding:[25,25],maxZoom:10});return;}}
-    if (points.length) map.fitBounds(L.latLngBounds(points),{padding:[45,45],maxZoom:selected?9:7});
+    if (points.length) map.fitBounds(L.latLngBounds(points),{padding:selected?[35,35]:[30,30],maxZoom:selected?9:8});
     else if (selected) {const area=data.areas.find(a=>a.id===selected);if (area) map.setView([area.lat,area.lon],8);}
-    else if (data.areas.length) map.fitBounds(L.latLngBounds(data.areas.map(a=>[a.lat,a.lon])),{padding:[40,40],maxZoom:7});
+    else if (data.areas.length) map.fitBounds(L.latLngBounds(data.areas.map(a=>[a.lat,a.lon])),{padding:[30,30],maxZoom:8});
   }
   function locateRecord(id) {
     if (!mapReady) {notice('The map is unavailable. See the location note in the listing.');return;}
