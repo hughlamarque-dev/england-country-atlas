@@ -247,3 +247,9 @@
   .selected-indicator{padding:11px 12px}
   .selected-indicator-value b{font-size:23px}
 }
+
+
+/* Compare areas: make the starting path and section hierarchy easier to scan. */
+#analysisPage .page-head p:not(.eyebrow){max-width:720px}
+#analysisPage .planning-presets>span{font-weight:650;color:var(--ink)}
+#analysisPage .supporting-heading{padding-top:2px}
