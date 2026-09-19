@@ -146,6 +146,10 @@ function communitySafetyApplyPeriod(value,{refresh=true}={}){
  }
  if(!refresh)return;
  communitySafetyRefreshFeatures();
+ // The selected period changes the values used by the graduated map style.
+ // Refresh the already-loaded safety layer immediately; otherwise the data
+ // changes internally but the visible polygons keep their previous colours.
+ if(typeof drawVector==='function')for(const entry of active?.values?.()||[])if(entry.layer?.id?.startsWith('district_safety_'))drawVector(entry);
  if(typeof renderControls==='function')renderControls();
  if(typeof renderLegend==='function')renderLegend();
  if(selectedArea&&typeof renderAreaCard==='function'&&typeof addAreaBriefing==='function'){renderAreaCard();addAreaBriefing();}
