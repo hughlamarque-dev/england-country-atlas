@@ -36,3 +36,17 @@
 /* Keep the Sources destination aligned with the main atlas header. */
 .topnav nav a.sources-link{white-space:nowrap}
 @media(max-width:620px){.topnav nav a.sources-link{display:none}}
+
+/* Keep record views practical first; fold low-priority provenance and empty details. */
+.record-actions .primary-link{font-size:14px;font-weight:650;min-height:46px;padding:11px 17px;box-shadow:0 2px 8px #17382622}
+.card-actions .primary-link{font-weight:650;padding:10px 14px}
+.record-details,.record-provenance{border:1px solid #dce5da;border-radius:8px;margin:12px 0;background:#fbfdfb;padding:0}
+.record-details>summary,.record-provenance>summary{padding:11px 13px;font-size:12px;font-weight:650;color:var(--ink);cursor:pointer;list-style-position:inside}
+.record-details[open]>summary,.record-provenance[open]>summary{border-bottom:1px solid #e5ece4}
+.record-details .record-facts{margin:0;padding:13px 15px}
+.record-provenance .provenance-body{padding:0 15px 13px}
+.record-provenance .provenance-body h3{display:none}
+.record-no-details{font-size:11px;color:#758375;margin:12px 0;padding:10px 12px;background:#f6f8f5;border-radius:7px}
+@media(max-width:620px){
+  .record-actions .primary-link{width:100%;min-height:48px}
+}
