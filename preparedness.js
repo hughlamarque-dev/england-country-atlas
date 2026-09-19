@@ -29,7 +29,7 @@ async function initialisePreparedness(){
  $('partnersExport').onclick=()=>downloadTable(filteredPartners().map(p=>({name:p.name,category:p.category,region:p.region,source_region:p.source_region||p.region,role:p.role,office_address:p.address||'',phone:p.phone||'',website:p.website||'',risk_register:p.risk_register||'',longitude:p.feature?.geometry.coordinates[0]??'',latitude:p.feature?.geometry.coordinates[1]??'',source_url:p.source_url,directory_checked:p.checked,directory_updated:p.directory_updated,verification:p.verification,coverage_note:p.coverage_note||(p.feature?preparednessData.partner_note:resilienceData.note),discovery_regions:(p.area_ids||[]).join('; '),volunteering_url:p.volunteering_url||''})),'England-partner-directory.csv');
  $('closeBriefing').onclick=()=>$('briefing').close();
 }
-function mergePreparedness(f,l){if(!l?.id.startsWith('district'))return f;return {...f,properties:{...f.properties,...(preparednessData?.records[f.properties.code]||{}),...(censusData?.records[f.properties.code]||{}),...(floodData?.records[f.properties.code]||{}),name:f.properties.name,code:f.properties.code}};}
+function mergePreparedness(f,l){if(!l?.id.startsWith('district'))return f;return {...f,properties:{...f.properties,...(preparednessData?.records[f.properties.code]||{}),...(censusData?.records[f.properties.code]||{}),...(floodData?.records[f.properties.code]||{}),...(communitySafetyData?.records[f.properties.code]||{}),name:f.properties.name,code:f.properties.code}};}
 function renderPreparednessControls(box,metrics){
  if(view==='needs'){
   const label=document.createElement('label');label.className='control-label';label.textContent='Compare community needs';label.htmlFor='needsIndicator';
@@ -49,6 +49,7 @@ function renderDataContext(parent){
  if(view==='environment'&&environment==='water')text='Historical satellite observations of surface water. Long-term flood exposure summaries are available under Flood exposure. Current warnings require the Environment Agency service.';
  if(view==='services')text='OpenStreetMap locations. A mapped facility may be closed, duplicated or missing. Confirm current services and capacity locally.';
  if(primaryId==='built2030')text='2030 projection. This layer does not show observed buildings.';
+ if(view==='safety')communitySafetyContext(parent);
  if(view==='needs'){const detail=document.createElement('details');detail.className='coverage-detail';detail.innerHTML='<summary>294 of 296 areas matched</summary><p>Barnsley and Sheffield use different source and atlas codes and are shown without data pending reconciliation.</p>';parent.append(detail);}
  if(text){const p=document.createElement('p');p.className='data-context';p.textContent=text;parent.append(p);}
 }
@@ -64,7 +65,7 @@ function briefingHTML(){
  let html='<p class="brief-lead">'+esc(p.name)+' · '+esc(p.code)+' · England</p><div class="brief-grid">';
  html+=metricCard('Modelled population',fmt(p.population_2025),'WorldPop · 2025')+metricCard('Population density',fmt(p.density_km2,1),'People / km² · WorldPop 2025');
  for(const[key,meta]of Object.entries(NEEDS_METRICS)){const value=p[key],count=meta.numerator_field&&p[meta.numerator_field];html+=metricCard(meta.title,value!=null?fmt(value,1)+'%':'Unavailable',meta.unit+' · '+(meta.period||'IoD2025')+(count!=null?' · '+fmt(count)+' of '+fmt(p[meta.denominator_field]):''));}
- html+='</div>'+floodBriefingHTML(p)+'<h3>Using this area profile</h3><p>These figures describe the whole local authority. For a specific incident, establish the affected footprint and households before estimating needs. Local averages can conceal pockets of deprivation.</p>';
+ html+='</div>'+floodBriefingHTML(p)+(typeof communitySafetyBriefingHTML==='function'?communitySafetyBriefingHTML(p):'')+'<h3>Using this area profile</h3><p>These figures describe the whole local authority. For a specific incident, establish the affected footprint and households before estimating needs. Local averages can conceal pockets of deprivation.</p>';
  if(!n)html+='<p class="data-context">The atlas and deprivation source use different codes for this authority. Values have been withheld pending boundary reconciliation.</p>';
  html+='<h3>Local support and recovery</h3><p>Use the <a href="https://www.ukcommunityfoundations.org/find-a-foundation" target="_blank" rel="noopener">community foundation directory</a> to confirm local funding routes. Record practical assistance, financial help and longer-term wellbeing support separately when developing the response.</p>';
  html+='<h3>Current conditions</h3><p><a href="https://check-for-flooding.service.gov.uk/alerts-and-warnings" target="_blank" rel="noopener">Environment Agency flood alerts and warnings</a>. Flood exposure summarises long-term modelled risk. Historical surface-water observations are available separately under Environment.</p>';
