@@ -234,3 +234,16 @@
     pointer-events:none;
   }
 }
+
+
+/* Keep the clicked map measure visible in the area card. */
+.selected-indicator{margin:0 0 14px;padding:12px 13px;background:#edf5ee;border:1px solid #b9d1be;border-left:4px solid var(--ink);border-radius:8px}
+.selected-indicator-kicker{margin:0 0 4px;color:#6c7e70;font-size:10px;font-weight:650;letter-spacing:.08em;text-transform:uppercase}
+.selected-indicator-title{display:block;margin:0 0 5px;color:var(--ink);font-size:14px;line-height:1.3;font-weight:650}
+.selected-indicator-value{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.selected-indicator-value b{color:var(--ink);font-size:25px;line-height:1.05;font-weight:650}
+.selected-indicator-value span{color:#65766b;font-size:11px;line-height:1.4}
+@media(max-width:620px){
+  .selected-indicator{padding:11px 12px}
+  .selected-indicator-value b{font-size:23px}
+}
