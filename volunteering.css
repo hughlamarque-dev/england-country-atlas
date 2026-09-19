@@ -32,3 +32,7 @@
   .topnav nav{width:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;align-items:stretch}
   .topnav nav a{min-width:0;width:100%;min-height:36px;padding:8px 3px;font-size:11px;line-height:1.15;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 }
+
+/* Keep the Sources destination aligned with the main atlas header. */
+.topnav nav a.sources-link{white-space:nowrap}
+@media(max-width:620px){.topnav nav a.sources-link{display:none}}
