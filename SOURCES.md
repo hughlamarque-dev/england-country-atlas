@@ -47,3 +47,13 @@ User-supplied RoFRS_KeySummaryInfo.zip and RoFSW_KeySummaryInfo.zip, inspected 1
 Where a host publishes a relevant postcode, the record retains it and its location basis (office or venue). [Postcodes.io](https://postcodes.io/docs/api/lookup-postcode/) supplied approximate postcode positions, checked on 18 September 2026. Host-supplied map pins retain their original source. Other points are explicitly labelled area anchors. [Postcode data attribution and licences](https://postcodes.io/docs/licences/): OS, Royal Mail, National Statistics and NRS data, copyright/database rights as stated by the provider (2025). No precise activity location is inferred from a host office or county marker.
 
 See [VOLUNTEERING-MAINTENANCE.md](VOLUNTEERING-MAINTENANCE.md) for editorial ownership, expiry rules, CSV updates and automated review reports. A working URL does not renew a source check or establish available places.
+
+
+## Community safety / Police.uk data
+
+The optional community-safety importer is `tools/qgis_import_community_safety.py`. It reads the monthly Police.uk downloads, spatially assigns approximate street-level records to the atlas's local-authority boundaries in QGIS, and writes an authority-level `data/community_safety.json` file. It uploads only that aggregated JSON when explicitly enabled; raw CSVs and incident points are not uploaded.
+
+- Police.uk data downloads: https://data.police.uk/data/
+- Police.uk API documentation: https://data.police.uk/docs/
+- Home Office police-recorded crime and outcomes open-data tables: https://www.gov.uk/government/statistical-data-sets/police-recorded-crime-and-outcomes-open-data-tables
+- Community-safety interpretation: police-recorded activity reflects reporting and policing patterns as well as underlying incidents. The public view uses local-authority rates for the selected release months, not a combined crime-risk score or a public incident-point layer.
