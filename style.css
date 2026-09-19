@@ -214,3 +214,22 @@
   }
   .panel{top:62px;bottom:24px}
 }
+
+/* Mobile first-load cue for the map controls — 2026-09-19 */
+@media(max-width:620px){
+  #panelToggle.mobile-hint::after{
+    content:"↑";
+    position:absolute;
+    top:calc(100% + 5px);
+    left:50%;
+    z-index:2;
+    transform:translateX(-50%);
+    color:transparent;
+    -webkit-text-stroke:2px #315e4a;
+    font-size:34px;
+    font-weight:700;
+    line-height:1;
+    text-shadow:0 1px 3px #fff;
+    pointer-events:none;
+  }
+}
