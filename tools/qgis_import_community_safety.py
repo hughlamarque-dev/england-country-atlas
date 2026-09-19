@@ -898,3 +898,101 @@ def github_request(method, url, token, body=None):
         "Accept": "application/vnd.github+json",
         "Authorization": f"Bearer {token}",
         "User-Agent": "england-atlas-qgis-community-safety-importer",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    if body is not None:
+        data = json.dumps(body).encode("utf-8")
+        headers["Content-Type"] = "application/json"
+    request = urllib.request.Request(url, data=data, headers=headers, method=method)
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            raw = response.read().decode("utf-8")
+            return json.loads(raw) if raw else {}
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"GitHub API returned HTTP {error.code}: {detail[:500]}")
+
+
+def upload_file_to_github(path: Path, token: str):
+    api_base = f"https://api.github.com/repos/{GITHUB_REPOSITORY}/contents/{GITHUB_DATA_PATH}"
+    current_sha = None
+    try:
+        current = github_request("GET", f"{api_base}?ref={GITHUB_BRANCH}", token)
+        current_sha = current.get("sha")
+    except RuntimeError as error:
+        if "HTTP 404" not in str(error):
+            raise
+
+    content = base64.b64encode(path.read_bytes()).decode("ascii")
+    body = {
+        "message": f"Add community safety data for {path.stat().st_mtime_ns}",
+        "content": content,
+        "branch": GITHUB_BRANCH,
+    }
+    if current_sha:
+        body["sha"] = current_sha
+    result = github_request("PUT", api_base, token, body)
+    commit = result.get("commit", {}).get("html_url", "")
+    log(f"Uploaded aggregated data to {GITHUB_REPOSITORY}/{GITHUB_DATA_PATH}")
+    if commit:
+        log(f"GitHub commit: {commit}")
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Main routine
+# ---------------------------------------------------------------------------
+
+
+def run():
+    started = dt.datetime.now()
+    root = discover_download_root()
+    log(f"Police.uk input folder: {root}")
+    files = discover_files(root)
+    all_months, selected_months = choose_months(files)
+    boundary_layer = get_boundary_layer()
+    authority_index = AuthorityIndex(boundary_layer)
+
+    records, stats, excluded_forces, used_files = process_files(
+        files, selected_months, authority_index
+    )
+    payload = build_web_payload(
+        records,
+        selected_months,
+        all_months,
+        stats,
+        excluded_forces,
+        root,
+        used_files,
+        authority_index,
+    )
+    local_output = write_payload(payload, root)
+
+    if ADD_QGIS_LAYER:
+        add_qgis_layer(boundary_layer, authority_index, payload)
+
+    if UPLOAD_TO_GITHUB:
+        token = get_github_token()
+        if not token:
+            raise RuntimeError("Upload cancelled: no GitHub token was supplied.")
+        upload_file_to_github(local_output, token)
+    else:
+        log("GitHub upload is OFF. Set UPLOAD_TO_GITHUB = True after inspecting the output.")
+
+    elapsed = dt.datetime.now() - started
+    summary = (
+        f"Community-safety import finished in {elapsed}. "
+        f"Street rows matched: {stats.get('street_matched', 0):,}; "
+        f"unmatched: {stats.get('street_unmatched', 0):,}; "
+        f"output: {local_output}"
+    )
+    log(summary)
+    try:
+        QMessageBox.information(None, "England Atlas · community safety", summary)
+    except Exception:
+        pass
+    return payload
+
+
+if __name__ == "__main__":
+    run()
