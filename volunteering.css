@@ -12,3 +12,23 @@
 @media(max-width:760px){.results-column{width:100%}.filter-secondary #authority{max-width:100%}.coverage-summary{font-size:11px;padding:11px 13px}.coverage-summary span{flex-basis:100%}.coverage-card{display:block}.coverage-card>h2{font-size:13px}#areaCoverage{grid-template-columns:1fr 1fr;gap:3px 12px}.area-coverage-row{grid-template-columns:minmax(0,1fr) 22px;font-size:10px;gap:4px}.area-coverage-row .area-track{display:none}.map-column{gap:10px}}
 
 .area-marker.marker-cluster>span{border:3px solid #fff;background:#285549;color:#fff;border-radius:50%;box-shadow:0 1px 5px #123c3755;font-size:13px}.key-cluster{border:2px solid white;border-radius:50%;background:#285549;box-shadow:0 0 0 1px #285549}
+
+/* Shared atlas navigation: keep the top bar stable across entry points. */
+.topnav{height:64px;min-height:64px;padding:0 24px;flex-direction:row;align-items:center;gap:15px;flex-wrap:nowrap}
+.topnav .brand{font-size:22px}
+.topnav nav{display:flex;gap:8px;flex-wrap:nowrap;align-items:center}
+.topnav nav a{padding:9px 14px;font-size:13px;line-height:1.3}
+@media(max-width:1100px){
+  .topnav{height:64px;min-height:64px;padding:0 18px;flex-direction:row;align-items:center;gap:15px}
+  .topnav nav{gap:8px;flex-wrap:nowrap}
+  .topnav nav a{padding:9px 12px;font-size:13px}
+}
+@media(max-width:900px){
+  .topnav .brand span{display:none}
+}
+@media(max-width:620px){
+  .topnav{height:88px;min-height:88px;padding:7px 12px 6px;display:grid;grid-template-columns:1fr;align-content:center;gap:4px}
+  .topnav .brand{width:100%;font-size:16px;line-height:1.15;min-height:18px}
+  .topnav nav{width:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;align-items:stretch}
+  .topnav nav a{min-width:0;width:100%;min-height:36px;padding:8px 3px;font-size:11px;line-height:1.15;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+}
