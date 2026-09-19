@@ -176,7 +176,7 @@
   }
   async function initialiseMap() {
     if (!window.L) {$('mapMessage').hidden=false;$('mapMessage').textContent='Map unavailable. All route details remain available in the list.';return;}
-    map=L.map('volunteerMap',{preferCanvas:true,scrollWheelZoom:false,minZoom:4,maxZoom:18}).setView([53,-2.5],6);
+    map=L.map('volunteerMap',{preferCanvas:true,scrollWheelZoom:true,minZoom:4,maxZoom:18}).setView([53,-2.5],6);
     L.control.scale({imperial:false}).addTo(map);
     map.attributionControl.addAttribution('<a href="https://postcodes.io/docs/licences/" target="_blank" rel="noopener noreferrer">Postcode data</a>');
     let tileError=false,tileSuccess=false;
