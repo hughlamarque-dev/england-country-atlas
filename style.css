@@ -34,7 +34,7 @@
 /* Release 7: visible navigation, infrastructure switches and comparison overview. */
 .panel>.preset-grid{flex:none;margin:0;padding:0 0 12px;grid-auto-rows:minmax(37px,auto)}
 .panel>.preset-grid button{min-height:37px;padding:7px 9px;font-size:12px}
-.panel>.preset-grid button:last-child{grid-column:1/-1}
+/* All current views stay in the two-column grid; no orphan full-width final button. */
 .panel-scroll{padding-top:2px}
 .infrastructure-options{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
 .layer-toggle{position:relative;align-items:center;gap:7px;padding:9px 8px;min-height:42px;border:1px solid #dce5df;border-radius:8px;background:#f8faf8;cursor:pointer;transition:background .15s,border-color .15s}
