@@ -8,15 +8,24 @@ const PLANNING_PRESETS=[
  ['older_income_deprivation_pct','Older people','Income deprivation affecting older people']
 ];
 
-// Five equal-width intervals, with readable limits and no discarded extremes.
+// General-purpose readable limits for axes and relationships.
 function chartExtent(values){
  const low=Math.min(0,...values),high=Math.max(0,...values),span=high-low||1;
  const power=10**Math.floor(Math.log10(span/5)),normal=span/5/power,step=([1,2,2.5,5,10].find(n=>n>=normal)||10)*power;
  const min=Math.floor(low/step)*step,max=Math.ceil(high/step)*step;
  return {min,max:max===min?min+step:max,step};
 }
+// Use about ten intervals for the distribution chart so a concentrated
+// indicator is not reduced to a few visually heavy blocks.
+function histogramExtent(values){
+ const low=Math.min(0,...values),high=Math.max(0,...values),span=high-low||1,target=10;
+ const power=10**Math.floor(Math.log10(span/target)),normal=span/target/power;
+ const step=([1,2,2.5,5,10].find(n=>n>=normal)||10)*power;
+ const min=Math.floor(low/step)*step,max=Math.ceil(high/step)*step;
+ return {min,max:max===min?min+step:max,step};
+}
 function histogramData(values){
- const extent=chartExtent(values),count=Math.round((extent.max-extent.min)/extent.step);
+ const extent=histogramExtent(values),count=Math.max(1,Math.round((extent.max-extent.min)/extent.step));
  const bins=Array.from({length:count},(_,i)=>({low:extent.min+i*extent.step,high:extent.min+(i+1)*extent.step,count:0}));
  for(const value of values)bins[Math.min(count-1,Math.max(0,Math.floor((value-extent.min)/extent.step)))].count++;
  return {...extent,bins};
@@ -46,7 +55,14 @@ function renderDistributionChart(){
  const countExtent=chartExtent(data.bins.map(b=>b.count)),maxY=Math.max(1,countExtent.max),steps=maxY/Math.max(1,countExtent.step);
  const x=44,y=22,w=416,h=153,sx=v=>x+(v-data.min)/(data.max-data.min)*w;
  let svg=chartGrid(x,y,w,h,maxY,steps)+'<text class="chart-axis-caption" x="44" y="12">Number of authorities</text>';
- data.bins.forEach((b,i)=>{const bx=sx(b.low),bw=w/data.bins.length,bh=b.count/maxY*h;svg+='<rect class="histogram-bar" x="'+(bx+3)+'" y="'+(y+h-bh)+'" width="'+(bw-6)+'" height="'+bh+'"><title>'+esc(chartNumber(b.low)+' to '+chartNumber(b.high)+': '+b.count+' authorities')+'</title></rect>';});
+ data.bins.forEach((b,i)=>{
+  const bx=sx(b.low),bw=w/data.bins.length,bh=b.count/maxY*h,gap=Math.min(3,bw*.14);
+  svg+='<rect class="histogram-bar" x="'+(bx+gap)+'" y="'+(y+h-bh)+'" width="'+Math.max(1,bw-gap*2)+'" height="'+bh+'"><title>'+esc(chartNumber(b.low)+' to '+chartNumber(b.high)+': '+b.count+' authorities')+'</title></rect>';
+  if (b.count) {
+   const inside=bh>=24,labelY=inside?y+h-bh+14:Math.max(y+12,y+h-bh-5);
+   svg+='<text class="histogram-count '+(inside?'inside':'')+'" x="'+(bx+bw/2)+'" y="'+labelY+'" text-anchor="middle">'+b.count+'</text>';
+  }
+ });
  for(let i=0;i<=data.bins.length;i++){const value=data.min+i*data.step;svg+='<text class="chart-tick" x="'+sx(value)+'" y="195" text-anchor="middle">'+chartNumber(value)+'</text>';}
  svg+='<line class="median-line" x1="'+sx(median)+'" y1="'+y+'" x2="'+sx(median)+'" y2="'+(y+h)+'"><title>Median authority: '+esc(metricValue(median,metric,meta.decimals))+'</title></line>';
  for(const p of rows.filter(p=>shortlist.has(p.code)))svg+='<path class="shortlist-mark" d="M '+sx(p[metric])+' 177 l -5 8 h 10 z"><title>'+esc(p.name+': '+metricValue(p[metric],metric,meta.decimals))+'</title></path>';
