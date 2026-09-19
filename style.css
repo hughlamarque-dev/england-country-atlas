@@ -166,3 +166,51 @@
 
 /* Distinguish measured car availability from unmeasured assistance needs. */
 .practical-context{display:block;font-size:10px;font-weight:400;line-height:1.4;color:#5f7268;margin-top:3px}.chart-interpretation{padding:12px 14px;margin:0 0 13px;border:1px solid #d4e0d7;border-left:3px solid #688977;border-radius:6px;background:#f2f6f2;font-size:11px;line-height:1.6;color:#445e4e}.chart-interpretation strong{display:block;color:#294e3c;font-size:12px}.chart-interpretation p{margin:6px 0 0}
+
+/* Mobile atlas controls and comparison-chart clarity — 2026-09-19 */
+.histogram-count{fill:#3f6652;font-size:9px;font-weight:650;pointer-events:none}
+.histogram-count.inside{fill:#fff}
+.histogram-bar{rx:2}
+@media(max-width:620px){
+  .topnav{
+    height:88px;
+    padding:7px 12px 6px;
+    display:grid;
+    grid-template-columns:1fr;
+    align-content:center;
+    gap:4px;
+  }
+  .topnav .brand{font-size:16px;line-height:1.15;min-height:18px}
+  .topnav nav{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:4px;
+    align-items:stretch;
+  }
+  .topnav nav button,.topnav nav .nav-link{
+    min-width:0;
+    width:100%;
+    min-height:36px;
+    padding:8px 3px;
+    font-size:11px;
+    line-height:1.15;
+    text-align:center;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .topnav nav button:last-child{display:none}
+  #mapPage{height:calc(100dvh - 88px)}
+  .searchbox{top:12px;left:10px;width:calc(100% - 138px)}
+  .floating{
+    top:12px;
+    right:max(12px,env(safe-area-inset-right));
+    min-height:40px;
+    padding:9px 10px;
+    font-weight:600;
+    white-space:nowrap;
+    z-index:1250;
+  }
+  .panel{top:62px;bottom:24px}
+}
