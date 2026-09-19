@@ -224,13 +224,13 @@
     left:50%;
     z-index:2;
     transform:translateX(-50%);
-    color:#315e4a;
+    color:#315e4a !important;
     font-family:Arial,Helvetica,sans-serif;
-    -webkit-text-stroke:0;
+    -webkit-text-stroke:0 transparent;
     font-size:35px;
     font-weight:800;
     line-height:1;
-    text-shadow:0 1px 3px #fff;
+    text-shadow:none;
     pointer-events:none;
   }
 }
