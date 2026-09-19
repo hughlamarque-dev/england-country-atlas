@@ -77,9 +77,13 @@ async function initialiseCommunitySafety(){
     source_url:data.source_url||COMMUNITY_SAFETY_SOURCE,
     note
    };
-  }
+ }
  }catch(error){
   communitySafetyData=null;
+  if(typeof VIEWS!=='undefined'){
+   const index=VIEWS.findIndex(item=>item[0]==='safety');
+   if(index>=0)VIEWS.splice(index,1);
+  }
   // A missing optional file must not stop the main atlas from opening.
   console.info('Community safety is not available in this release:',error.message);
  }
