@@ -41,7 +41,7 @@ function fit(){
  });
 }
 document.querySelector('.brand').onclick=e=>{e.preventDefault();setView('clean',{keepArea:false});};
-$('panelToggle').onclick=()=>showPanel(true);$('closePanel').onclick=()=>showPanel(false);$('fit').onclick=fit;$('basemap').onchange=e=>{Object.values(basemaps).forEach(l=>map.removeLayer(l));basemaps[e.target.value].addTo(map);document.body.classList.toggle('light',e.target.value==='light');for(const item of active.values())if(item.features)drawVector(item);};
+$('panelToggle').onclick=()=>{$('panelToggle').classList.remove('mobile-hint');showPanel(true);};$('closePanel').onclick=()=>showPanel(false);$('fit').onclick=fit;$('basemap').onchange=e=>{Object.values(basemaps).forEach(l=>map.removeLayer(l));basemaps[e.target.value].addTo(map);document.body.classList.toggle('light',e.target.value==='light');for(const item of active.values())if(item.features)drawVector(item);};
 $('opacityButton').onclick=()=>{$('opacityControls').hidden=!$('opacityControls').hidden;$('opacityButton').setAttribute('aria-expanded',String(!$('opacityControls').hidden));};$('opacity').oninput=e=>{const entry=active.get(primaryId);if(entry?.layer.kind==='raster')entry.mapLayer.setOpacity(Number(e.target.value)/100);};
 function renderViews(){
  const box=$('views');box.replaceChildren();
