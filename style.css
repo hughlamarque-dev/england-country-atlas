@@ -253,3 +253,11 @@
 #analysisPage .page-head p:not(.eyebrow){max-width:720px}
 #analysisPage .planning-presets>span{font-weight:650;color:var(--ink)}
 #analysisPage .supporting-heading{padding-top:2px}
+
+
+/* Resolve the requested route before revealing the map, preventing a stale/default first paint. */
+body.booting #mapPage,
+body.booting #analysisPage,
+body.booting #partnersPage{visibility:hidden}
+.app-loading{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;background:#f2f6f2;color:#244e46;font-size:14px;letter-spacing:.01em}
+.app-loading[hidden]{display:none}
